@@ -1,0 +1,12 @@
+{
+  "name": "styfle.dev",
+  "alias": ["styfle.dev"],
+  "version": 2,
+  "routes": [
+    {
+      "src": "/.*",
+      "status": 302,
+      "headers": { "Location": "https://ceriously.com/" }
+    }
+  ]
+}
