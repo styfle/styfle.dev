@@ -1,6 +1,5 @@
 body {
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    padding: 20px 20px 60px;
     max-width: 680px;
     margin: 0 auto;
     font-size: 16px;
@@ -12,6 +11,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     hyphens: auto;
+
+    background: #222;
+    color: #ffff;
   }
   
   h2, h3, h4 {
@@ -23,31 +25,31 @@ body {
     color: #0076FF;
     text-decoration: none;
     transition: all 0.2s ease;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid transparent;
   }
   
   a:hover {
     border-bottom: 1px solid #0076FF;
   }
   
-  ul, ol {
+  p > ul, ol {
     padding: 0;
     margin-left: 1.5em;
   }
   
-  ul {
+  p > ul {
     list-style-type: none;
   }
   
-  li {
+  p > ul > li {
     margin-bottom: 10px;
   }
   
-  ul li:before {
+  p > ul > li:before {
     content: '–';
   }
   
-  li:before {
+  p > ul > li:before {
     display: inline-block;
     color: #999;
     position: absolute;
