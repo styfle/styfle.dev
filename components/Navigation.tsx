@@ -11,7 +11,6 @@ const links: NavLink[] = [
   { href: '/projects', label: 'Projects' },
   { href: '/blog', label: 'Blog' },
   { href: '/slides', label: 'Slides' },
-  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' }
 ];
 
@@ -22,7 +21,7 @@ function getClassName(href: string) {
 
 const Navigation = () => (
   <nav>
-    <ul>
+    <ul className="container">
       {links.map(({ href, label }) => (
         <li key={href} className={getClassName(href)}>
           <Link href={href}><a>{label}</a></Link>
@@ -42,7 +41,6 @@ const Navigation = () => (
       }
       nav > ul {
         padding: 0px;
-        margin: 0px;
       }
       li {
         display: flex;
