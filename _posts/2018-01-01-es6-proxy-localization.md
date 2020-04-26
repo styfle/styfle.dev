@@ -22,6 +22,7 @@ At first, you might think that the [ES5 Getter][Getter] could solve our problem 
 
 Enter the [Proxy][Proxy], where Bruce Lee plays a web developer determined to help capture the missing keys responsible for the death of his sister.
 
+```js
     let obj = JSON.parse(json);
     let l10n = new Proxy(obj, {
       get(target, name) {
@@ -32,6 +33,7 @@ Enter the [Proxy][Proxy], where Bruce Lee plays a web developer determined to he
         return target[name];
       }
     });
+```
 
 We call the localization object `l10n` because we're lazy and this abbreviation is commonly used according to [Wikipedia][WikiL10n] and other lazy devs. Ain't nobody got time for typing. Why am I writing this article anyway?
 
@@ -39,6 +41,7 @@ Now back to the topic of Proxy usage...let's talk about React.
 
 React is great and you should use it because the internet told you so and that one blogger blogged about it on their weblog so don't challenge the blog. Embrace the blogosphere.
 
+```js
     const SelectAColor = (props) => (
       <div>
       <label>{props.l10n.color}:</label>
@@ -50,6 +53,7 @@ React is great and you should use it because the internet told you so and that o
       </select>
       </div>
     );
+```
 
 Now that we have a React component, let's see how it would render for users from different countries.
 

@@ -9,14 +9,13 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    hyphens: auto;
 
     background: #222;
     color: #ffff;
   }
 
   .container {
-    max-width: 680px;
+    max-width: 720px;
     margin: 0 auto;
   }
   
@@ -68,11 +67,18 @@ body {
     color: #D400FF;
   }
   */
+
+  p > code {
+    background: #2e3440;
+    color: #81a1c1;
+    padding: 0 5px;
+  }
   
   blockquote {
     margin: 1.6em 0;
     padding: 5px 24px;
-    background: #efefef;
+    background: rgba(0,0,0, 0.5);
+    color: #55796b;
   }
   
   input, button, textarea

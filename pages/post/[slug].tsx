@@ -75,8 +75,8 @@ export default function Post(props: PostProps) {
           <a className="u-url" href={`/post/${slug}`} hidden></a>
 
           <footer className="site-footer">
-            <Link href="/">
-              <a>&laquo; Back</a>
+            <Link href="/blog">
+              <a>&laquo; Back to blog</a>
             </Link>
           </footer>
         </article>

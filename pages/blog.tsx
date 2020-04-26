@@ -4,7 +4,7 @@ import { getPosts, BlogPost } from '../utils/posts';
 
 export async function getStaticProps() {
   const posts = await getPosts();
-  const sortedPosts = posts.sort((a, b) => a.date.localeCompare(b.date));
+  const sortedPosts = posts.sort((a, b) => b.date.localeCompare(a.date));
   return { props: { posts: sortedPosts } };
 }
 
@@ -14,14 +14,13 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
       <div className="wrapper">
         <div className="home">
           <h1 className="page-heading">Blog</h1>
-          <h2 className="post-list-heading">Posts</h2>
           <ul className="post-list">
             {posts.map(({slug, title, date}) => (
               <li key={slug}>
-                <span className="post-meta">
-                  {new Date(date).toDateString()}
-                </span>
                 <h3>
+                  <small className="post-meta">
+                    {new Date(date).toDateString()}
+                  </small>{" "}
                   <Link href="/post/[slug]" as={`/post/${slug}`}>
                     <a className="post-link">{title}</a>
                   </Link>
