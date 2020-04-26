@@ -1,6 +1,7 @@
 const Home = () => (<div>
-    <h1>Title Here</h1>
-    <p>Home page is here</p>
+    <h1>Hello World</h1>
+    <p>My name is Steven</p>
+    <img alt="styfle" src="/styfle-ceriously.png" />
   </div>);
 
 export default Home
