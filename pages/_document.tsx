@@ -7,7 +7,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>My page title - styfle.dev</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link href="/global.css" rel="stylesheet"></link>
         </Head>

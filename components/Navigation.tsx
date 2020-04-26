@@ -25,7 +25,7 @@ const Navigation = () => (
     <ul>
       {links.map(({ href, label }) => (
         <li key={href} className={getClassName(href)}>
-          <a href={href}>{label}</a>
+          <Link href={href}><a>{label}</a></Link>
         </li>
       ))}
     </ul>

@@ -1,6 +1,8 @@
-## ES6 Proxy and Localization
-
-*Published 2018-01-01*
+---
+slug: 'es6-proxy-localization'
+title: 'ES6 Proxy and Localization'
+date: '2018-01-01T09:40:00.000Z'
+---
 
 Maybe you've heard of JavaScript Proxy and think, "Hey that's cool and such, but what should I use it for?" Don't worry, I thought this too until recently when I needed a catch-all solution. And BEHOLD, the indirect intermediary known only as "Proxy" arose from the ashes and set ablaze all Text Editors throughout the known universe.
 
@@ -8,11 +10,13 @@ In my use case, I wanted to pass back an object (more like a dictionary) that wo
 
 Let's look at some example JSON that is emitted when a good ol' chap from across the pond visits our application (someone using `en-GB`).
 
-    {
-      "color": "Colour",
-      "elevator": "Lift",
-      "pants": "Trousers"
-    }
+```json
+{
+  "color": "Colour",
+  "elevator": "Lift",
+  "pants": "Trousers"
+}
+```
 
 At first, you might think that the [ES5 Getter][Getter] could solve our problem because you can override a property (such as `elevator`) and check if there is no value defined. But what about the keys you don't know about? You don't know what you don't know.
 
