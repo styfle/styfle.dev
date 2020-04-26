@@ -32,8 +32,9 @@ const Navigation = () => (
 
     <style jsx>{`
       nav {
+        background-color: #00796b;
         text-align: center;
-        border-bottom: 1px solid #ccc;
+        box-shadow: 0 2px 2px 0 rgba(200,200,200,0.14), 0 3px 1px -2px rgba(200,200,200,0.12), 0 1px 5px 0 rgba(200,200,200,0.2);
       }
       ul {
         display: flex;
@@ -45,7 +46,7 @@ const Navigation = () => (
       }
       li {
         display: flex;
-        padding: 6px 8px;
+        padding: 10px 10px;
       }
       li.active {
         border-bottom: 3px ridge currentColor;
@@ -53,11 +54,11 @@ const Navigation = () => (
       a {
         color: white;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 20px;
         font-weight: bold;
       }
       a:hover {
-        text-decoration: none;
+        text-decoration: none !important;
       }
     `}</style>
   </nav>

@@ -1,6 +1,9 @@
 const Footer = () => (
-    <footer className="page-footer grey lighten-4">
+    <footer>
     <style jsx>{`
+      footer {
+        background: #151815
+      }
       .social-svg {
           fill: white;
           width: 32px;
@@ -39,19 +42,11 @@ const Footer = () => (
                 </a>
 			</div>
           </div>
-          <div className="col l4 offset-l2 s12">
-            <h5 className="grey-text text-darken-2">Links</h5>
-            <ul>
-              <li><a className="grey-text text-darken-1" href="/about">About</a></li>
-              <li><a className="grey-text text-darken-1" href="/contact">Contact</a></li>
-              <li><a className="grey-text text-darken-1" href="/disclaimer">Disclaimer</a></li>
-            </ul>
-          </div>
         </div>
       </div>
       <div className="footer-copyright">
         <div className="grey-text text-darken-1 container center">
-			ceriously &copy;
+			styfle &copy;
 	        {new Date().getFullYear()}
         </div>
       </div>

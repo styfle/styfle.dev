@@ -1,4 +1,7 @@
-const About = () => (
+import Layout from '../components/Layout'
+
+export default function About() {
+  return (<Layout title="About">
   <div>
     <h1>About Me</h1>
     <dl>
@@ -65,6 +68,5 @@ const About = () => (
       </dd>
     </dl>
   </div>
-);
-
-export default About;
+  </Layout>);
+}

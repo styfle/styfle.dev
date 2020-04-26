@@ -1,4 +1,7 @@
-const Contact = () => (
+import Layout from '../components/Layout'
+
+export default function Contact() {
+  return (<Layout title="Contact">
     <div>
         <style jsx>{`
         label { display: block; margin-top: 20px }
@@ -13,7 +16,5 @@ const Contact = () => (
           <label><span>Message:</span><textarea name="message" placeholder="You are awesome!"></textarea></label>
       </form>
     </div>
-  );
-  
-  export default Contact;
-  
+    </Layout>);
+}

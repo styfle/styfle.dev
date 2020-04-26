@@ -2,7 +2,7 @@ import { highlight, highlightAuto } from 'highlight.js';
 import marked from 'marked';
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import Layout from '../../components/Layout'
 import { getPosts } from '../../utils/posts';
 
 interface PostProps {
@@ -44,13 +44,12 @@ export async function getStaticProps({
 
 export default function Post(props: PostProps) {
   const { slug, title, date, html } = props;
-  return (
+  return (<Layout title={title}>
     <main className="page-content" aria-label="Content">
       <div className="wrapper">
         <article className="post h-entry">
           <header className="post-header">
             <Head>
-              <title>{title} - style.dev</title>
               <link href="/nord.css" rel="stylesheet"></link>
             </Head>
             <h1 className="post-title p-name" itemProp="name headline">
@@ -83,5 +82,5 @@ export default function Post(props: PostProps) {
         </article>
       </div>
     </main>
-  );
+    </Layout>);
 }
