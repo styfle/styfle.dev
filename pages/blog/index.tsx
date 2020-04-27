@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Layout from '../components/Layout'
-import { getPosts, BlogPost } from '../utils/posts';
+import Layout from '../../components/Layout'
+import { getPosts, BlogPost } from '../../utils/posts';
 
 export async function getStaticProps() {
   const posts = await getPosts();
@@ -21,7 +21,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
                   <small className="post-meta">
                     {new Date(date).toDateString()}
                   </small>{" "}
-                  <Link href="/post/[slug]" as={`/post/${slug}`}>
+                  <Link href="/blog/[slug]" as={`/blog/${slug}`}>
                     <a className="post-link">{title}</a>
                   </Link>
                 </h3>

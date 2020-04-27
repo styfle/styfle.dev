@@ -13,7 +13,7 @@ interface PostProps {
 }
 
 export const getStaticPaths = async () => ({
-  paths: (await getPosts()).map(p => `/post/${p.slug}`),
+  paths: (await getPosts()).map(p => `/blog/${p.slug}`),
   fallback: false,
 });
 
@@ -72,7 +72,7 @@ export default function Post(props: PostProps) {
             dangerouslySetInnerHTML={{ __html: html }}
           ></div>
 
-          <a className="u-url" href={`/post/${slug}`} hidden></a>
+          <a className="u-url" href={`/blog/${slug}`} hidden></a>
 
           <footer className="site-footer">
             <Link href="/blog">
