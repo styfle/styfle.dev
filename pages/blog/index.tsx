@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout'
 import { getPosts, BlogPost } from '../../utils/posts';
+import marked from 'marked';
 
 export async function getStaticProps() {
   const posts = await getPosts();
@@ -10,26 +11,33 @@ export async function getStaticProps() {
 
 export default function Blog({ posts }: { posts: BlogPost[] }) {
   return (<Layout title="Blog">
-    <main className="page-content" aria-label="Content">
-      <div className="wrapper">
-        <div className="home">
-          <h1 className="page-heading">Blog</h1>
-          <ul className="post-list">
-            {posts.map(({slug, title, date}) => (
-              <li key={slug}>
-                <h3>
-                  <small className="post-meta">
-                    {new Date(date).toDateString()}
-                  </small>{" "}
-                  <Link href="/blog/[slug]" as={`/blog/${slug}`}>
-                    <a className="post-link">{title}</a>
-                  </Link>
-                </h3>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </main>
+    <h1>Blog</h1>
+      {posts.map(({slug, title, date, content}) => (
+        <article key={slug}>
+          <h2>
+            <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+              <a>{title}</a>
+            </Link>
+          </h2>
+          <p className="post-meta">
+              <time
+                className="dt-published"
+                dateTime={date}
+                itemProp="datePublished"
+              >
+                {new Date(date).toDateString()}
+              </time>
+            </p>
+          <div
+            className="post-content e-content"
+            itemProp="articleBody"
+            dangerouslySetInnerHTML={{ __html: marked(content.split('\n')[1]) }}
+          ></div>
+          <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+            <a>Read more...</a>
+          </Link>
+          <hr/>
+        </article>
+      ))}
     </Layout>);
 }

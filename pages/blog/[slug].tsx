@@ -45,42 +45,38 @@ export async function getStaticProps({
 export default function Post(props: PostProps) {
   const { slug, title, date, html } = props;
   return (<Layout title={title}>
-    <main className="page-content" aria-label="Content">
-      <div className="wrapper">
-        <article className="post h-entry">
-          <header className="post-header">
-            <Head>
-              <link href="/nord.css" rel="stylesheet"></link>
-            </Head>
-            <h1 className="post-title p-name" itemProp="name headline">
-              {title}
-            </h1>
-            <p className="post-meta">
-              <time
-                className="dt-published"
-                dateTime={date}
-                itemProp="datePublished"
-              >
-                {new Date(date).toDateString()}
-              </time>
-            </p>
-          </header>
+    <article className="post h-entry">
+      <header className="post-header">
+        <Head>
+          <link href="/nord.css" rel="stylesheet"></link>
+        </Head>
+        <h1 className="post-title p-name" itemProp="name headline">
+          {title}
+        </h1>
+        <p className="post-meta">
+          <time
+            className="dt-published"
+            dateTime={date}
+            itemProp="datePublished"
+          >
+            {new Date(date).toDateString()}
+          </time>
+        </p>
+      </header>
 
-          <div
-            className="post-content e-content"
-            itemProp="articleBody"
-            dangerouslySetInnerHTML={{ __html: html }}
-          ></div>
+      <div
+        className="post-content e-content"
+        itemProp="articleBody"
+        dangerouslySetInnerHTML={{ __html: html }}
+      ></div>
 
-          <a className="u-url" href={`/blog/${slug}`} hidden></a>
+      <a className="u-url" href={`/blog/${slug}`} hidden></a>
 
-          <footer className="site-footer">
-            <Link href="/blog">
-              <a>&laquo; Back to blog</a>
-            </Link>
-          </footer>
-        </article>
-      </div>
-    </main>
-    </Layout>);
+      <footer className="site-footer">
+        <Link href="/blog">
+          <a>&laquo; Back to blog</a>
+        </Link>
+      </footer>
+    </article>
+  </Layout>);
 }
