@@ -1,0 +1,139 @@
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  text-rendering: optimizeSpeed;
+
+  background: #222;
+  color: #ffff;
+}
+
+:root {
+  --green: #00A96b;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h2, h3, h4 {
+  margin-top: 1.5em;
+}
+
+a {
+  cursor: pointer;
+  color: var(--green);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--green);
+}
+
+p > ul, ol {
+  padding: 0;
+  margin-left: 1.5em;
+}
+
+p > ul {
+  list-style-type: none;
+}
+
+p > ul > li {
+  margin-bottom: 10px;
+}
+
+p > ul > li:before {
+  content: '–';
+}
+
+p > ul > li:before {
+  display: inline-block;
+  color: #999;
+  position: absolute;
+  margin-left: -18px;
+  transition: color 0.2s ease;
+}
+
+/*
+code, pre {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: .92em;
+  color: #D400FF;
+}
+*/
+
+p > code {
+  background: #2e3440;
+  color: #81a1c1;
+  padding: 0 5px;
+}
+
+blockquote {
+  margin: 1.6em 0;
+  padding: 5px 24px;
+  background: rgba(0,0,0, 0.5);
+  color: #55796b;
+}
+
+input, button, textarea
+{
+  margin: 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: .5em;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  padding: .65em 1em;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+input:focus, textarea:focus, button:focus
+{
+  outline: 0;
+  border-color: var(--green);
+}
+button:hover {
+  background: rgba(0, 118, 255, 0.8);
+}
+button:focus {
+  box-shadow: 0 0 0 2px rgba(0, 118, 255, 0.5);
+}
+button:disabled {
+  pointer-events: none;
+  background: #999;
+}
+
+img {
+  max-width: 100%;
+}
+
+textarea {
+  min-height: 300px;
+  width: 100%;
+  resize: none;
+  margin: 1.4em 0;
+  box-sizing: border-box;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #efefef;
+  margin: 6em auto;
+}
