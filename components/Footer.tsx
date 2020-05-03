@@ -4,6 +4,7 @@ const Footer = () => (
       footer {
         background: #151815;
         height: 10em;
+        margin-top: 2em;
       }
 
       .flex {
