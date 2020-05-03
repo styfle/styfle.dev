@@ -8,7 +8,7 @@ I'm no security expert, but I had some fun upgrading this website to use some se
 
 I recently found out about [Mozilla Observatory][Observatory] and ran my website through the tool. The results were depressing…a big, fat, ugly **F**. For those of you not familiar with [grading in the US][Grading], an F is the lowest grade possible. It’s like a punch in the face to my pride.
 
-![Observatory results for ceriously.com](/images/observatory-f.png)
+![Observatory results for ceriously.com](https://res.cloudinary.com/ceriously/image/upload/v1588546037/blog/observatory-f.png)
 
 Okay, well every day is a learning experience so let’s dive a bit deeper and maybe you can learn something new too!
 
@@ -90,7 +90,7 @@ If your CDN doesn't provide this information, you can use a tool like [SRI Hash 
 
 That wasn’t so bad. With the additional headers and one line of HTML, Observatory is reporting the coveted green **A** with a score of *90*!
 
-![Grade A](/images/observatory-a.png)
+![Grade A](https://res.cloudinary.com/ceriously/image/upload/v1588546037/blog/observatory-a.png)
 
 ### Compression and Caching
 Now that your website is secure, why not make it fast too?
