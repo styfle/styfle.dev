@@ -13,9 +13,16 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
 <style jsx>{`
 
   article {
-    border: 1px solid #2d2d2d;
+    border: 2px solid #2d2f2d;
     border-radius: 0.5rem;
     padding: 1rem;
+    transition: box-shadow 200ms;
+    box-shadow: none;
+  }
+
+  article:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px rgba(155, 191, 158, 0.5);
   }
 
   .grid {
