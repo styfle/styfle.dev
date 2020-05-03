@@ -1,10 +1,10 @@
 import { Octokit } from '@octokit/rest';
 import { existsSync, promises } from 'fs';
 const { readFile, writeFile } = promises;
-if (!process.env.STYFLE_DEV_GH_TOKEN) {
-    throw new Error('Expected environment variable STYFLE_DEV_GH_TOKEN')
+if (!process.env.GH_TOKEN) {
+    throw new Error('Expected environment variable GH_TOKEN')
 }
-const octokit = new Octokit({ auth: process.env.STYFLE_DEV_GH_TOKEN });
+const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
 export interface Repo {
     id: number;
