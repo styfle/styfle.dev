@@ -1,5 +1,8 @@
 import { Octokit } from '@octokit/rest';
-const octokit = new Octokit();
+if (!process.env.STYFLE_DEV_GH_TOKEN) {
+    throw new Error('Expected environment variable STYFLE_DEV_GH_TOKEN')
+}
+const octokit = new Octokit({ auth: process.env.STYFLE_DEV_GH_TOKEN });
 
 export interface Repo {
     id: number;
@@ -120,26 +123,26 @@ export interface GitHubProject {
     pushed_at: string;
 }
 
-async function getReposForPage(page: number) {
-    const res = await octokit.repos.listForUser({
-        username: 'styfle',
-        visibility: 'public',
-        affiliation: 'owner',
-        sort: 'created',
-        per_page: 100,
-        page
-    });
-    const repos: Repo[] = res.data;
-    return repos;
+let allRepos: Repo[] = [];
+
+async function getAllRepos(): Promise<Repo[]> {
+    if (allRepos.length === 0) {
+        console.log('Fetching all repos so this might take a second...')
+        allRepos = await octokit.paginate(
+            octokit.repos.listForAuthenticatedUser,
+            {
+                visibility: 'public',
+                affiliation: 'owner',
+                sort: 'created',
+                per_page: 100,
+            }
+        );
+    }
+    return allRepos;
 }
 
 export async function getProjects(): Promise<GitHubProject[]> {
-    const page1 = await getReposForPage(1);
-    const page2 = await getReposForPage(2);
-    const page3 = await getReposForPage(3);
-    const page4 = await getReposForPage(4);
-    const page5 = await getReposForPage(5);
-    
-    const projects = [...page1, ...page2, ...page3, ...page4, ...page5].filter(r => !r.fork && !r.private && !r.disabled && !r.archived && !r.name.includes('example') && !r.name.includes('bug-') && !r.name.includes('-bug') && !r.name.includes('Bug'));
-    return projects;
+    const repos = await getAllRepos();
+    const allowList = new Set(['The-Harvest-Club', 'ypha', 'dice', 'wedding'])
+    return repos.filter(r => allowList.has(r.name) || (!r.fork && !r.private && !r.disabled && !r.archived));
 }
