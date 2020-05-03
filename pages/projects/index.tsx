@@ -11,14 +11,17 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
   return (<Layout title="Projects">
     <h1>Projects</h1>
 <style jsx>{`
+
   article {
     border: 1px solid #2d2d2d;
-    border-radius: 7px;
-    display: inline-block;
-    width: 300px;
-    padding: 20px;
-    height: 300px;
-    margin-right: 5px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
   }
 
   h2 {
@@ -29,6 +32,7 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
     font-size: 10px;
   }
 `}</style>
+      <div className="grid">
       {projects.map(({name, description, created_at}) => (
         <article key={name}>
           <h2>
@@ -42,5 +46,6 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
           <div itemProp="description">{description}</div>
         </article>
       ))}
+    </div>
     </Layout>);
 }

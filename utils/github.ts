@@ -1,4 +1,6 @@
 import { Octokit } from '@octokit/rest';
+import { existsSync, promises } from 'fs';
+const { readFile, writeFile } = promises;
 if (!process.env.STYFLE_DEV_GH_TOKEN) {
     throw new Error('Expected environment variable STYFLE_DEV_GH_TOKEN')
 }
@@ -10,7 +12,7 @@ export interface Repo {
     name: string;
     full_name: string;
     private: boolean;
-    owner: Owner;
+    owner: any;
     html_url: string;
     description: string;
     fork: boolean;
@@ -73,42 +75,12 @@ export interface Repo {
     archived: boolean;
     disabled: boolean;
     open_issues_count: number;
-    license: License;
+    license: any;
     forks: number;
     open_issues: number;
     watchers: number;
     default_branch: string;
 }
-  
-export interface Owner {
-    login: string;
-    id: number;
-    node_id: string;
-    avatar_url: string;
-    gravatar_id: string;
-    url: string;
-    html_url: string;
-    followers_url: string;
-    following_url: string;
-    gists_url: string;
-    starred_url: string;
-    subscriptions_url: string;
-    organizations_url: string;
-    repos_url: string;
-    events_url: string;
-    received_events_url: string;
-    type: string;
-    site_admin: boolean;
-}
-
-export interface License {
-    key: string;
-    name: string;
-    spdx_id: string;
-    url: string;
-    node_id: string;
-}
-
 
 export interface GitHubProject {
     name: string;
@@ -123,12 +95,15 @@ export interface GitHubProject {
     pushed_at: string;
 }
 
-let allRepos: Repo[] = [];
-
 async function getAllRepos(): Promise<Repo[]> {
-    if (allRepos.length === 0) {
+    let repos: Repo[];
+    if (existsSync('./repos.json')) {
+        console.log('Found cached repos.json...');
+        const json = await readFile('./repos.json', 'utf8');
+        repos = JSON.parse(json);
+    } else {
         console.log('Fetching all repos so this might take a second...')
-        allRepos = await octokit.paginate(
+        repos = await octokit.paginate(
             octokit.repos.listForAuthenticatedUser,
             {
                 visibility: 'public',
@@ -137,8 +112,9 @@ async function getAllRepos(): Promise<Repo[]> {
                 per_page: 100,
             }
         );
+        await writeFile('./repos.json', JSON.stringify(repos), 'utf8');
     }
-    return allRepos;
+    return repos;
 }
 
 export async function getProjects(): Promise<GitHubProject[]> {
