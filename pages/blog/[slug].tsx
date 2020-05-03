@@ -45,38 +45,29 @@ export async function getStaticProps({
 export default function Post(props: PostProps) {
   const { slug, title, date, html } = props;
   return (<Layout title={title}>
-    <article className="post h-entry">
-      <header className="post-header">
+    <article>
+      <header>
         <Head>
           <link href="/nord.css" rel="stylesheet"></link>
         </Head>
-        <h1 className="post-title p-name" itemProp="name headline">
+        <h1 itemProp="name headline">
           {title}
         </h1>
-        <p className="post-meta">
-          <time
-            className="dt-published"
-            dateTime={date}
-            itemProp="datePublished"
-          >
+        <p>
+          <time dateTime={date} itemProp="datePublished">
             {new Date(date).toDateString()}
           </time>
         </p>
       </header>
 
-      <div
-        className="post-content e-content"
-        itemProp="articleBody"
-        dangerouslySetInnerHTML={{ __html: html }}
-      ></div>
+      <div itemProp="articleBody" dangerouslySetInnerHTML={{ __html: html }}></div>
 
-      <a className="u-url" href={`/blog/${slug}`} hidden></a>
+      <a href={`/blog/${slug}`} hidden></a>
 
-      <footer className="site-footer">
-        <Link href="/blog">
-          <a>&laquo; Back to blog</a>
-        </Link>
-      </footer>
+      <Link href="/blog">
+        <a>&laquo; Back to blog</a>
+      </Link>
+      
     </article>
   </Layout>);
 }

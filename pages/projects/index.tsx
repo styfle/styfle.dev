@@ -11,8 +11,13 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
   return (<Layout title="Projects">
     <h1>Projects</h1>
 <style jsx>{`
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
 
-  article {
+  section {
     border: 2px solid #2d2f2d;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -20,15 +25,9 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
     box-shadow: none;
   }
 
-  article:hover {
+  section:hover {
     cursor: pointer;
     box-shadow: 0 0 5px 2px rgba(155, 191, 158, 0.5);
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1rem;
   }
 
   h2 {
@@ -41,7 +40,7 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
 `}</style>
       <div className="grid">
       {projects.map(({name, description, homepage, created_at, og_image_url}) => (
-        <article key={name}>
+        <section key={name}>
           {og_image_url ? <img src={og_image_url} width="100%" /> : null}
           <h2>
             {homepage && homepage.startsWith('https://styfle.dev/') 
@@ -54,7 +53,7 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
             {new Date(created_at).toDateString()}
           </time>
           <div itemProp="description">{description}</div>
-        </article>
+        </section>
       ))}
     </div>
     </Layout>);
