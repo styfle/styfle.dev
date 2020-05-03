@@ -40,12 +40,15 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
   }
 `}</style>
       <div className="grid">
-      {projects.map(({name, description, created_at}) => (
+      {projects.map(({name, description, homepage, created_at, og_image_url}) => (
         <article key={name}>
+          {og_image_url ? <img src={og_image_url} width="100%" /> : null}
           <h2>
-            <Link href="/projects/[name]" as={`/projects/${name}`}>
+            {homepage && homepage.startsWith('https://styfle.dev/') 
+            ? (<Link href="/projects/[name]" as={`/projects/${name}`}>
               <a>{name}</a>
-            </Link>
+            </Link>)
+            : <a href={homepage}>{name}</a>}
           </h2>
           <time dateTime={created_at} itemProp="created_at" >
             {new Date(created_at).toDateString()}
