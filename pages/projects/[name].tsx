@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 import { getProjects, GitHubProject } from '../../utils/github';
 import { formatDate } from '../../utils/date';
 
@@ -20,28 +20,27 @@ export async function getStaticProps({
     throw new Error(`Expected name ${name}`);
   }
   return {
-    props: project
+    props: project,
   };
 }
 
 export default function Project(props: GitHubProject) {
   const { name, description, created_at, stargazers_count } = props;
-  return (<Layout title={name}>
-        <h1>
-          {name}
-        </h1>
-        <p>
-          Created: <time dateTime={created_at} itemProp="created_at">
-            {formatDate(created_at)}
-          </time>
-        </p>
-        <p>
-          Stars: {stargazers_count}
-        </p>
+  return (
+    <Layout title={name}>
+      <h1>{name}</h1>
+      <p>
+        Created:{' '}
+        <time dateTime={created_at} itemProp="created_at">
+          {formatDate(created_at)}
+        </time>
+      </p>
+      <p>Stars: {stargazers_count}</p>
       <div itemProp="description">{description}</div>
       <a href={`/projects/${name}`} hidden></a>
       <Link href="/projects">
         <a className="green-link">&laquo; Back to projects</a>
       </Link>
-  </Layout>);
+    </Layout>
+  );
 }
