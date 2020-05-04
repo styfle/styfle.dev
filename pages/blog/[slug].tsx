@@ -2,7 +2,7 @@ import { highlight, highlightAuto } from 'highlight.js';
 import marked from 'marked';
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 import { getPosts } from '../../utils/posts';
 import { formatDate } from '../../utils/date';
 
@@ -31,7 +31,7 @@ export async function getStaticProps({
   }
   const { title, date, content } = post;
   const html = marked(content, {
-    highlight: function(code, lang) {
+    highlight: function (code, lang) {
       if (!lang) {
         return highlightAuto(code).value;
       }
@@ -39,36 +39,39 @@ export async function getStaticProps({
     },
   });
   return {
-    props: { slug, title, date, html }
+    props: { slug, title, date, html },
   };
 }
 
 export default function Post(props: PostProps) {
   const { slug, title, date, html } = props;
-  return (<Layout title={title}>
-    <article>
-      <header>
-        <Head>
-          <link href="/nord.css" rel="stylesheet"></link>
-        </Head>
-        <h1 itemProp="name headline">
-          {title}
-        </h1>
-        <p style={{textAlign: 'center', fontSize: '0.8em', lineHeight: '1'}}>
-          <time dateTime={date} itemProp="datePublished">
-            {formatDate(date)}
-          </time>
-        </p>
-      </header>
+  return (
+    <Layout title={title}>
+      <article>
+        <header>
+          <Head>
+            <link href="/nord.css" rel="stylesheet"></link>
+          </Head>
+          <h1 itemProp="name headline">{title}</h1>
+          <p style={{ textAlign: 'center', fontSize: '0.8em', lineHeight: '1' }}>
+            <time dateTime={date} itemProp="datePublished">
+              {formatDate(date)}
+            </time>
+          </p>
+        </header>
 
-      <div className="main-content" itemProp="articleBody" dangerouslySetInnerHTML={{ __html: html }}></div>
+        <div
+          className="main-content"
+          itemProp="articleBody"
+          dangerouslySetInnerHTML={{ __html: html }}
+        ></div>
 
-      <a href={`/blog/${slug}`} hidden></a>
+        <a href={`/blog/${slug}`} hidden></a>
 
-      <Link href="/blog">
-        <a className="green-link">&laquo; Back to blog</a>
-      </Link>
-      
-    </article>
-  </Layout>);
+        <Link href="/blog">
+          <a className="green-link">&laquo; Back to blog</a>
+        </Link>
+      </article>
+    </Layout>
+  );
 }

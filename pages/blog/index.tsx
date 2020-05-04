@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 import { getPosts, BlogPost } from '../../utils/posts';
 import marked from 'marked';
 import { formatDate } from '../../utils/date';
@@ -11,9 +11,10 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts }: { posts: BlogPost[] }) {
-  return (<Layout title="Blog">
-    <h1>Blog</h1>
-      {posts.map(({slug, title, date, content}) => (
+  return (
+    <Layout title="Blog">
+      <h1>Blog</h1>
+      {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>
             <Link href="/blog/[slug]" as={`/blog/${slug}`}>
@@ -21,14 +22,10 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
             </Link>
           </h2>
           <p className="post-meta">
-              <time
-                className="dt-published"
-                dateTime={date}
-                itemProp="datePublished"
-              >
-                {formatDate(date)}
-              </time>
-            </p>
+            <time className="dt-published" dateTime={date} itemProp="datePublished">
+              {formatDate(date)}
+            </time>
+          </p>
           <div
             className="post-content e-content"
             itemProp="articleBody"
@@ -37,8 +34,9 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
           <Link href="/blog/[slug]" as={`/blog/${slug}`}>
             <a className="green-link">Read more...</a>
           </Link>
-          <hr/>
+          <hr />
         </article>
       ))}
-    </Layout>);
+    </Layout>
+  );
 }

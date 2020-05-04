@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" --write",
+    "git-pre-commit": "yarn prettier && git add -A"
   },
   "dependencies": {
     "@octokit/rest": "17.6.0",
