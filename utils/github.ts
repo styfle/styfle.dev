@@ -161,11 +161,11 @@ const mapRepoToImage: Record<string, string> = {
   'breaking-changes-web':
     'https://repository-images.githubusercontent.com/124409296/3fd08700-8d67-11ea-94a3-458a6c35de39',
   dotfiles:
-    'https://repository-images.githubusercontent.com/84888943/a787d180-8d69-11ea-867a-5f17dcf06e99',
+    'https://repository-images.githubusercontent.com/84888943/fcd2db80-8d87-11ea-8329-c43942d7816f',
   geoslack:
     'https://repository-images.githubusercontent.com/97144945/d30abc00-8d69-11ea-8b1f-b8ff088e165c',
   magnemite:
-    'https://repository-images.githubusercontent.com/72372310/3c3b0100-8d63-11ea-83f2-8eb9c4928ea3',
+    'https://repository-images.githubusercontent.com/72372310/33a8f180-8d88-11ea-841f-3ada4013047f',
   exeggcute:
     'https://repository-images.githubusercontent.com/63953497/a8b60000-8d63-11ea-8f4d-1f197c326fb4',
   'react-server-example-tsx':
@@ -173,7 +173,7 @@ const mapRepoToImage: Record<string, string> = {
   copee:
     'https://repository-images.githubusercontent.com/39547867/182bef80-8d64-11ea-98af-8709c8d784bf',
   'typed-tmpl':
-    'https://repository-images.githubusercontent.com/45296077/47426100-8d64-11ea-9a71-78a05d28668f',
+    'https://repository-images.githubusercontent.com/45296077/415e7700-8d88-11ea-985d-db12c77c3470',
   'The-Harvest-Club':
     'https://repository-images.githubusercontent.com/3373441/23334f80-8d65-11ea-86da-962d559821e8',
   'Basic-Wars':
