@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/styfle
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://styfle.dev
+  * I am styfle (https://keybase.io/styfle) on keybase.
+  * I have a public key with fingerprint 7C2F 8237 7443 525B 2F9A  D6BA 6483 7EC1 4937 E465
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204d2d4e08afd61f6d79b998a3b1c783c2ae9088509ef995b978d11e28c99364530a",
+      "fingerprint": "7c2f82377443525b2f9ad6ba64837ec14937e465",
+      "host": "keybase.io",
+      "key_id": "64837ec14937e465",
+      "kid": "0101722d623a44c1ee194e47171fc118453bc73d03053bff4bdf9e94568a8444f4890a",
+      "uid": "87e4a5a8bd08ab5e6d9c3450d3dc9919",
+      "username": "styfle"
+    },
+    "service": {
+      "hostname": "styfle.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1588559641,
+  "expire_in": 157680000,
+  "prev": "126de179bff2957814bc086c12923d53270c618e07ed2fe6c17c9ed7b72f5c30",
+  "seqno": 153,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMNrAnicbVJ7UFRVHF6UIHcmotEehAhdUGMk5r7vPZs0KFkuorlUOCKy3XvPuezl
+sXfZB49Q2UFrxoEJ4zWRY5uTTCONwvQQSCSWolJwFKKCQZ0wQhO1IsKGcuhcJv9o
+pvPPOed3vu873/c754sHlprMIXD/vqBVmEQhA8FGnym3rTKqgpB1WE5YKogCtDih
+Qog8XnuBBgkLQVI0yUIasogUJRXylMpDAcgAiBIjU4ogMgotIUCKIkcCpALAyUAQ
+IUUhWlQAYHiWY0iJSCJUzZmH3C635vRiWUGhVZFmBIFlGY7mZFoFEuRliWdFRkAK
+xQI8sTyHiQ7dYzCwOVnyoGRNxzW8sS/a+x/8Pd8kJdA05GlGYlmFQogCLGIFSqBU
+haJEbEtWBAaSDIlXqsrKUAUIsBwvSiLLsiorgkXfvkU5EatLnCTKELdB5hAPgcKw
+HAkZiFNSwAB6kNspFSGM9njL1UJE7E0icK1EU5DRViPHf86TISrBPJdb9+qKXojr
+Dq/X5bEYPG+5ywCWItn+r4Rd1pwQ9xAzSpDbo+lOwkJhpOLVDE2Kwy/AAZ6lkghU
+5tLcyK4ZCE7gRRIP4x58nYWgaB4iCj+hqtKAE0SKlRVS5BWKBjQDOYYWSIWnREQK
+CNIqwgeCAhAUZIFWOYUhCSNUsVM3tBlsVMozAml5Tsnrc+PMfcGcUFOI2RR23xLj
+d5nMyyLv/bkr/ZGmN/+4kZ9vLpqM53/9LvLwWLDjzLaVPWPmfXc/Td7/+xVr788b
+fOHvrW5u331zoXZHQVt/7Qr/VrB+rC7R803uhbKONOJ4Q/TLVQ9+/WTkdHrix6Nl
+HX2vLdnVqYxnNxyoKrkc3v59XvVkSeNgddpI6sTob5aJo47YNf13N4Xafoldm2jb
+etT1dnjSD2HRMyX9gSxbdk7limsvPX91sKjzq6Sa4Ymp+G27+zZunMrJT3miO1Bz
+duRagfjo1fttDetslQlpGTGObFfYNKoPBG4dsfzd2tTfGmEfr3VvT/Tc3nOuZ2nK
+hSl/6GOVXc/YK6wTN9Q4EPbUX/Hnm+tjktNGD+bNttXPnB04bKq69WomeTOz6NSx
+d0bqLi6rPuAcP985G3ru0E9/zk34mmJWRyRfejgm7cXndGuGZ9WJqS9TW7qmJ7V0
+jbdlr2zaWZE1MXAnK3dgubowuuF4T6YnYJqrsR90RM07C5qL3kor3VUeyQWYnXuL
+hw95n+7YEXgjbst6h/mz28ET6R9GnfS3drVEL/j9Q6d5/RO9a0+wZabxFcex9+fo
+j65vT1lTO24drElYTsbuzzD5u1eta/cVz58C7fpcb9yP1twXWqq6an29j2+2WZ7l
+TqbkRqwVLp2ZeTfh9Q8+D1RfvK6nbobplz3fJnTXnR4m/IGOofn8O2NScs4jQ3Ol
+swlbHNkPHYH/AGh7wHw=
+=OsHE
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/styfle
+
+==================================================================
