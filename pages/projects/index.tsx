@@ -36,7 +36,7 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
   }
 
   time {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   section > a {

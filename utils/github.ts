@@ -136,7 +136,7 @@ export async function getProjects(): Promise<GitHubProject[]> {
 }
 
 const mapRepoToImage: Record<string, string> = {
-    'doorbell': 'https://repository-images.githubusercontent.com/259120667/a4421500-8d6c-11ea-9096-82407a8c95a5',
+    'doorbell': 'https://repository-images.githubusercontent.com/259120667/41f11080-8d7c-11ea-9ff3-10d5575cbc70',
     'cancel-workflow-action': 'https://repository-images.githubusercontent.com/237695528/790bf580-8d6d-11ea-8524-57512d577f22',
     'rediscovering-neverland': 'https://repository-images.githubusercontent.com/230126718/4fe36900-8d5d-11ea-979a-a21cd8131656',
     'tls-check': 'https://repository-images.githubusercontent.com/144043735/a061c300-8d6b-11ea-80e2-d7099d7917fe',
