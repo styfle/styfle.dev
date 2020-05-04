@@ -16,7 +16,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
         <article key={slug}>
           <h2>
             <Link href="/blog/[slug]" as={`/blog/${slug}`}>
-              <a>{title}</a>
+              <a className="green-link">{title}</a>
             </Link>
           </h2>
           <p className="post-meta">
@@ -34,7 +34,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
             dangerouslySetInnerHTML={{ __html: marked(content.split('\n')[1]) }}
           ></div>
           <Link href="/blog/[slug]" as={`/blog/${slug}`}>
-            <a>Read more...</a>
+            <a className="green-link">Read more...</a>
           </Link>
           <hr/>
         </article>

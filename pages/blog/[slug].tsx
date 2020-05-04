@@ -60,12 +60,12 @@ export default function Post(props: PostProps) {
         </p>
       </header>
 
-      <div itemProp="articleBody" dangerouslySetInnerHTML={{ __html: html }}></div>
+      <div className="main-content" itemProp="articleBody" dangerouslySetInnerHTML={{ __html: html }}></div>
 
       <a href={`/blog/${slug}`} hidden></a>
 
       <Link href="/blog">
-        <a>&laquo; Back to blog</a>
+        <a className="green-link">&laquo; Back to blog</a>
       </Link>
       
     </article>

@@ -53,9 +53,7 @@ const Navigation = () => (
         color: white;
         font-size: 20px;
         font-weight: bold;
-      }
-      a:hover {
-        border-bottom: none;
+        text-decoration: none;
       }
     `}</style>
   </nav>

@@ -26,15 +26,15 @@ h2, h3, h4 {
   margin-top: 1.5em;
 }
 
-a {
+a.green-link, div.main-content a {
   cursor: pointer;
   color: var(--green);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 100ms ease;
   border-bottom: 1px solid transparent;
 }
 
-a:hover {
+a.green-link:hover, div.main-content a:hover {
   border-bottom: 1px solid var(--green);
 }
 
@@ -73,7 +73,7 @@ code, pre {
 
 p > code {
   background: #2e3440;
-  color: #81a1c1;
+  color: #99b285;
   padding: 0 5px;
 }
 

@@ -73,7 +73,7 @@ export default function Home() {
       animation-delay: .5s;
     }
     `}</style>
-  <div>
+  <div className="main-content">
     <div className="avatar">
       <img alt="styfle" src="/styfle-ceriously.png" />
     </div>

@@ -32,7 +32,6 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
 
   h2 {
     margin: 0;
-    color: var(--green);
   }
 
   time {
@@ -52,7 +51,7 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
         <section key={name}>
           <a href={homepage}>
           <img src={og_image_url || `https://via.placeholder.com/640x320?text=${name}`} width="100%" />
-            <h2>{name}</h2>
+            <h2 className="green-link">{name}</h2>
             <time dateTime={created_at} itemProp="created_at" >
               {new Date(created_at).toDateString()}
             </time>

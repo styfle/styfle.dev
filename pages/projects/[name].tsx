@@ -41,7 +41,7 @@ export default function Project(props: GitHubProject) {
       <div itemProp="description">{description}</div>
       <a href={`/projects/${name}`} hidden></a>
       <Link href="/projects">
-        <a>&laquo; Back to projects</a>
+        <a className="green-link">&laquo; Back to projects</a>
       </Link>
   </Layout>);
 }
