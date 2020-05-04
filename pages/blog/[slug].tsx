@@ -53,9 +53,9 @@ export default function Post(props: PostProps) {
         <h1 itemProp="name headline">
           {title}
         </h1>
-        <p>
-          <time dateTime={date} itemProp="datePublished">
-            {new Date(date).toDateString()}
+        <p style={{textAlign: 'center', fontSize: '0.8em', lineHeight: '1'}}>
+          Published <time dateTime={date} itemProp="datePublished">
+            {new Date(date)}
           </time>
         </p>
       </header>
