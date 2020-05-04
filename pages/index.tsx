@@ -85,7 +85,11 @@ export default function Home() {
       `}</style>
       <div className="main-content">
         <div className="avatar">
-          <img alt="styfle" src="/styfle-ceriously.png" />
+          <picture>
+            <source srcSet="/styfle-ceriously.webp" type="image/webp" />
+            <source srcSet="/styfle-ceriously.png" type="image/png" />
+            <img alt="styfle" src="/styfle-ceriously.png" />
+          </picture>
         </div>
         <p>
           My name is Steven and I'm a{' '}
