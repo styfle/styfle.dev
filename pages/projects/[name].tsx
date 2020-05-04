@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout'
 import { getProjects, GitHubProject } from '../../utils/github';
+import { formatDate } from '../../utils/date';
 
 export const getStaticPaths = async () => ({
   paths: (await getProjects()).map(p => `/projects/${p.name}`),
@@ -32,7 +32,7 @@ export default function Project(props: GitHubProject) {
         </h1>
         <p>
           Created: <time dateTime={created_at} itemProp="created_at">
-            {new Date(created_at).toDateString()}
+            {formatDate(created_at)}
           </time>
         </p>
         <p>

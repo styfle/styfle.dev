@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout'
 import { getPosts } from '../../utils/posts';
+import { formatDate } from '../../utils/date';
 
 interface PostProps {
   slug: string;
@@ -54,8 +55,8 @@ export default function Post(props: PostProps) {
           {title}
         </h1>
         <p style={{textAlign: 'center', fontSize: '0.8em', lineHeight: '1'}}>
-          Published <time dateTime={date} itemProp="datePublished">
-            {new Date(date)}
+          <time dateTime={date} itemProp="datePublished">
+            {formatDate(date)}
           </time>
         </p>
       </header>

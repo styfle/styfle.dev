@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import Layout from '../../components/Layout'
 import { getProjects, GitHubProject } from '../../utils/github';
+import { formatDate } from '../../utils/date';
 
 export async function getStaticProps() {
   const projects = await getProjects();
@@ -53,7 +53,7 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
           <img src={og_image_url || `https://via.placeholder.com/640x320?text=${name}`} width="100%" />
             <h2 className="green-link">{name}</h2>
             <time dateTime={created_at} itemProp="created_at" >
-              {new Date(created_at).toDateString()}
+              {formatDate(created_at)}
             </time>
             <div itemProp="description">{description}</div>
           </a>     

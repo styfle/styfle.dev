@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout'
 import { getPosts, BlogPost } from '../../utils/posts';
 import marked from 'marked';
+import { formatDate } from '../../utils/date';
 
 export async function getStaticProps() {
   const posts = await getPosts();
@@ -25,7 +26,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
                 dateTime={date}
                 itemProp="datePublished"
               >
-                {new Date(date).toDateString()}
+                {formatDate(date)}
               </time>
             </p>
           <div
