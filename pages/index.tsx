@@ -16,18 +16,6 @@ export default function Home() {
           margin: 60px auto;
         }
 
-        .avatar img {
-          border-radius: 9999px;
-          height: 100%;
-          position: relative;
-          width: 100%;
-          z-index: 2;
-        }
-
-        .avatar:hover img {
-          border-radius: 9999px;
-        }
-
         @keyframes cycle-colors {
           0% {
             border-color: rgba(0, 100%, 50%);
