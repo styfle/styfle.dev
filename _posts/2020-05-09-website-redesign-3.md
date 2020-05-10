@@ -1,5 +1,5 @@
 ---
-slug: 'website-redesign-3.0'
+slug: 'website-redesign-3'
 title: 'Website Redesign 3.0'
 date: '2020-05-10T02:48:32.344Z'
 ---
