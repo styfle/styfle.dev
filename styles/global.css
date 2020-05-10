@@ -30,7 +30,7 @@ h2, h3, h4 {
   margin-top: 1.5em;
 }
 
-a.green-link, div.main-content a {
+a.green-link, div.main-content a, article a {
   cursor: pointer;
   color: var(--green);
   text-decoration: none;
@@ -38,7 +38,7 @@ a.green-link, div.main-content a {
   border-bottom: 1px solid transparent;
 }
 
-a.green-link:hover, div.main-content a:hover {
+a.green-link:hover, div.main-content a:hover, article a:hover {
   border-bottom: 1px solid var(--green);
 }
 
