@@ -50,7 +50,16 @@ export default function Post(props: PostProps) {
       <article>
         <header>
           <Head>
-            <link href="/nord.css" rel="stylesheet"></link>
+            <link
+              href="/themes/nord.css"
+              rel="stylesheet"
+              media="(prefers-color-scheme: dark)"
+            ></link>
+            <link
+              href="/themes/github.css"
+              rel="stylesheet"
+              media="(prefers-color-scheme: light)"
+            ></link>
           </Head>
           <h1 itemProp="name headline">{title}</h1>
           <p style={{ textAlign: 'center', fontSize: '0.8em', lineHeight: '1' }}>
