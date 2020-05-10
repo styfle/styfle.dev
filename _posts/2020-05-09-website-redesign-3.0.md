@@ -4,8 +4,7 @@ title: 'Website Redesign 3.0'
 date: '2020-05-10T02:48:32.344Z'
 ---
 
-It's been a few years, well [5 years](./website-redesign-2-0), since the last time I redesigned my website and roughly 2 years since I wrote a blog post, excluding work related [posts](https://vercel.com/blog/social-og-image-cards-as-a-service). 
-
+It's been a few years, well [5 years](./website-redesign-2-0), since the last time I redesigned my website and roughly 2 years since my last blog post, excluding work related [posts](https://vercel.com/blog/social-og-image-cards-as-a-service). 
 
 ## History
 
@@ -33,19 +32,23 @@ Before I could rewrite my website from scratch, I made a few goals:
 
 I decided to use [Next.js](https://nextjs.org) because of a recent [SSG feature](https://nextjs.org/blog/next-9-3#next-gen-static-site-generation-ssg-support) that feels like SSR but it renders pages at build time. This allowed me to check off number 1 and 2 from the list because I could use TypeScript with React and ensure fast page loads because the generated pages would be static HTML. Next.js also hands [client-side transitions](https://nextjs.org/docs/api-reference/next/link) which avoids a complete reload when navigating between pages.
 
-For number 3, I utilized Next.js to fetch my projects at build time from the [GitHub REST API](https://developer.github.com/v3/repos/#list-repositories-for-the-authenticated-user) usinng a personal access token. I didn't want to show private or archived repositories so those are filtered out in the query.
+For number 3, I utilized Next.js to fetch my projects at build time from the [GitHub REST API](https://developer.github.com/v3/repos/#list-repositories-for-the-authenticated-user) using a personal access token. I didn't want to show private or archived repositories so those are filtered out in the query.
 
 I implemented support for Dark Mode and Light Mode by using the CSS media query `prefers-color-scheme`. It looks something like this:
 
 ```html
-<link href="dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)"></link>
-<link href="light.css" rel="stylesheet" media="(prefers-color-scheme: light)"></link>
+<link href="dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet"></link>
+<link href="light.css" media="(prefers-color-scheme: light)" rel="stylesheet"></link>
 ```
 
 The beauty here is that this media query respects the user's system preference so enabling [Appearance Auto](https://support.apple.com/en-us/HT208976) in macOS Catalina will use the light appearance during the day, and the dark appearance at night. No more burning your eyes out of their sockets.
 
-In order to implement Markdown blog post authoring, I reached for [marked](https://github.com/markedjs/marked), a project I help maintain. And, you guessed it, Next.js [dynamic route segments](https://nextjs.org/docs/routing/introduction#dynamic-route-segments). Is there anything Next.js can't do?
+In order to implement Markdown blog post authoring, I reached for [Marked](https://github.com/markedjs/marked), a project I help maintain that parses markdown and converts it to HTML. And, as you may have guessed, I used Next.js [dynamic route segments](https://nextjs.org/docs/routing/introduction#dynamic-route-segments) to dynamically generate a page for each blog post. Is there anything Next.js can't do?
 
-The domain was easy. I actually purchased [styfle.dev](https://twitter.com/styfle/status/1101238620982308864) a year ago because `.dev` is the new hotness. [Vercel](https://vercel.com/domains) makes it really easy to purchase a domain and assign it to a project.
+The domain was easy. I actually purchased [styfle.dev](https://twitter.com/styfle/status/1101238620982308864) a year ago because `.dev` is the new hotness. [Vercel](https://vercel.com/domains) makes it really easy to purchase a domain and assign it to a project in seconds.
 
 Which brings me to my last step, deployment. I set up [Vercel GitHub Integration](https://vercel.com/github) with a few clicks so that each time I `git push` to my [repository](https://github.com/styfle/styfle.dev), a new deployment is created. The best part here is that Vercel will deploy Pull Requests to a Preview URL and even take screenshots of the modified pages using the [Deploy Summary Integration](https://vercel.com/integrations/deploy-summary). For example, see [PR 13](https://github.com/styfle/styfle.dev/pull/13).
+
+## Conclusion
+
+Overall, I'm happy with the new design and productivity boost. Perhaps I'll start blogging again. If you want to see the source code for my website, you can find it on [GitHub](https://github.com/styfle/styfle.dev).
