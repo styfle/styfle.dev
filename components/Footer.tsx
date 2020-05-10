@@ -1,12 +1,6 @@
 const Footer = () => (
   <footer>
     <style jsx>{`
-      footer {
-        background: #151815;
-        height: 10em;
-        margin-top: 2em;
-      }
-
       .flex {
         display: flex;
         justify-content: space-between;
@@ -23,7 +17,7 @@ const Footer = () => (
       a {
         margin: 0 0.5vw;
         text-decoration: none;
-        color: white;
+        color: inherit;
       }
 
       a:hover {
@@ -136,7 +130,7 @@ const Footer = () => (
           </a>
         </div>
         <div>
-          <a href="https://github.com/styfle/styfle.dev">styfle.dev</a> &copy;{' '}
+          <a href="https://github.com/styfle/styfle.dev">styfle.dev</a>&copy;{' '}
           {new Date().getFullYear()}
         </div>
       </div>

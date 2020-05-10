@@ -4,9 +4,6 @@ body {
   font-size: 17px;
   line-height: 1.65;
   text-rendering: optimizeSpeed;
-
-  background: #222;
-  color: #ffff;
 }
 
 :root {
@@ -16,6 +13,13 @@ body {
 .container {
   max-width: 720px;
   margin: 0 auto;
+}
+
+nav {
+  background: #08634a;
+  text-align: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -72,16 +76,14 @@ code, pre {
 */
 
 p > code {
-  background: #2e3440;
-  color: #99b285;
-  padding: 0 5px;
+  background: rgba(27,31,35,0.05);
+  padding: 2px 5px;
 }
 
 blockquote {
   margin: 1.6em 0;
   padding: 5px 24px;
-  background: rgba(0,0,0, 0.5);
-  color: #55796b;
+  background: rgba(0,0,0, 0.2);
 }
 
 input, button, textarea
@@ -140,4 +142,46 @@ hr {
   border: none;
   border-bottom: 1px solid #2d2f2d;
   margin: 2em auto;
+}
+
+footer {
+  color: black;
+  background: #f5f5f5;
+  height: 10em;
+  margin-top: 2em;
+}
+
+main {
+  min-height: calc(100vh - 250px);
+}
+
+@media (prefers-color-scheme: dark) {
+  body   {
+    background: #222;
+    color: #fff;
+  }
+
+  nav {
+    background: #184534;
+  }
+
+  footer {
+    color: #AAA;
+    background: #151815;
+  }
+
+  p > code {
+    background: #2e3440;
+    color: #99b285;
+    padding: 0 5px;
+  }
+
+  blockquote {
+    background: rgba(0,0,0, 0.5);
+    color: #55796b;
+  }
+
+  article img {
+    filter: brightness(0.8);
+  }
 }
