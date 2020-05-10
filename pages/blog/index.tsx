@@ -14,6 +14,20 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
   return (
     <Layout title="Blog">
       <h1>Blog</h1>
+      <picture>
+        <source
+          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589074697/blog/simpsons-any-key.webp"
+          type="image/webp"
+        />
+        <source
+          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589074697/blog/simpsons-any-key.jpg"
+          type="image/jpeg"
+        />
+        <img
+          alt="Simpsons Any Key"
+          src="https://res.cloudinary.com/ceriously/image/upload/v1589074697/blog/simpsons-any-key.jpg"
+        />
+      </picture>
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>

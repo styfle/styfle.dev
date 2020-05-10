@@ -3,45 +3,47 @@ import Layout from '../components/Layout';
 export default function Contact() {
   return (
     <Layout title="Contact">
-      <div>
-        <style jsx>{`
-          label {
-            display: block;
-            margin-top: 20px;
-          }
-          label span {
-            display: inline-block;
-            width: 75px;
-            text-align: right;
-            margin: 5px 20px 0 0;
-            vertical-align: top;
-          }
-          input,
-          textarea {
-            color: white;
-            background: black;
-          }
-          textarea {
-            height: 50px;
-            width: 300px;
-          }
-        `}</style>
-        <h1>Contact Me</h1>
-        <form method="post" target="/api/email">
-          <label>
-            <span>Name:</span>
-            <input type="text" name="name" placeholder="Jane Doe" />
-          </label>
-          <label>
-            <span>Email:</span>
-            <input type="email" name="email" placeholder="foo@example.com" />
-          </label>
-          <label>
-            <span>Message:</span>
-            <textarea name="message" placeholder="You are awesome!"></textarea>
-          </label>
-        </form>
-      </div>
+      <h1>First Contact 🖖</h1>
+      <picture>
+        <source
+          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589072884/blog/star-trek-kirk.webp"
+          type="image/webp"
+        />
+        <source
+          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589072884/blog/star-trek-kirk.jpg"
+          type="image/jpeg"
+        />
+        <img
+          alt="Star Trek Kirk"
+          src="https://res.cloudinary.com/ceriously/image/upload/v1589072884/blog/star-trek-kirk.jpg"
+        />
+      </picture>
+      <p>Hey thanks for reaching out! You can contact me in the following ways:</p>
+      <ul>
+        <li>
+          Public Message -{' '}
+          <a className="green-link" href="https://twitter.com/styfle">
+            Tweet
+          </a>{' '}
+          or{' '}
+          <a className="green-link" href="https://github.com/styfle/styfle.dev/issues">
+            create an issue
+          </a>
+          .
+        </li>
+        <li>
+          Private Message - Direct Message on{' '}
+          <a className="green-link" href="https://twitter.com/styfle">
+            Twitter
+          </a>{' '}
+          or{' '}
+          <a className="green-link" href="https://keybase.io/styfle">
+            Keybase
+          </a>
+          .
+        </li>
+      </ul>
+      <p>You can also find my email address in my git commits.</p>
     </Layout>
   );
 }
