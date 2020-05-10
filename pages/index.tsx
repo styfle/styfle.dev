@@ -16,24 +16,6 @@ export default function Home() {
           margin: 60px auto;
         }
 
-        @keyframes cycle-colors {
-          0% {
-            border-color: rgba(0, 100%, 50%);
-          }
-          25% {
-            border-color: hsl(90, 100%, 50%);
-          }
-          50% {
-            border-color: hsl(180, 100%, 50%);
-          }
-          75% {
-            border-color: hsl(270, 100%, 50%);
-          }
-          100% {
-            border-color: hsl(360, 100%, 50%);
-          }
-        }
-
         @keyframes pulse {
           to {
             opacity: 0;
@@ -43,8 +25,8 @@ export default function Home() {
 
         .avatar::before,
         .avatar::after {
-          animation: pulse 2s linear infinite;
-          border: #fff solid 8px;
+          animation: pulse 2s ease-out infinite;
+          border: var(--green) solid 8px;
           border-radius: 9999px;
           box-sizing: border-box;
           content: ' ';
@@ -64,7 +46,7 @@ export default function Home() {
 
         .avatar:hover::before,
         .avatar:hover::after {
-          animation: pulse 1s linear infinite, cycle-colors 6s linear infinite;
+          animation: pulse 1s linear infinite;
         }
 
         .avatar:hover::after {
