@@ -75,7 +75,7 @@ code, pre {
 }
 */
 
-p > code {
+p > code, li > code {
   background: rgba(27,31,35,0.05);
   padding: 2px 5px;
 }
@@ -170,7 +170,7 @@ main {
     background: #151815;
   }
 
-  p > code {
+  p > code, li > code {
     background: #2e3440;
     color: #99b285;
     padding: 0 5px;
