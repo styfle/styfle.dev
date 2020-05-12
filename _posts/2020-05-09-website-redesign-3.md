@@ -4,7 +4,7 @@ title: 'Website Redesign 3.0'
 date: '2020-05-10T02:48:32.344Z'
 ---
 
-It's been a few years, well [5 years](./website-redesign-2-0), since the last time I redesigned my website and roughly 2 years since my last blog post, excluding work related [posts](https://vercel.com/blog/social-og-image-cards-as-a-service). 
+It's been a few years, well [5 years](/blog/website-redesign-2-0), since the last time I redesigned my website and roughly 2 years since my last blog post, excluding work related [posts](https://vercel.com/blog/social-og-image-cards-as-a-service). 
 
 ## History
 
