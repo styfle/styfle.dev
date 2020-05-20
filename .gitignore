@@ -2,4 +2,5 @@
 node_modules
 repos.json
 .now
-.env
+.vercel
+.env*
