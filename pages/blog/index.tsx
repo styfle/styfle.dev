@@ -8,14 +8,14 @@ import { resolve, join } from 'path';
 import fs from 'fs';
 const { readFile, readdir } = fs.promises;
 
-export interface BlogPost {
+interface BlogPost {
   slug: string;
   title: string;
   date: string;
   content: string;
 }
 
-export async function getPosts(): Promise<BlogPost[]> {
+async function getPosts(): Promise<BlogPost[]> {
   const postsDirectory = resolve(process.cwd(), '..', '..', '_posts');
   const postFiles = await readdir(postsDirectory);
 
