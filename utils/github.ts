@@ -84,6 +84,7 @@ export interface Repo {
 
 export interface GitHubProject {
   name: string;
+  full_name: string;
   description: string;
   homepage: string;
   html_url: string;
@@ -118,7 +119,14 @@ async function getAllRepos(): Promise<Repo[]> {
 
 export async function getProjects(): Promise<GitHubProject[]> {
   const repos = await getAllRepos();
-  const allowList = new Set(['The-Harvest-Club', 'ypha', 'dice', 'wedding']);
+  const allowList = new Set([
+    'Basic-Wars',
+    'The-Harvest-Club',
+    'typed-tmpl',
+    'ypha',
+    'dice',
+    'wedding',
+  ]);
   const blockList = new Set([
     'dotnet-api-example',
     'tsc-example',
@@ -139,6 +147,13 @@ export async function getProjects(): Promise<GitHubProject[]> {
     }
   });
   return projects;
+}
+
+export async function getRawFile({ full_name }: GitHubProject, filename: string) {
+  const url = `https://raw.githubusercontent.com/${full_name}/master/${filename}`;
+  const res = await fetch(url);
+  const text = await res.text();
+  return text;
 }
 
 const mapRepoToImage: Record<string, string> = {
