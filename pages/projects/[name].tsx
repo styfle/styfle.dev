@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { getProjects, GitHubProject, getRawFile } from '../../utils/github';
-import { formatDate } from '../../utils/date';
 import { markdownToHtml } from '../../utils/markdown';
 
 interface Props {
@@ -32,8 +31,9 @@ export async function getStaticProps({
 }
 
 export default function Project({ project, readme }: Props) {
-  const { name, full_name } = project;
-  const html = markdownToHtml(readme);
+  const { name, html_url } = project;
+  const baseUrl = `${html_url}/blob/master/`;
+  const html = markdownToHtml(readme, baseUrl);
   return (
     <Layout title={name}>
       <div
@@ -47,7 +47,7 @@ export default function Project({ project, readme }: Props) {
         <Link href="/projects">
           <a className="green-link">&laquo; All projects</a>
         </Link>
-        <a className="green-link" href={`https://github.com/${full_name}`}>
+        <a className="green-link" href={html_url}>
           Edit this page &raquo;
         </a>
       </div>
