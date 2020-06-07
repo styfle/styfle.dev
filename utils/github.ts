@@ -126,6 +126,7 @@ export async function getProjects(): Promise<GitHubProject[]> {
     'ypha',
     'dice',
     'wedding',
+    'dad-jokes',
   ]);
   const blockList = new Set([
     'dotnet-api-example',
@@ -161,6 +162,8 @@ const mapRepoToImage: Record<string, string> = {
     'https://repository-images.githubusercontent.com/259120667/41f11080-8d7c-11ea-9ff3-10d5575cbc70',
   'cancel-workflow-action':
     'https://repository-images.githubusercontent.com/237695528/790bf580-8d6d-11ea-8524-57512d577f22',
+  'dad-jokes':
+    'https://repository-images.githubusercontent.com/235868806/1ec2ff00-a8ee-11ea-8c48-2a973a5f0c80',
   'rediscovering-neverland':
     'https://repository-images.githubusercontent.com/230126718/4fe36900-8d5d-11ea-979a-a21cd8131656',
   'tls-check':
