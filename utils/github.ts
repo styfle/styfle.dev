@@ -107,7 +107,7 @@ async function getAllRepos(): Promise<Repo[]> {
   } else {
     console.log('Fetching all repos so this might take a second...');
     repos = await octokit.paginate(octokit.repos.listForAuthenticatedUser, {
-      visibility: 'public',
+      visibility: 'all',
       affiliation: 'owner',
       sort: 'created',
       per_page: 100,
@@ -166,6 +166,8 @@ const mapRepoToImage: Record<string, string> = {
     'https://repository-images.githubusercontent.com/235868806/1ec2ff00-a8ee-11ea-8c48-2a973a5f0c80',
   'rediscovering-neverland':
     'https://repository-images.githubusercontent.com/230126718/4fe36900-8d5d-11ea-979a-a21cd8131656',
+  ypha:
+    'https://repository-images.githubusercontent.com/165961570/39b3e700-ae8b-11ea-8343-3167539fa5cf',
   'tls-check':
     'https://repository-images.githubusercontent.com/144043735/a061c300-8d6b-11ea-80e2-d7099d7917fe',
   'styfle.dev':
