@@ -4,7 +4,7 @@ const { GA_ID } = process.env;
 export default class extends Document {
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           {GA_ID ? (
             <>
