@@ -32,7 +32,7 @@ export async function getStaticProps({
 
 export default function Project({ project, readme }: Props) {
   const { name, html_url } = project;
-  const baseUrl = `${html_url}/blob/master/`;
+  const baseUrl = `${html_url}/blob/main/`;
   const html = markdownToHtml(readme, baseUrl);
   return (
     <Layout title={name}>

@@ -151,7 +151,7 @@ export async function getProjects(): Promise<GitHubProject[]> {
 }
 
 export async function getRawFile({ full_name }: GitHubProject, filename: string) {
-  const url = `https://raw.githubusercontent.com/${full_name}/master/${filename}`;
+  const url = `https://raw.githubusercontent.com/${full_name}/main/${filename}`;
   const res = await fetch(url);
   const text = await res.text();
   return text;
