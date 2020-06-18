@@ -145,6 +145,8 @@ export async function getProjects(): Promise<GitHubProject[]> {
     }
     if (!r.homepage || r.name === 'styfle.dev') {
       r.homepage = r.html_url;
+    } else if (r.homepage.startsWith('https://styfle.dev')) {
+      r.homepage = r.homepage.slice(18);
     }
   });
   return projects;
