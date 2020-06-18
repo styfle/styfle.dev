@@ -145,13 +145,15 @@ export async function getProjects(): Promise<GitHubProject[]> {
     }
     if (!r.homepage || r.name === 'styfle.dev') {
       r.homepage = r.html_url;
+    } else if (r.homepage.startsWith('https://styfle.dev')) {
+      r.homepage = r.homepage.slice(18);
     }
   });
   return projects;
 }
 
 export async function getRawFile({ full_name }: GitHubProject, filename: string) {
-  const url = `https://raw.githubusercontent.com/${full_name}/master/${filename}`;
+  const url = `https://raw.githubusercontent.com/${full_name}/main/${filename}`;
   const res = await fetch(url);
   const text = await res.text();
   return text;
