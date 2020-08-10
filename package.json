@@ -26,6 +26,6 @@
     "typescript": "3.9.7"
   },
   "resolutions": {
-    "webpack": "5.0.0-beta.22"
+    "webpack": "5.0.0-beta.25"
   }
 }
