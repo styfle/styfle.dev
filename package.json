@@ -11,7 +11,7 @@
   "dependencies": {
     "@octokit/rest": "18.0.5",
     "gray-matter": "4.0.2",
-    "highlight.js": "10.1.2",
+    "highlight.js": "10.2.0",
     "marked": "1.1.1",
     "next": "9.5.3",
     "react": "16.13.1",
