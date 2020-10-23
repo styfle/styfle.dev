@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Layout from '../components/Layout';
 
 // Avatar animation by https://codepen.io/blixt/pen/ZGwwKW
@@ -55,11 +56,7 @@ export default function Home() {
       `}</style>
       <div className="main-content">
         <div className="avatar">
-          <picture>
-            <source srcSet="/styfle-ceriously.webp" type="image/webp" />
-            <source srcSet="/styfle-ceriously.png" type="image/png" />
-            <img alt="styfle" src="/styfle-ceriously.png" />
-          </picture>
+          <Image src="/blog/ceriously-styfle.png" width={257} height={243} priority />
         </div>
         <p>
           My name is Steven and I'm a{' '}

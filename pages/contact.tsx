@@ -1,23 +1,11 @@
+import Image from 'next/image';
 import Layout from '../components/Layout';
 
 export default function Contact() {
   return (
     <Layout title="Contact">
       <h1>First Contact 🖖</h1>
-      <picture>
-        <source
-          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589072884/blog/star-trek-kirk.webp"
-          type="image/webp"
-        />
-        <source
-          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589072884/blog/star-trek-kirk.jpg"
-          type="image/jpeg"
-        />
-        <img
-          alt="Star Trek Kirk"
-          src="https://res.cloudinary.com/ceriously/image/upload/v1589072884/blog/star-trek-kirk.jpg"
-        />
-      </picture>
+      <Image src="/blog/star-trek-kirk.jpg" width={800} height={400} priority />
       <p>Hey thanks for reaching out! You can contact me in the following ways:</p>
       <ul>
         <li>

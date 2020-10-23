@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '../../components/Layout';
 import { getPosts, BlogPost } from '../../utils/posts';
 import marked from 'marked';
@@ -14,20 +15,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
   return (
     <Layout title="Blog">
       <h1>Blog</h1>
-      <picture>
-        <source
-          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589074697/blog/simpsons-any-key.webp"
-          type="image/webp"
-        />
-        <source
-          srcSet="https://res.cloudinary.com/ceriously/image/upload/v1589074697/blog/simpsons-any-key.jpg"
-          type="image/jpeg"
-        />
-        <img
-          alt="Simpsons Any Key"
-          src="https://res.cloudinary.com/ceriously/image/upload/v1589074697/blog/simpsons-any-key.jpg"
-        />
-      </picture>
+      <Image src="/blog/simpsons-any-key.jpg" width={714} height={416} priority />
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>
