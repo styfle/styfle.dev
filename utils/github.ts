@@ -143,9 +143,10 @@ export async function getProjects(): Promise<GitHubProject[]> {
     if (!r.og_image_url) {
       if (existsSync(`${process.cwd()}/public/images/projects/${r.name}.png`)) {
         r.og_image_url = `/images/projects/${r.name}.png`;
-      }
-      if (existsSync(`${process.cwd()}/public/images/projects/${r.name}.jpg`)) {
+      } else if (existsSync(`${process.cwd()}/public/images/projects/${r.name}.jpg`)) {
         r.og_image_url = `/images/projects/${r.name}.jpg`;
+      } else {
+        r.og_image_url = `https://via.placeholder.com/1280x640/787/FFF.png?text=${r.name}`;
       }
     }
     if (!r.homepage || r.name === 'styfle.dev') {
