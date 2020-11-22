@@ -139,9 +139,15 @@ export async function getProjects(): Promise<GitHubProject[]> {
       allowList.has(r.name) ||
       (!r.fork && !r.private && !r.disabled && !r.archived && !blockList.has(r.name)),
   );
-  projects.forEach(r => {
-    if (r.name in mapRepoToImage) {
-      r.og_image_url = mapRepoToImage[r.name];
+  projects.forEach(async r => {
+    if (!r.og_image_url) {
+      if (existsSync(`${process.cwd()}/public/images/projects/${r.name}.png`)) {
+        r.og_image_url = `/images/projects/${r.name}.png`;
+      } else if (existsSync(`${process.cwd()}/public/images/projects/${r.name}.jpg`)) {
+        r.og_image_url = `/images/projects/${r.name}.jpg`;
+      } else {
+        r.og_image_url = `https://via.placeholder.com/1280x640/787/FFF.png?text=${r.name}`;
+      }
     }
     if (!r.homepage || r.name === 'styfle.dev') {
       r.homepage = r.html_url;
@@ -158,46 +164,3 @@ export async function getRawFile({ full_name }: GitHubProject, filename: string)
   const text = await res.text();
   return text;
 }
-
-const mapRepoToImage: Record<string, string> = {
-  doorbell:
-    'https://repository-images.githubusercontent.com/259120667/41f11080-8d7c-11ea-9ff3-10d5575cbc70',
-  'cancel-workflow-action':
-    'https://repository-images.githubusercontent.com/237695528/790bf580-8d6d-11ea-8524-57512d577f22',
-  'dad-jokes':
-    'https://repository-images.githubusercontent.com/235868806/1ec2ff00-a8ee-11ea-8c48-2a973a5f0c80',
-  'rediscovering-neverland':
-    'https://repository-images.githubusercontent.com/230126718/4fe36900-8d5d-11ea-979a-a21cd8131656',
-  ypha:
-    'https://repository-images.githubusercontent.com/165961570/39b3e700-ae8b-11ea-8343-3167539fa5cf',
-  'tls-check':
-    'https://repository-images.githubusercontent.com/144043735/a061c300-8d6b-11ea-80e2-d7099d7917fe',
-  'styfle.dev':
-    'https://repository-images.githubusercontent.com/173218733/50cdc800-8d68-11ea-88d1-59b2ff1cb179',
-  'awesome-desktop-js':
-    'https://repository-images.githubusercontent.com/136332742/ed459980-8d6b-11ea-83f2-3a03d84b6df4',
-  packagephobia:
-    'https://repository-images.githubusercontent.com/125946482/c4260880-8d6d-11ea-9491-b75c56b3c3e1',
-  'awesome-online-ide':
-    'https://repository-images.githubusercontent.com/101212460/9c2fa880-8d5f-11ea-9d4a-3e5fac3dad55',
-  'breaking-changes-web':
-    'https://repository-images.githubusercontent.com/124409296/3fd08700-8d67-11ea-94a3-458a6c35de39',
-  dotfiles:
-    'https://repository-images.githubusercontent.com/84888943/fcd2db80-8d87-11ea-8329-c43942d7816f',
-  geoslack:
-    'https://repository-images.githubusercontent.com/97144945/d30abc00-8d69-11ea-8b1f-b8ff088e165c',
-  magnemite:
-    'https://repository-images.githubusercontent.com/72372310/33a8f180-8d88-11ea-841f-3ada4013047f',
-  exeggcute:
-    'https://repository-images.githubusercontent.com/63953497/a8b60000-8d63-11ea-8f4d-1f197c326fb4',
-  'react-server-example-tsx':
-    'https://repository-images.githubusercontent.com/60888990/e581f700-8d63-11ea-862f-1d468aae7171',
-  copee:
-    'https://repository-images.githubusercontent.com/39547867/182bef80-8d64-11ea-98af-8709c8d784bf',
-  'typed-tmpl':
-    'https://repository-images.githubusercontent.com/45296077/415e7700-8d88-11ea-985d-db12c77c3470',
-  'The-Harvest-Club':
-    'https://repository-images.githubusercontent.com/3373441/23334f80-8d65-11ea-86da-962d559821e8',
-  'Basic-Wars':
-    'https://repository-images.githubusercontent.com/2135555/b077a380-8d67-11ea-9c2a-75106021354c',
-};
