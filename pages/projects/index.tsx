@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Layout from '../../components/Layout';
 import { getProjects, GitHubProject } from '../../utils/github';
 import { formatDate } from '../../utils/date';
@@ -51,11 +52,12 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
         {projects.map(({ name, description, homepage, created_at, og_image_url }) => (
           <section key={name}>
             <a href={homepage}>
-              <img
+              <Image
                 src={
                   og_image_url || `https://via.placeholder.com/1280x640/787/FFF.png?text=${name}`
                 }
-                width="100%"
+                width={640}
+                height={320}
               />
               <h2 className="green-link">{name}</h2>
               <time dateTime={created_at} itemProp="created_at">
