@@ -9,21 +9,23 @@
     "git-pre-commit": "yarn prettier && git add -A"
   },
   "dependencies": {
-    "@octokit/rest": "18.0.8",
+    "@octokit/rest": "18.0.9",
     "gray-matter": "4.0.2",
     "highlight.js": "10.3.2",
     "marked": "1.2.2",
+    "highlight.js": "10.4.0",
+    "marked": "1.2.5",
     "next": "10.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@types/highlight.js": "9.12.4",
-    "@types/marked": "1.1.0",
+    "@types/highlight.js": "10.1.0",
+    "@types/marked": "1.2.0",
     "@types/node": "14",
-    "@types/react": "16.9.55",
-    "prettier": "2.1.2",
-    "typescript": "4.0.5"
+    "@types/react": "16.9.56",
+    "prettier": "2.2.0",
+    "typescript": "4.1.2"
   },
   "resolutions": {
     "webpack": "webpack@5.6.0"
