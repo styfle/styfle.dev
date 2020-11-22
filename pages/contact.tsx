@@ -6,7 +6,7 @@ export default function Contact() {
     <Layout title="Contact">
       <h1>First Contact 🖖</h1>
       <Image
-        src="/blog/star-trek-kirk.jpg"
+        src="/images/blog/star-trek-kirk.jpg"
         width="800"
         height="400"
         layout="responsive"

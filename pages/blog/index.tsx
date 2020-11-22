@@ -16,7 +16,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
     <Layout title="Blog">
       <h1>Blog</h1>
       <Image
-        src="/blog/simpsons-any-key.jpg"
+        src="/images/blog/simpsons-any-key.jpg"
         width="710"
         height="415"
         layout="responsive"

@@ -57,7 +57,7 @@ export default function Home() {
       <div className="main-content">
         <div className="avatar">
           <Image
-            src="/blog/styfle-ceriously.png"
+            src="/images/blog/styfle-ceriously.png"
             width="200"
             height="200"
             layout="fixed"
