@@ -52,7 +52,9 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
           <section key={name}>
             <a href={homepage}>
               <img
-                src={og_image_url || `https://via.placeholder.com/640x320?text=${name}`}
+                src={
+                  og_image_url || `https://via.placeholder.com/1280x640/787/FFF.png?text=${name}`
+                }
                 width="100%"
               />
               <h2 className="green-link">{name}</h2>
