@@ -41,11 +41,12 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
         }
 
         section > a {
-          all: unset;
+          color: unset;
+          text-decoration: unset;
         }
 
         section > a:hover {
-          all: unset;
+          color: unset;
         }
       `}</style>
       <div className="grid">
