@@ -37,7 +37,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
           <div
             className="post-content e-content"
             itemProp="articleBody"
-            dangerouslySetInnerHTML={{ __html: marked(content.split('\n')[1]) }}
+            dangerouslySetInnerHTML={{ __html: marked(content.split('\n')[1] || '') }}
           ></div>
           <Link href="/blog/[slug]" as={`/blog/${slug}`}>
             <a className="green-link">Read more...</a>

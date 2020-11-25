@@ -8,6 +8,7 @@
     ],
     "skipLibCheck": true,
     "strict": true,
+		"noUncheckedIndexedAccess": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
