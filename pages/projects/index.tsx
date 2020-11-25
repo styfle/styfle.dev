@@ -20,16 +20,27 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
         }
 
         section {
-          border: 2px solid #2d2f2d;
+          border-color: rgba(185, 190, 180, 0.2);
+          border-width: 2px;
+          border-style: solid;
           border-radius: 0.5rem;
           padding: 1rem;
-          transition: box-shadow 200ms;
-          box-shadow: none;
+          transition-duration: 100ms;
+          transition-property: border-color, background;
         }
 
         section:hover {
           cursor: pointer;
-          box-shadow: 0 0 5px 2px rgba(155, 191, 158, 0.5);
+          background: rgba(185, 190, 180, 0.3);
+        }
+
+        @media (prefers-color-scheme: dark) {
+          section {
+            border-color: rgba(45, 47, 45, 1);
+          }
+          section:hover {
+            background: rgba(125, 135, 125, 0.1);
+          }
         }
 
         h2 {
