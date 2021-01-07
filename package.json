@@ -9,7 +9,7 @@
     "git-pre-commit": "yarn prettier && git add -A"
   },
   "dependencies": {
-    "@octokit/rest": "18.0.9",
+    "@octokit/rest": "18.0.12",
     "gray-matter": "4.0.2",
     "highlight.js": "10.5.0",
     "marked": "1.2.7",
