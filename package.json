@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/highlight.js": "10.1.0",
-    "@types/marked": "2.0.0",
+    "@types/marked": "2.0.1",
     "@types/node": "14",
     "@types/react": "17.0.3",
     "prettier": "2.2.1",
