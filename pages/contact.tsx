@@ -37,7 +37,9 @@ export default function Contact() {
           .
         </li>
       </ul>
-      <p>You can also find my email address in my git commits.</p>
+      <p>
+        You can also send an email to me <code>@styfle.dev</code> if you're into that kind of stuff.
+      </p>
     </Layout>
   );
 }
