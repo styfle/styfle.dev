@@ -40,7 +40,7 @@ Software Shepherd implies a fast, autonomous livestock that might break if left 
 
 Why is software autonomous? Doesn't it only do what we tell it to do?
 
-Well yes, but when you have many people working on the same code with slightly different intentions distributed in many different timezones, the code doesn't remain the same. It's constantly changing one day to the next. And not just code, but upstream services that your code relies on can change or go down causing unexpected behavior.
+Well yes, but when you have many people working on the same code with slightly different intentions distributed in many different time zones, the code doesn't remain the same. It's constantly changing one day to the next. And not just code, but upstream services that your code relies on can change or go down causing unexpected behavior.
 
 Shepherd is also a title that is not usually considered prestigious. Sometimes they don't even own the sheep, they're just hired hands. They might even live with the livestock. Shepherds sometimes work in groups to keep watch and guide the sheep. They work as a team towards a common goal.
 
