@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 
 // Avatar animation by https://codepen.io/blixt/pen/ZGwwKW
@@ -66,9 +67,11 @@ export default function Home() {
         </div>
         <p>
           My name is Steven and I'm a{' '}
-          <a href="https://twitter.com/styfle/status/1083763630108217344">
-            Software <s>Engineer</s> Shepherd
-          </a>{' '}
+          <Link href="/blog/software-shepherd">
+            <a>
+              Software <s>Engineer</s> Shepherd
+            </a>
+          </Link>{' '}
           with a passion for building open source tools. I currently work for{' '}
           <a href="https://vercel.com">Vercel</a> building the best cloud deployment experience in
           the world. On the interwebz, I go by <a href="https://github.com/styfle">styfle</a>.
