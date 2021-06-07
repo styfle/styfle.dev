@@ -1,17 +1,13 @@
 import Image from 'next/image';
 import Layout from '../components/Layout';
+//@ts-ignore
+import Kirk from '../public/images/blog/star-trek-kirk.jpg';
 
 export default function Contact() {
   return (
     <Layout title="Contact">
       <h1>First Contact 🖖</h1>
-      <Image
-        src="/images/blog/star-trek-kirk.jpg"
-        width="800"
-        height="400"
-        layout="responsive"
-        alt="Star Trek Kirk"
-      />
+      <Image src={Kirk} width="800" height="400" layout="responsive" alt="Star Trek Kirk" />
       <p>Hey thanks for reaching out! You can contact me in the following ways:</p>
       <ul>
         <li>

@@ -4,6 +4,8 @@ import Layout from '../../components/Layout';
 import { getPosts, BlogPost } from '../../utils/posts';
 import marked from 'marked';
 import { formatDate } from '../../utils/date';
+//@ts-ignore
+import Simpsons from '../public/images/blog/simpsons-any-key.jpg';
 
 export async function getStaticProps() {
   const posts = await getPosts();
@@ -15,13 +17,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
   return (
     <Layout title="Blog">
       <h1>Blog</h1>
-      <Image
-        src="/images/blog/simpsons-any-key.jpg"
-        width="710"
-        height="415"
-        layout="responsive"
-        alt="Simpsons Any Key"
-      />
+      <Image src={Simpsons} width="710" height="415" layout="responsive" alt="Simpsons Any Key" />
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>
