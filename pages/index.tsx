@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+//@ts-ignore
+import Avatar from '../public/images/blog/styfle-ceriously.png';
 
 // Avatar animation by https://codepen.io/blixt/pen/ZGwwKW
 export default function Home() {
@@ -57,13 +59,7 @@ export default function Home() {
       `}</style>
       <div className="main-content">
         <div className="avatar">
-          <Image
-            src="/images/blog/styfle-ceriously.png"
-            width="200"
-            height="200"
-            layout="fixed"
-            alt="styfle"
-          />
+          <Image src={Avatar} width="200" height="200" layout="fixed" alt="styfle" />
         </div>
         <p>
           My name is Steven and I'm a{' '}
