@@ -5,7 +5,7 @@ import { getPosts, BlogPost } from '../../utils/posts';
 import marked from 'marked';
 import { formatDate } from '../../utils/date';
 //@ts-ignore
-import Simpsons from '../public/images/blog/simpsons-any-key.jpg';
+import Simpsons from '../../public/images/blog/simpsons-any-key.jpg';
 
 export async function getStaticProps() {
   const posts = await getPosts();
