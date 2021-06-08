@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Layout from '../components/Layout';
-//@ts-ignore
 import Kirk from '../public/images/blog/star-trek-kirk.jpg';
 
 export default function Contact() {

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-//@ts-ignore
 import Avatar from '../public/images/blog/styfle-ceriously.png';
 
 // Avatar animation by https://codepen.io/blixt/pen/ZGwwKW
