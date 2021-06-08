@@ -6,7 +6,14 @@ export default function Contact() {
   return (
     <Layout title="Contact">
       <h1>First Contact 🖖</h1>
-      <Image src={Kirk} width="800" height="400" layout="responsive" alt="Star Trek Kirk" />
+      <Image
+        src={Kirk}
+        placeholder="blur"
+        width="800"
+        height="400"
+        layout="responsive"
+        alt="Star Trek Kirk"
+      />
       <p>Hey thanks for reaching out! You can contact me in the following ways:</p>
       <ul>
         <li>

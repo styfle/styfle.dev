@@ -16,7 +16,14 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
   return (
     <Layout title="Blog">
       <h1>Blog</h1>
-      <Image src={Simpsons} width="710" height="415" layout="responsive" alt="Simpsons Any Key" />
+      <Image
+        src={Simpsons}
+        placeholder="blur"
+        width="710"
+        height="415"
+        layout="responsive"
+        alt="Simpsons Any Key"
+      />
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>
