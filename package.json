@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "start": "next start",
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" --write",
     "git-pre-commit": "yarn prettier && git add -A"
   },
@@ -13,7 +14,7 @@
     "gray-matter": "4.0.3",
     "highlight.js": "10.7.2",
     "marked": "2.0.7",
-    "next": "10.2.4-canary.5",
+    "next": "10.2.4-canary.6",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
