@@ -58,7 +58,14 @@ export default function Home() {
       `}</style>
       <div className="main-content">
         <div className="avatar">
-          <Image src={Avatar} width="200" height="200" layout="fixed" alt="styfle" />
+          <Image
+            src={Avatar}
+            placeholder="blur"
+            width="200"
+            height="200"
+            layout="fixed"
+            alt="styfle"
+          />
         </div>
         <p>
           My name is Steven and I'm a{' '}
