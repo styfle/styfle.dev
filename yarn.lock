@@ -59,20 +59,20 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.0.tgz#6c9eafc78c1529248f8f4d92b0799a712b6052c6"
   integrity sha512-i9YbZPN3QgfighY/1X1Pu118VUz2Fmmhd6b2n0/O8YVgGGfw0FbUYoA97k7FkpGJ+pLCFEDLUmAPPV4D1kpeFw==
 
-"@next/env@10.2.4-canary.12":
-  version "10.2.4-canary.12"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-10.2.4-canary.12.tgz#af9c6270ef5a5460d0e7c0b77c4b8ef21f9b1f41"
-  integrity sha512-9uaAZmY69XrG8vvbidvaoZvTk1pLb6wJuQXkbTR9wxwK+19rpvxi/2ysvp7bb+1qy5jh943OCQAy/AU8s11c9A==
+"@next/env@10.2.4-canary.13":
+  version "10.2.4-canary.13"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-10.2.4-canary.13.tgz#154163d38e1c68d237c1b2675a81de25d62d1ede"
+  integrity sha512-wQRaict7lbAdSu9n8lYFr6bBg3pzbrakdofx2klfcgpLXQGeqNQYtPtqGqZj4gT+m/dX5l8i2sPHv9XEEzJ1RQ==
 
-"@next/polyfill-module@10.2.4-canary.12":
-  version "10.2.4-canary.12"
-  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.2.4-canary.12.tgz#484d984b8e3239a49a6d7ca9f7bb05743499690e"
-  integrity sha512-3GnY4QrLk3sMiXvfmCbpnVjuUTyDttHspbipLY278gOfQQgWu8NtEsXBMAjeF5pBjjUImvDp1Nqo78GIusSIfA==
+"@next/polyfill-module@10.2.4-canary.13":
+  version "10.2.4-canary.13"
+  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.2.4-canary.13.tgz#73672a83542fe9ee592b30b975ed507948206076"
+  integrity sha512-l0ETjAUFwv9vKGloUmRvT9N3ozgGeFc5CJIMZQj1/WCq4z/+s94GaMT6Ruts8s/x1tY/UzsMmpakvePjKamWbQ==
 
-"@next/react-dev-overlay@10.2.4-canary.12":
-  version "10.2.4-canary.12"
-  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-10.2.4-canary.12.tgz#3294782a1c2332b6278b75bf687be85132d310b2"
-  integrity sha512-QHMkJ1vcrTvWXRQq4ElejYQQxODWbfuHVXhj2lTaHzNeOr8IgfjfnYkHJ6j5tHLegTWqM7LYu4e7bu2eH7S5FA==
+"@next/react-dev-overlay@10.2.4-canary.13":
+  version "10.2.4-canary.13"
+  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-10.2.4-canary.13.tgz#b9a8b36f5a4a8a6dac42c4758673ab5ba2dd08a3"
+  integrity sha512-HoH1wbP+Bg8PwL8qTAuEbwqPBEupxyKkpmdO0+IqpSUDKgrkmimfAEk+M05WwXo4oD7aD5xusXysv8BPkyIUnw==
   dependencies:
     "@babel/code-frame" "7.12.11"
     anser "1.4.9"
@@ -86,10 +86,10 @@
     stacktrace-parser "0.1.10"
     strip-ansi "6.0.0"
 
-"@next/react-refresh-utils@10.2.4-canary.12":
-  version "10.2.4-canary.12"
-  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.2.4-canary.12.tgz#8fd40c3b36ec5e78533e03a3e9d83bb4408299bf"
-  integrity sha512-eZKkZ6/GMnH1j3jjGim5dNRoRga+7w2lOaaRsqj+nUVlKnwR2RVV/DkIoKppYF/7OeMQo+XD4nI8MQsWBtus4Q==
+"@next/react-refresh-utils@10.2.4-canary.13":
+  version "10.2.4-canary.13"
+  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.2.4-canary.13.tgz#471570844f3415c82c0f2ee341e981f3da648546"
+  integrity sha512-0YJ+/LUj9WAs+ViVPbrOUfBRQRga5ZFAIjGb1dYImI+tanhhvgph9I28aLb3mGG9pPjXwUO89vBwlmUAUQYUsA==
 
 "@octokit/auth-token@^2.4.0":
   version "2.4.3"
@@ -1269,17 +1269,17 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next@10.2.4-canary.12:
-  version "10.2.4-canary.12"
-  resolved "https://registry.yarnpkg.com/next/-/next-10.2.4-canary.12.tgz#d1927454f9b92f9e7e17079cd10a3d57f8de0429"
-  integrity sha512-lwsORrPbgWYPK5+jb6p6JSVK4iQ5ow76ue3imzy3Dcs8kkA/CsjtNWXOSFXnxCA9uFpFx3Af/o+iXMjDQGtCNw==
+next@10.2.4-canary.13:
+  version "10.2.4-canary.13"
+  resolved "https://registry.yarnpkg.com/next/-/next-10.2.4-canary.13.tgz#d9985fbe18a836b5e63be8f9111cd193a455b6f6"
+  integrity sha512-hxMAG4MnBYbJfPA4unceT/pKVqc+9+XVPXOssZFFCYRearc/pAqllCxJIaQbz3+wkVqFOfgsymQlEwQb5vD+SQ==
   dependencies:
     "@babel/runtime" "7.12.5"
     "@hapi/accept" "5.0.2"
-    "@next/env" "10.2.4-canary.12"
-    "@next/polyfill-module" "10.2.4-canary.12"
-    "@next/react-dev-overlay" "10.2.4-canary.12"
-    "@next/react-refresh-utils" "10.2.4-canary.12"
+    "@next/env" "10.2.4-canary.13"
+    "@next/polyfill-module" "10.2.4-canary.13"
+    "@next/react-dev-overlay" "10.2.4-canary.13"
+    "@next/react-refresh-utils" "10.2.4-canary.13"
     assert "2.0.0"
     ast-types "0.13.2"
     browserify-zlib "0.2.0"
