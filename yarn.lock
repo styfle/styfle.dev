@@ -59,20 +59,25 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.0.tgz#6c9eafc78c1529248f8f4d92b0799a712b6052c6"
   integrity sha512-i9YbZPN3QgfighY/1X1Pu118VUz2Fmmhd6b2n0/O8YVgGGfw0FbUYoA97k7FkpGJ+pLCFEDLUmAPPV4D1kpeFw==
 
-"@next/env@11.0.2-canary.22":
-  version "11.0.2-canary.22"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-11.0.2-canary.22.tgz#eddc171f25be11ade7b8db7832c2c349719855f5"
-  integrity sha512-b16ZYiLSbW3qd7gzxxVTGmtrkISlbf5+S/6u/LMEhjwhDrsnB42y5E3PcShqVxNo21M3i6HbtbU0I9qhTr6CPA==
+"@napi-rs/triples@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@napi-rs/triples/-/triples-1.0.3.tgz#76d6d0c3f4d16013c61e45dfca5ff1e6c31ae53c"
+  integrity sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA==
 
-"@next/polyfill-module@11.0.2-canary.22":
-  version "11.0.2-canary.22"
-  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-11.0.2-canary.22.tgz#f24c1e88fd815d9f5f0647ae3d04b66874262884"
-  integrity sha512-0+v7eygXI9mqsmAAipDk1MBKRg0yniiZyDRJ7qfz7PqUr3Nb0pJY1XI4b//wV9WIp/APDqHeRelVh/bE/o8PcQ==
+"@next/env@11.0.2-canary.23":
+  version "11.0.2-canary.23"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-11.0.2-canary.23.tgz#407abc296f80824a33ef59f05d0aca5fcfdd8635"
+  integrity sha512-sUCIW5Z2yKD9dK6u76oakcj3yNDN5Gas0YJzW5JYRtF5YArtjmVfhrNM7znCVP2gXYvLMfiXIgGoN+ADfSp/8w==
 
-"@next/react-dev-overlay@11.0.2-canary.22":
-  version "11.0.2-canary.22"
-  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-11.0.2-canary.22.tgz#2e378b674be99e854081788c60dbeae5ae4ad956"
-  integrity sha512-Vj3b+tsN22DtNhwP7zDB95wtDRbqY887dmzYC53+VdD+nJeoWYZNpiSlZKKk8rDocjipMkHrH9uL5NDyqjOSuA==
+"@next/polyfill-module@11.0.2-canary.23":
+  version "11.0.2-canary.23"
+  resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-11.0.2-canary.23.tgz#98fd993b17555a1277c65511496a7423411c93ac"
+  integrity sha512-R6JeEeU7oVPrfM9p/NwlyHzJv90gxEhubl+1dejGLE+o8hQ8eGzRlpHRUsvDpxCB8HU4A171V1gS7wR4x46SIA==
+
+"@next/react-dev-overlay@11.0.2-canary.23":
+  version "11.0.2-canary.23"
+  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-11.0.2-canary.23.tgz#d362be9902a888b518271840f35bc82d3fa33a4a"
+  integrity sha512-YPxF8AXnWq9ca2G9tZSBM599L0X+v2txpcuzTc2FSXwm1fiQkjtk7R5CaVB4eEH5Zbr9319FggUmT9iqK3E+Hw==
   dependencies:
     "@babel/code-frame" "7.12.11"
     anser "1.4.9"
@@ -86,10 +91,17 @@
     stacktrace-parser "0.1.10"
     strip-ansi "6.0.0"
 
-"@next/react-refresh-utils@11.0.2-canary.22":
-  version "11.0.2-canary.22"
-  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-11.0.2-canary.22.tgz#3281f5f03986a8ef2b7f1205155e15f798535422"
-  integrity sha512-15xOThZBe5pKDjAP9GGVpZL5qJoxsqC2MSyOM0fZUIsntU96l8r1/NiL+JUy1LjUimVc/0zbUxftb/IJDXfRVw==
+"@next/react-refresh-utils@11.0.2-canary.23":
+  version "11.0.2-canary.23"
+  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-11.0.2-canary.23.tgz#6f1066d20816fa1130c459ac57e98e4565b77eb6"
+  integrity sha512-wmYYLpIHxdkEKgmfWW/F4VXkOr2y4uecTwGjm73jJRsnE3bC950d0iBJxEBmUbrV/r96KSttAFe/KgTLP91QOw==
+
+"@node-rs/helper@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@node-rs/helper/-/helper-1.2.1.tgz#e079b05f21ff4329d82c4e1f71c0290e4ecdc70c"
+  integrity sha512-R5wEmm8nbuQU0YGGmYVjEc0OHtYsuXdpRG+Ut/3wZ9XAvQWyThN08bTh2cBJgoZxHQUPtvRfeQuxcAgLuiBISg==
+  dependencies:
+    "@napi-rs/triples" "^1.0.3"
 
 "@octokit/auth-token@^2.4.0":
   version "2.4.3"
@@ -1196,7 +1208,7 @@ lodash@^4.17.13:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -1269,17 +1281,18 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next@11.0.2-canary.22:
-  version "11.0.2-canary.22"
-  resolved "https://registry.yarnpkg.com/next/-/next-11.0.2-canary.22.tgz#5ce1bb15f97295b1b31fa7074766583367aa3c4a"
-  integrity sha512-S39EcWy4erEsVeIjkJdsgIy1Sd3hJy/KomgxgdtrTZJOrdoJr1L1KxvyBwRD++Iw72SwC0bgqT8kojYdC+ANnw==
+next@11.0.2-canary.23:
+  version "11.0.2-canary.23"
+  resolved "https://registry.yarnpkg.com/next/-/next-11.0.2-canary.23.tgz#57465a42260e4e1f01eebbba321824339885d6e5"
+  integrity sha512-hmO0lQo5E/TGVhawCrMJqtShJvxyFcRbK7rxE6jd51J39sQjPbAT6cJewRFf0ggHqrY0keTij7vcJpcaDn1RkA==
   dependencies:
     "@babel/runtime" "7.12.5"
     "@hapi/accept" "5.0.2"
-    "@next/env" "11.0.2-canary.22"
-    "@next/polyfill-module" "11.0.2-canary.22"
-    "@next/react-dev-overlay" "11.0.2-canary.22"
-    "@next/react-refresh-utils" "11.0.2-canary.22"
+    "@next/env" "11.0.2-canary.23"
+    "@next/polyfill-module" "11.0.2-canary.23"
+    "@next/react-dev-overlay" "11.0.2-canary.23"
+    "@next/react-refresh-utils" "11.0.2-canary.23"
+    "@node-rs/helper" "1.2.1"
     assert "2.0.0"
     ast-types "0.13.2"
     browserify-zlib "0.2.0"
@@ -1309,7 +1322,6 @@ next@11.0.2-canary.22:
     pnp-webpack-plugin "1.6.4"
     postcss "8.2.15"
     process "0.11.10"
-    prop-types "15.7.2"
     querystring-es3 "0.2.1"
     raw-body "2.4.1"
     react-is "17.0.2"
@@ -1537,15 +1549,6 @@ process@0.11.10, process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
-prop-types@15.7.2:
-  version "15.7.2"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
-  integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
-  dependencies:
-    loose-envify "^1.4.0"
-    object-assign "^4.1.1"
-    react-is "^16.8.1"
-
 public-encrypt@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/public-encrypt/-/public-encrypt-4.0.3.tgz#4fcc9d77a07e48ba7527e7cbe0de33d0701331e0"
@@ -1628,11 +1631,6 @@ react-is@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
-
-react-is@^16.8.1:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
-  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-refresh@0.8.3:
   version "0.8.3"
