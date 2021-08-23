@@ -216,10 +216,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@types/marked@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-2.0.4.tgz#34a0ea548afe6e0c01095229d47b48b2af650613"
-  integrity sha512-L9VRSe0Id8xbPL99mUo/4aKgD7ZoRwFZqUQScNKHi2pFjF9ZYSMNShUHD6VlMT6J/prQq0T1mxuU25m3R7dFzg==
+"@types/marked@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-3.0.0.tgz#2deb8fcd1ec655336e498cb100e6cb346b731df9"
+  integrity sha512-vof90OIWT+Tzq3MBRXgV9fsH8PC3WZ4OQg9Qa04vOtP0TcyiNfl7BTonYCmTapHZ5lRZh6ihUYkAy7St1hmk/A==
 
 "@types/node@*", "@types/node@16", "@types/node@>= 8":
   version "16.7.0"
