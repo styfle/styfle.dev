@@ -14,7 +14,7 @@ export interface Repo {
   private: boolean;
   owner: any;
   html_url: string;
-  description: string;
+  description: string | null;
   fork: boolean;
   url: string;
   forks_url: string;
@@ -53,18 +53,18 @@ export interface Repo {
   labels_url: string;
   releases_url: string;
   deployments_url: string;
-  created_at: string;
-  updated_at: string;
-  pushed_at: string;
-  git_url: string;
-  ssh_url: string;
-  clone_url: string;
-  svn_url: string;
-  homepage: string;
+  created_at: string | null;
+  updated_at: string | null;
+  pushed_at: string | null;
+  git_url: string | null;
+  ssh_url: string | null;
+  clone_url: string | null;
+  svn_url: string | null;
+  homepage: string | null;
   size: number;
   stargazers_count: number;
   watchers_count: number;
-  language: string;
+  language: string | null;
   has_issues: boolean;
   has_projects: boolean;
   has_downloads: boolean;
@@ -82,21 +82,21 @@ export interface Repo {
   default_branch: string;
 }
 
-export interface GitHubProject {
-  name: string;
-  full_name: string;
-  description: string;
-  homepage: string;
-  html_url: string;
-  stargazers_count: number;
-  watchers_count: number;
-  language: string;
-  size: number;
-  created_at: string;
-  updated_at: string;
-  pushed_at: string;
+export type GitHubProject = Pick<
+  Repo,
+  | 'name'
+  | 'full_name'
+  | 'description'
+  | 'homepage'
+  | 'html_url'
+  | 'stargazers_count'
+  | 'watchers_count'
+  | 'created_at'
+  | 'updated_at'
+  | 'pushed_at'
+> & {
   og_image_url?: string;
-}
+};
 
 async function getAllRepos(): Promise<Repo[]> {
   let repos: Repo[];
