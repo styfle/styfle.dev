@@ -11,7 +11,7 @@ interface PostProps {
   title: string;
   date: string;
   html: string;
-  ogImage?: { src: string; width: number; height: number };
+  ogImage?: { src: string; width: number; height: number } | null;
 }
 
 export const getStaticPaths = async () => ({

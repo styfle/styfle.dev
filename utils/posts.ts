@@ -7,7 +7,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
-  ogImage?: { src: string; width: number; height: number };
+  ogImage?: { src: string; width: number; height: number } | null;
   content: string;
 }
 
@@ -20,7 +20,7 @@ export async function getPosts(): Promise<BlogPost[]> {
       const fullPath = join(postsDirectory, fileName);
       const markdown = await readFile(fullPath, 'utf8');
       const {
-        data: { slug, title, date, ogImage },
+        data: { slug, title, date, ogImage = null },
         content,
       } = matter(markdown);
 

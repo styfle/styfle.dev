@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 interface Props {
   title: string;
-  ogImage?: { src: string; width: number; height: number };
+  ogImage?: { src: string; width: number; height: number } | null;
   children: React.ReactNode;
 }
 
