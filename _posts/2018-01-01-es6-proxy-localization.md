@@ -57,7 +57,7 @@ React is great and you should use it because the internet told you so and that o
 
 Now that we have a React component, let's see how it would render for users from different countries.
 
-![color-dropdown-localized](https://res.cloudinary.com/ceriously/image/upload/v1588545917/blog/color-dropdown-localized.png)
+![color-dropdown-localized](https://res.cloudinary.com/ceriously/image/upload/f_auto/v1588546037/blog/color-dropdown-localized.png)
 
 USA looks A-OK! Great Britain looks great! Mexico is ¡Ay, caramba! We forgot to translate into Spanish! The monkey does not lie but the monkey is forgiving.
 
