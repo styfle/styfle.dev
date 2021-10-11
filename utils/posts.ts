@@ -7,7 +7,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
-  ogImage?: string;
+  ogImage?: { src: string; width: number; height: number };
   content: string;
 }
 
