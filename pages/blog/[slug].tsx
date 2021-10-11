@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '../../components/Layout';
 import { getPosts } from '../../utils/posts';
 import { formatDate } from '../../utils/date';
@@ -10,6 +11,7 @@ interface PostProps {
   title: string;
   date: string;
   html: string;
+  ogImage?: { src: string; width: number; height: number } | null;
 }
 
 export const getStaticPaths = async () => ({
@@ -28,17 +30,17 @@ export async function getStaticProps({
   if (!post) {
     throw new Error(`Expected slug ${slug}`);
   }
-  const { title, date, content } = post;
+  const { title, date, ogImage, content } = post;
   const html = markdownToHtml(content);
   return {
-    props: { slug, title, date, html },
+    props: { slug, title, date, ogImage, html },
   };
 }
 
 export default function Post(props: PostProps) {
-  const { slug, title, date, html } = props;
+  const { slug, title, date, ogImage, html } = props;
   return (
-    <Layout title={title}>
+    <Layout title={title} ogImage={ogImage}>
       <article>
         <header>
           <Head>
@@ -61,6 +63,9 @@ export default function Post(props: PostProps) {
           </p>
         </header>
 
+        {ogImage ? (
+          <Image src={ogImage.src} width={ogImage.width} height={ogImage.height} alt={title} />
+        ) : null}
         <div
           className="main-content"
           itemProp="articleBody"
