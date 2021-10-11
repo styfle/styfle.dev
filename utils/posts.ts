@@ -7,6 +7,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
+  ogImage?: string;
   content: string;
 }
 
@@ -19,7 +20,7 @@ export async function getPosts(): Promise<BlogPost[]> {
       const fullPath = join(postsDirectory, fileName);
       const markdown = await readFile(fullPath, 'utf8');
       const {
-        data: { slug, title, date },
+        data: { slug, title, date, ogImage },
         content,
       } = matter(markdown);
 
@@ -38,8 +39,11 @@ export async function getPosts(): Promise<BlogPost[]> {
           `Expected string date but found: ${date}. Did you forget add it to ${fileName}?`,
         );
       }
+      if (ogImage && typeof ogImage !== 'object') {
+        throw new Error(`Expected ogImage to be object but found: ${typeof ogImage}`);
+      }
 
-      return { slug, title, date, content };
+      return { slug, title, date, ogImage, content };
     }),
   );
 

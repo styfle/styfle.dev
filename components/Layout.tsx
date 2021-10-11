@@ -5,15 +5,17 @@ import Footer from './Footer';
 
 interface Props {
   title: string;
+  ogImage?: { src: string; width: number; height: number };
   children: React.ReactNode;
 }
 
-export default function Layout({ children, title }: Props) {
+export default function Layout({ title, ogImage, children }: Props) {
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        {ogImage ? <meta property="og:image" content={ogImage.src} /> : null}
         <title>{title}</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

@@ -2,11 +2,13 @@
 slug: 'software-shepherd'
 title: 'Software Shepherd'
 date: '2021-04-25T19:22:00.000Z'
+ogImage:
+  src: '/images/blog/sheep-mosaic.jpg'
+  width: 1000
+  height: 694
 ---
 
 A few years ago, I changed my Twitter bio from Software Engineer to [Software Shepherd](https://twitter.com/styfle/status/1083763630108217344) for a number of reasons. I couldn't fit these reasons into a tweet so I wrote an entire blog post.
-
-<img alt="sheep mosaic" src="https://res.cloudinary.com/ceriously/image/upload/f_auto/v1588546126/blog/sheep-mosaic.jpg" loading="lazy" width="720" height="500" />
 
 ## Title
 
