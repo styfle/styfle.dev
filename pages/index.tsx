@@ -65,6 +65,7 @@ export default function Home() {
             height="200"
             layout="fixed"
             alt="styfle"
+            priority
           />
         </div>
         <p>
