@@ -3,7 +3,8 @@
  */
 const nextConfig = {
   images: {
-    domains: ['via.placeholder.com']
+    formats: ['image/avif', 'image/webp'],
+    domains: ['via.placeholder.com'],
   }
 }
   
