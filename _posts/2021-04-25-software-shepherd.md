@@ -38,7 +38,7 @@ Contrast Software Engineering with Civil Engineering where a bridge is engineere
 
 Software Gardener is a clever title that captures this difference, but it implies a slow evolution over a long time. It doesn't capture the real-time chaos of Software. That's why I prefer Software Shepherd.
 
-Software Shepherd implies a fast, autonomous livestock that might break if left unmaintained. Sheep without a shepherd can make [poor decisions](https://twitter.com/TobyonTV/status/1383681839236218885) so there is an active role for the shepherd.
+Software Shepherd implies a fast, autonomous livestock that might break if left unmaintained. Sheep without a shepherd can make [poor decisions](https://www.youtube.com/watch?v=W_4S5yBkSpU) so there is an active role for the shepherd.
 
 Why is software autonomous? Doesn't it only do what we tell it to do?
 
