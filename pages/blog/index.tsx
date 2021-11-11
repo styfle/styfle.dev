@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { getPosts, BlogPost } from '../../utils/posts';
-import marked from 'marked';
+import { marked } from 'marked';
 import { formatDate } from '../../utils/date';
 import Simpsons from '../../public/images/blog/simpsons-any-key.jpg';
 
