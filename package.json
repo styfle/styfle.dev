@@ -6,7 +6,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" --write",
+    "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
     "git-pre-commit": "yarn prettier && git add -A"
   },
   "dependencies": {

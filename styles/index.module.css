@@ -1,0 +1,50 @@
+.p {
+  font-size: 20px;
+}
+
+/**
+  * Avatar animation adapted from
+  * https://codepen.io/blixt/pen/ZGwwKW
+  */
+.avatar {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 60px auto;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.avatar::before,
+.avatar::after {
+  border: var(--green) solid 8px;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  content: ' ';
+  height: 140%;
+  left: -20%;
+  opacity: 0.6;
+  position: absolute;
+  top: -20%;
+  transform: scale(0.714);
+  width: 140%;
+  z-index: 1;
+}
+
+.avatar::after {
+  animation-delay: 1s;
+}
+
+.pulse:before,
+.pulse:after {
+  animation: pulse 2s ease-out infinite;
+}
+
+.round {
+  border-radius: 50%;
+}
