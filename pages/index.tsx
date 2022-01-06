@@ -35,7 +35,7 @@ export default function Home() {
           <a href="https://vercel.com">Vercel</a> building the best cloud deployment experience in
           the world. On the interwebz, I go by <a href="https://github.com/styfle">styfle</a>.
         </p>
-        <p>
+        <p className={style.p}>
           I think open source software is a great way to collaborate with people from all over the
           world and make a global impact. If you are using code I've written, I'd love to hear about
           it!
