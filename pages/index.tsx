@@ -1,65 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import Avatar from '../public/images/blog/styfle-ceriously.png';
+import Avatar from '../public/images/blog/ceriously-flat-glow.jpg';
+import style from '../styles/index.module.css';
+import { useState } from 'react';
 
-// Avatar animation by https://codepen.io/blixt/pen/ZGwwKW
 export default function Home() {
+  const [pulse, setPulse] = useState(false);
+
   return (
     <Layout title="Home">
-      <style jsx>{`
-        p {
-          font-size: 20px;
-        }
-
-        .avatar {
-          position: relative;
-          height: 200px;
-          width: 200px;
-          margin: 60px auto;
-        }
-
-        @keyframes pulse {
-          to {
-            opacity: 0;
-            transform: scale(1);
-          }
-        }
-
-        .avatar::before,
-        .avatar::after {
-          animation: pulse 2s ease-out infinite;
-          border: var(--green) solid 8px;
-          border-radius: 9999px;
-          box-sizing: border-box;
-          content: ' ';
-          height: 140%;
-          left: -20%;
-          opacity: 0.6;
-          position: absolute;
-          top: -20%;
-          transform: scale(0.714);
-          width: 140%;
-          z-index: 1;
-        }
-
-        .avatar::after {
-          animation-delay: 1s;
-        }
-
-        .avatar:hover::before,
-        .avatar:hover::after {
-          animation: pulse 1s linear infinite;
-        }
-
-        .avatar:hover::after {
-          animation-delay: 0.5s;
-        }
-      `}</style>
       <div className="main-content">
-        <div className="avatar">
+        <div className={`${style.avatar} ${pulse ? style.pulse : ''}`}>
           <Image
             src={Avatar}
+            className={style.round}
+            onLoadingComplete={() => setPulse(true)}
             placeholder="blur"
             width="200"
             height="200"
@@ -68,7 +24,7 @@ export default function Home() {
             priority
           />
         </div>
-        <p>
+        <p className={style.p}>
           My name is Steven and I'm a{' '}
           <Link href="/blog/software-shepherd">
             <a>
