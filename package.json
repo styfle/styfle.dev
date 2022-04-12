@@ -13,7 +13,7 @@
     "@octokit/rest": "18.12.0",
     "gray-matter": "4.0.3",
     "highlight.js": "11.5.1",
-    "marked": "4.0.13",
+    "marked": "4.0.14",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
