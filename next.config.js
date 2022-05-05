@@ -4,7 +4,15 @@
 const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['via.placeholder.com'],
+  },
+  experimental: {
+    images: {
+      layoutRaw: true,
+      remotePatterns: [{
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      }]
+    }
   }
 }
   
