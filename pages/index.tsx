@@ -19,7 +19,7 @@ export default function Home() {
             placeholder="blur"
             width="200"
             height="200"
-            layout="fixed"
+            layout="raw"
             alt="styfle"
             priority
           />
