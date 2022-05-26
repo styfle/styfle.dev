@@ -10,7 +10,7 @@
     "git-pre-commit": "yarn prettier && git add -A"
   },
   "browserslist": [
-    "es6-module-dynamic-import",
+    "supports es6-module-dynamic-import",
     "not dead"
   ],
   "dependencies": {
