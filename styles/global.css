@@ -183,6 +183,10 @@ img[align='right'] {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
   body {
     background: #222;
     color: #fff;
