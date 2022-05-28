@@ -17,7 +17,7 @@ export default function Layout({ title, ogImage, children }: Props) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content={`https://styfle.dev/${imgPath}`} />
+        <meta property="og:image" content={`https://styfle.dev${imgPath}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@styfle" />
         <meta name="twitter:site" content="@styfle" />
