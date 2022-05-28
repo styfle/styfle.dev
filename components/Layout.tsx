@@ -10,12 +10,17 @@ interface Props {
 }
 
 export default function Layout({ title, ogImage, children }: Props) {
+  const imgPath = ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg';
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        {ogImage ? <meta property="og:image" content={ogImage.src} /> : null}
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={`https://styfle.dev${imgPath}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@styfle" />
+        <meta name="twitter:site" content="@styfle" />
         <title>{title}</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
