@@ -15,10 +15,11 @@ export default function Layout({ title, ogImage, children }: Props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="og:title" content={title} />
+        <meta name="twitter:creator" content="@styfle" />
         {ogImage ? (
           <>
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content="@styfle" />
             <meta property="og:image" content={ogImage.src} />
           </>
         ) : null}
