@@ -15,7 +15,13 @@ export default function Layout({ title, ogImage, children }: Props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        {ogImage ? <meta property="og:image" content={ogImage.src} /> : null}
+        {ogImage ? (
+          <>
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:creator" content="@styfle" />
+            <meta property="og:image" content={ogImage.src} />
+          </>
+        ) : null}
         <title>{title}</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
