@@ -10,14 +10,14 @@ interface Props {
 }
 
 export default function Layout({ title, ogImage, children }: Props) {
-  const og_image_url = ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg';
+  const imgPath = ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg';
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content={og_image_url} />
+        <meta property="og:image" content={`https://styfle.dev/${imgPath}`} />
         <meta name="twitter:creator" content="@styfle" />
         <meta name="twitter:card" content="summary_large_image" />
         <title>{title}</title>
