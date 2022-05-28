@@ -16,7 +16,7 @@ export default function Layout({ title, ogImage, children }: Props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="og:title" content={title} />
+        <meta property="og:title" content={title} />
         <meta property="og:image" content={og_image_url} />
         <meta name="twitter:creator" content="@styfle" />
         <meta name="twitter:card" content="summary_large_image" />
