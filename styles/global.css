@@ -140,6 +140,7 @@ button:disabled {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 textarea {
