@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import Avatar from '../public/images/blog/ceriously-flat-glow.jpg';
@@ -19,7 +19,6 @@ export default function Home() {
             placeholder="blur"
             width="200"
             height="200"
-            layout="raw"
             alt="styfle"
             priority
           />

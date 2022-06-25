@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { getPosts, BlogPost } from '../../utils/posts';
@@ -16,14 +16,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
   return (
     <Layout title="Blog">
       <h1>Blog</h1>
-      <Image
-        src={Simpsons}
-        placeholder="blur"
-        width="710"
-        height="415"
-        layout="responsive"
-        alt="Simpsons Any Key"
-      />
+      <Image src={Simpsons} placeholder="blur" width="720" height="420" alt="Simpsons Any Key" />
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>
