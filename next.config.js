@@ -7,7 +7,7 @@ const nextConfig = {
   },
   experimental: {
     images: {
-      layoutRaw: true,
+			allowFutureImage: true,
       remotePatterns: [{
         protocol: 'https',
         hostname: 'via.placeholder.com',
