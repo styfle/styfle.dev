@@ -64,7 +64,7 @@ export default function Projects({ projects }: { projects: GitHubProject[] }) {
         {projects.map(({ name, description, homepage, created_at, og_image_url }) => (
           <section key={name}>
             <a href={homepage || ''}>
-              <Image src={og_image_url || ''} width={640} height={320} />
+              <Image alt={name} src={og_image_url || ''} width={640} height={320} />
               <h2 className="green-link">{name}</h2>
               <time dateTime={created_at || ''} itemProp="created_at">
                 {formatDate(created_at || '')}
