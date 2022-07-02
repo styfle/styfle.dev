@@ -9,6 +9,10 @@
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
     "git-pre-commit": "yarn prettier && git add -A"
   },
+  "browserslist": [
+    "supports es6-module-dynamic-import",
+    "not dead"
+  ],
   "dependencies": {
     "@octokit/rest": "18.12.0",
     "gray-matter": "4.0.3",
