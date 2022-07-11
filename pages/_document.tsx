@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 const { GA_ID } = process.env;
 
-export default class extends Document {
+export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">

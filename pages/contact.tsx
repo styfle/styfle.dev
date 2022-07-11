@@ -33,7 +33,8 @@ export default function Contact() {
         </li>
       </ul>
       <p>
-        You can also send an email to me <code>@styfle.dev</code> if you're into that kind of stuff.
+        You can also send an email to me <code>@styfle.dev</code> if you&apos;re into that kind of
+        stuff.
       </p>
     </Layout>
   );

@@ -44,11 +44,13 @@ export default function Post(props: PostProps) {
       <article>
         <header>
           <Head>
+            {/* eslint-disable-next-line @next/next/no-css-tags */}
             <link
               href="/themes/nord.css"
               rel="stylesheet"
               media="(prefers-color-scheme: dark)"
             ></link>
+            {/* eslint-disable-next-line @next/next/no-css-tags */}
             <link
               href="/themes/github.css"
               rel="stylesheet"
