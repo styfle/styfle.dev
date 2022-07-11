@@ -24,7 +24,7 @@ export default function Home() {
           />
         </div>
         <p className={style.p}>
-          My name is Steven and I'm a{' '}
+          My name is Steven and I&apos;m a{' '}
           <Link href="/blog/software-shepherd">
             <a>
               Software <s>Engineer</s> Shepherd
@@ -36,8 +36,8 @@ export default function Home() {
         </p>
         <p className={style.p}>
           I think open source software is a great way to collaborate with people from all over the
-          world and make a global impact. If you are using code I've written, I'd love to hear about
-          it!
+          world and make a global impact. If you are using code I&apos;ve written, I&apos;d love to
+          hear about it!
         </p>
       </div>
     </Layout>

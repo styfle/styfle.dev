@@ -33,7 +33,7 @@ const Footer = () => (
     <div className="container">
       <div className="flex">
         <div>
-          <a target="_blank" rel="noopener" href="https://github.com/styfle" title="GitHub">
+          <a target="_blank" rel="noreferrer" href="https://github.com/styfle" title="GitHub">
             <svg className="social-svg" viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
@@ -46,7 +46,7 @@ const Footer = () => (
               </g>
             </svg>
           </a>
-          <a target="_blank" rel="noopener" href="https://www.npmjs.com/~styfle" title="NPM">
+          <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/~styfle" title="NPM">
             <svg className="social-svg" viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
@@ -61,7 +61,7 @@ const Footer = () => (
           </a>
           <a
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
             href="https://stackoverflow.com/users/266535/styfle"
             title="StackOverflow"
           >
@@ -73,7 +73,12 @@ const Footer = () => (
               <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.936v.014zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.35 1.617-.01.001zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0h.002z"></path>
             </svg>
           </a>
-          <a target="_blank" rel="noopener" href="https://medium.com/@styfle/latest" title="Medium">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://medium.com/@styfle/latest"
+            title="Medium"
+          >
             <svg className="social-svg" viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
@@ -86,7 +91,7 @@ const Footer = () => (
               </g>
             </svg>
           </a>
-          <a target="_blank" rel="noopener" href="https://twitter.com/styfle" title="Twitter">
+          <a target="_blank" rel="noreferrer" href="https://twitter.com/styfle" title="Twitter">
             <svg className="social-svg" viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
@@ -99,7 +104,7 @@ const Footer = () => (
               </g>
             </svg>
           </a>
-          <a target="_blank" rel="noopener" href="https://keybase.io/styfle" title="Keybase">
+          <a target="_blank" rel="noreferrer" href="https://keybase.io/styfle" title="Keybase">
             <svg
               className="social-svg"
               viewBox="-10 -10 45 45"
@@ -112,7 +117,7 @@ const Footer = () => (
           </a>
           <a
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
             href="https://www.facebook.com/ceriously.com/"
             title="Facebook"
           >
