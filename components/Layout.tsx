@@ -13,6 +13,12 @@ export default function Layout({ title, ogImage, children }: Props) {
   const imgPath = ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg';
 
   const domain = process.env.VERCEL_ENV === 'production' ? 'styfle.dev' : process.env.VERCEL_URL;
+  console.log({
+    vcEnv: process.env.VERCEL_ENV,
+    vcUrl: process.env.VERCEL_URL,
+    nextvcEnv: process.env.NEXT_PUBLIC_VERCEL_ENV,
+    nextvcUrl: process.env.NEXT_PUBLIC_VERCEL_URL,
+  });
 
   return (
     <>
