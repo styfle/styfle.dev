@@ -11,7 +11,10 @@ interface Props {
 
 export default function Layout({ title, ogImage, children }: Props) {
   const imgPath = ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg';
-  const domain = process.env.VERCEL_ENV === 'production' ? 'styfle.dev' : process.env.VERCEL_URL;
+  const domain =
+    process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
+      ? 'styfle.dev'
+      : process.env.NEXT_PUBLIC_VERCEL_URL;
   return (
     <>
       <Head>
