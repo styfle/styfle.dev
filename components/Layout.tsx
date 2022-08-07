@@ -5,13 +5,15 @@ import Footer from './Footer';
 
 interface Props {
   title: string;
-  domain: string;
   ogImage?: { src: string; width: number; height: number } | null;
   children: React.ReactNode;
 }
 
-export default function Layout({ title, domain, ogImage, children }: Props) {
+export default function Layout({ title, ogImage, children }: Props) {
   const imgPath = ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg';
+
+  const domain = process.env.VERCEL_ENV === 'production' ? 'styfle.dev' : process.env.VERCEL_URL;
+
   return (
     <>
       <Head>
