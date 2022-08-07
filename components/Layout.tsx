@@ -11,13 +11,14 @@ interface Props {
 
 export default function Layout({ title, ogImage, children }: Props) {
   const imgPath = ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg';
+  const domain = process.env.VERCEL_ENV === 'production' ? 'styfle.dev' : process.env.VERCEL_URL;
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content={`https://styfle.dev${imgPath}`} />
+        <meta property="og:image" content={`https://${domain}${imgPath}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@styfle" />
         <meta name="twitter:site" content="@styfle" />
