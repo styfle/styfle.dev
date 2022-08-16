@@ -7,8 +7,9 @@ import { formatDate } from '../../utils/date';
 import Simpsons from '../../public/images/blog/simpsons-any-key.jpg';
 
 export async function getStaticProps() {
-  const posts = await getPosts();
+  const posts = await getPosts('trim');
   const sortedPosts = posts.sort((a, b) => b.date.localeCompare(a.date));
+
   return { props: { posts: sortedPosts } };
 }
 
@@ -32,7 +33,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
           <div
             className="post-content e-content"
             itemProp="articleBody"
-            dangerouslySetInnerHTML={{ __html: marked(content.split('\n')[1] || '') }}
+            dangerouslySetInnerHTML={{ __html: marked(content) }}
           ></div>
           <Link href="/blog/[slug]" as={`/blog/${slug}`}>
             <a className="green-link">Read more...</a>
