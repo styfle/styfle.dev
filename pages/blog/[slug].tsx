@@ -15,7 +15,7 @@ interface PostProps {
 }
 
 export const getStaticPaths = async () => ({
-  paths: (await getPosts()).map(p => `/blog/${p.slug}`),
+  paths: (await getPosts('trim')).map(p => `/blog/${p.slug}`),
   fallback: false,
 });
 
@@ -26,7 +26,7 @@ export async function getStaticProps({
 }): Promise<{ props: PostProps }> {
   const { slug } = params;
 
-  const post = (await getPosts()).find(p => p.slug === slug);
+  const post = (await getPosts('full')).find(p => p.slug === slug);
   if (!post) {
     throw new Error(`Expected slug ${slug}`);
   }

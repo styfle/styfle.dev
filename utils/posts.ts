@@ -11,7 +11,7 @@ export interface BlogPost {
   content: string;
 }
 
-export async function getPosts(): Promise<BlogPost[]> {
+export async function getPosts(type: 'full' | 'trim'): Promise<BlogPost[]> {
   const postsDirectory = resolve(process.cwd(), '_posts');
   const postFiles = await readdir(postsDirectory);
 
@@ -21,7 +21,7 @@ export async function getPosts(): Promise<BlogPost[]> {
       const markdown = await readFile(fullPath, 'utf8');
       const {
         data: { slug, title, date, ogImage = null },
-        content,
+        content: fullContent,
       } = matter(markdown);
 
       if (typeof slug !== 'string') {
@@ -42,6 +42,8 @@ export async function getPosts(): Promise<BlogPost[]> {
       if (ogImage && typeof ogImage !== 'object') {
         throw new Error(`Expected ogImage to be object but found: ${typeof ogImage}`);
       }
+
+      const content = type === 'trim' ? fullContent.split('\n')[1] || '' : fullContent;
 
       return { slug, title, date, ogImage, content };
     }),
