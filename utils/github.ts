@@ -82,6 +82,20 @@ export interface Repo {
   default_branch: string;
 }
 
+const validGitHubProjectKeys = [
+  'name',
+  'full_name',
+  'description',
+  'homepage',
+  'html_url',
+  'stargazers_count',
+  'watchers_count',
+  'created_at',
+  'updated_at',
+  'pushed_at',
+  'og_image_url',
+];
+
 export type GitHubProject = Pick<
   Repo,
   | 'name'
@@ -154,6 +168,12 @@ export async function getProjects(): Promise<GitHubProject[]> {
     } else if (r.homepage.startsWith('https://styfle.dev')) {
       r.homepage = r.homepage.slice(18);
     }
+    Object.keys(r)
+      .filter(k => !validGitHubProjectKeys.includes(k))
+      .forEach(k => {
+        const project = r as any;
+        delete project[k];
+      });
   });
   return projects;
 }
