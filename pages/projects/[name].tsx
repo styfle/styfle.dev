@@ -28,8 +28,9 @@ export async function getStaticProps({
   let readme = await getRawFile(project, filename);
   readme = readme.replaceAll('ceriously.com', 'styfle.dev');
   if (project.name === 'geoslack') {
-    readme = readme.replaceAll(/\(img\/.+png\)/g, (match: string) =>
-      match.replace('(', '(https://raw.githubusercontent.com/styfle/geoslack/main/docs/'),
+    readme = readme.replaceAll(
+      /img\/.+(png|svg)/g,
+      (match: string) => `https://raw.githubusercontent.com/styfle/geoslack/main/docs/${match}`,
     );
   }
   return {
