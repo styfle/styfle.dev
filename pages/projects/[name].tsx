@@ -24,7 +24,15 @@ export async function getStaticProps({
   if (!project) {
     throw new Error(`Expected name ${name}`);
   }
-  const readme = await getRawFile(project, 'README.md');
+  const filename = project.name === 'geoslack' ? 'docs/README.md' : 'README.md';
+  let readme = await getRawFile(project, filename);
+  readme = readme.replaceAll('ceriously.com', 'styfle.dev');
+  if (project.name === 'geoslack') {
+    readme = readme.replaceAll(
+      /img\/.+(png|svg)/g,
+      (match: string) => `https://raw.githubusercontent.com/styfle/geoslack/main/docs/${match}`,
+    );
+  }
   return {
     props: { project, readme },
   };
