@@ -24,6 +24,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/gtag.js": "0.0.11",
     "@types/marked": "4.0.7",
     "@types/node": "16",
     "@types/react": "18.0.21",
