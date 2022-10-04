@@ -1,4 +1,4 @@
-import { GetResponseDataTypeFromEndpointMethod } from '@octokit/types';
+import type { GetResponseDataTypeFromEndpointMethod } from '@octokit/types';
 import { Octokit } from '@octokit/rest';
 import { existsSync, promises } from 'fs';
 const { readFile, writeFile } = promises;
