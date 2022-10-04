@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/future/image';
-import Layout from '../../components/Layout';
-import { getPosts } from '../../utils/posts';
-import { formatDate } from '../../utils/date';
-import { markdownToHtml } from '../../utils/markdown';
+import Layout from 'components/Layout';
+import { getPosts } from 'utils/posts';
+import { formatDate } from 'utils/date';
+import { markdownToHtml } from 'utils/markdown';
 
 interface PostProps {
   slug: string;

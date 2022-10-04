@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { getProjects, GitHubProject, getRawFile } from '../../utils/github';
-import { markdownToHtml } from '../../utils/markdown';
+import Layout from 'components/Layout';
+import { getProjects, GitHubProject, getRawFile } from 'utils/github';
+import { markdownToHtml } from 'utils/markdown';
 
 interface Props {
   project: GitHubProject;

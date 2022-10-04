@@ -1,8 +1,8 @@
 import Image from 'next/future/image';
 import Link from 'next/link';
-import Layout from '../components/Layout';
-import Avatar from '../public/images/blog/ceriously-flat-glow.jpg';
-import style from '../styles/index.module.css';
+import Layout from 'components/Layout';
+import Avatar from 'public/images/blog/ceriously-flat-glow.jpg';
+import style from 'styles/index.module.css';
 import { useState } from 'react';
 
 export default function Home() {
