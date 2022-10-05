@@ -1,7 +1,7 @@
 import Image from 'next/future/image';
-import Layout from '../../components/Layout';
-import { getProjects, GitHubProject } from '../../utils/github';
-import { formatDate } from '../../utils/date';
+import Layout from 'components/Layout';
+import { getProjects, GitHubProject } from 'utils/github';
+import { formatDate } from 'utils/date';
 
 export async function getStaticProps() {
   const projects = await getProjects();

@@ -1,10 +1,10 @@
 import Image from 'next/future/image';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { getPosts, BlogPost } from '../../utils/posts';
+import Layout from 'components/Layout';
+import { getPosts, BlogPost } from 'utils/posts';
 import { marked } from 'marked';
-import { formatDate } from '../../utils/date';
-import Simpsons from '../../public/images/blog/simpsons-any-key.jpg';
+import { formatDate } from 'utils/date';
+import Simpsons from 'public/images/blog/simpsons-any-key.jpg';
 
 export async function getStaticProps() {
   const posts = await getPosts('trim');

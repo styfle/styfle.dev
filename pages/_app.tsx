@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import Router from 'next/router';
-import '../styles/global.css';
-import { pageview } from '../utils/gtag';
+import 'styles/global.css';
+import { pageview } from 'utils/gtag';
 
 Router.events.on('routeChangeComplete', url => pageview(url));
 

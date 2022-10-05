@@ -1,6 +1,6 @@
 import Image from 'next/future/image';
-import Layout from '../components/Layout';
-import Kirk from '../public/images/blog/star-trek-kirk.jpg';
+import Layout from 'components/Layout';
+import Kirk from 'public/images/blog/star-trek-kirk.jpg';
 
 export default function Contact() {
   return (
