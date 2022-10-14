@@ -76,7 +76,7 @@ const Footer = () => (
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://medium.com/@styfle/latest"
+            href="https://medium.com/@styfle"
             title="Medium"
           >
             <svg className="social-svg" viewBox="0 0 64 64">
