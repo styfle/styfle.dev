@@ -1,7 +1,7 @@
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export function pageview(url: string) {
   const { gtag } = window as {
-    gtag: Gtag.Gtag
+    gtag: Gtag.Gtag;
   };
   const { GA_ID } = process.env;
   if (GA_ID) {

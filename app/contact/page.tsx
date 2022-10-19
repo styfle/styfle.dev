@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Layout from 'components/Layout';
 import Kirk from 'public/images/blog/star-trek-kirk.jpg';
 

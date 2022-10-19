@@ -1,4 +1,5 @@
-import Image from 'next/future/image';
+'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import Layout from 'components/Layout';
 import Avatar from 'public/images/blog/ceriously-flat-glow.jpg';

@@ -11,6 +11,7 @@ const nextConfig = {
     }],
   },
   experimental: {
+    appDir: true,
     browsersListForSwc: true,
     legacyBrowsers: false,
   }
