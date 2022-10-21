@@ -72,8 +72,8 @@ export default function Post({ params }: { params: Params }) {
 
         <a href={`/blog/${slug}`} hidden></a>
 
-        <Link href="/blog">
-          <a className="green-link">&laquo; Back to blog</a>
+        <Link href="/blog" className="green-link">
+          &laquo; Back to blog
         </Link>
       </article>
     </Layout>

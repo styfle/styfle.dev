@@ -47,8 +47,8 @@ export default function Project({ params }: { params: Params }) {
       <a href={`/projects/${name}`} hidden></a>
 
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Link href="/projects">
-          <a className="green-link">&laquo; All projects</a>
+        <Link href="/projects" className="green-link">
+          &laquo; All projects
         </Link>
         <a className="green-link" href={html_url}>
           Edit this page &raquo;

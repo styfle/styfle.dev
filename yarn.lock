@@ -1669,23 +1669,23 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-dom@0.0.0-experimental-3b814327e-20221014:
-  version "0.0.0-experimental-3b814327e-20221014"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.0.0-experimental-3b814327e-20221014.tgz#c03a93b1dd3db708e7df29929d71ee768f9843c0"
-  integrity sha512-/sul2GuTzSdacgWoEs2HvHUus9EqBDp5W+JzP3CJdet8zaIV4vSlQIZz18ZCg4cGlgxJZGxbRBRJXFEGkMvKyQ==
+react-dom@18.3.0-next-79c582981-20221021:
+  version "18.3.0-next-79c582981-20221021"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.0-next-79c582981-20221021.tgz#fa31bd51cb207f21d223f7d67a917abdf1a55051"
+  integrity sha512-3kAR+mpEEdS/uDvbtoJ20BO+tRr/mjWZ+GfgQCajfl9B8rpaS71XKxgUH2KOrc3rLSBs1Kx6sQFyFIjn8cDCCA==
   dependencies:
     loose-envify "^1.1.0"
-    scheduler "0.0.0-experimental-3b814327e-20221014"
+    scheduler "0.24.0-next-79c582981-20221021"
 
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react@0.0.0-experimental-3b814327e-20221014:
-  version "0.0.0-experimental-3b814327e-20221014"
-  resolved "https://registry.yarnpkg.com/react/-/react-0.0.0-experimental-3b814327e-20221014.tgz#c7ec6717f795c8081a789fc08d391876cb35e0e0"
-  integrity sha512-R2E7Mgeg0LRp++B6wMZNBMTcBAWcPJ3e2XjHP8fPKldt5qG9z7uFZvGCRMVn2K12jiyv1ILNJSEoH/F44lzbkA==
+react@18.3.0-next-79c582981-20221021:
+  version "18.3.0-next-79c582981-20221021"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.3.0-next-79c582981-20221021.tgz#6f52a318c35279220c1aae2f2d2c3036328bee0c"
+  integrity sha512-NHbYxkJx5dmC0uI+GFp6GGfvUYnJN0WDb0WHaPVFNxtI0/fOll50a2Z6j75Y33Uc/VBGPzUG8pZK/yzJFF3pBA==
   dependencies:
     loose-envify "^1.1.0"
 
@@ -1750,10 +1750,10 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-scheduler@0.0.0-experimental-3b814327e-20221014:
-  version "0.0.0-experimental-3b814327e-20221014"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.0.0-experimental-3b814327e-20221014.tgz#b3348b4f88d1802ddee43392567660b8c662bf7f"
-  integrity sha512-1HB1QXdj6D1mWi9kl44TmFZ6fVSsMiiioL7u7MxmrX5bQwKDNouAuYgc33oCKV6Tr9W8gQxzNwDnyLQV2Z6UoQ==
+scheduler@0.24.0-next-79c582981-20221021:
+  version "0.24.0-next-79c582981-20221021"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.24.0-next-79c582981-20221021.tgz#6a0a6d035db63ab6dd91de5320cfff8926226452"
+  integrity sha512-tQ9qbbVZVW7Cqx+WwxvJqvkcKUaJa7C1JfBXQrNcPt2DbCdacgfLbNff7GHphDqEY5gKetMtLBp08oVR/Wz0rQ==
   dependencies:
     loose-envify "^1.1.0"
 

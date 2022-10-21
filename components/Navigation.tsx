@@ -24,8 +24,8 @@ export default function Navigation() {
       <ul className={`container ${style.ul}`}>
         {links.map(({ href, label }) => (
           <li key={href} className={pathname === href ? `${style.li} ${style.active}` : style.li}>
-            <Link href={href}>
-              <a className={style.a}>{label}</a>
+            <Link href={href} className={style.a}>
+              {label}
             </Link>
           </li>
         ))}

@@ -20,8 +20,8 @@ export default function Blog() {
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>
-            <Link href="/blog/[slug]" as={`/blog/${slug}`}>
-              <a className="green-link">{title}</a>
+            <Link href="/blog/[slug]" as={`/blog/${slug}`} className="green-link">
+              {title}
             </Link>
           </h2>
           <p className="post-meta">
@@ -34,8 +34,8 @@ export default function Blog() {
             itemProp="articleBody"
             dangerouslySetInnerHTML={{ __html: marked(content) }}
           ></div>
-          <Link href="/blog/[slug]" as={`/blog/${slug}`}>
-            <a className="green-link">Read more...</a>
+          <Link href="/blog/[slug]" as={`/blog/${slug}`} className="green-link">
+            Read more...
           </Link>
           <hr />
         </article>

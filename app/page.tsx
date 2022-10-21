@@ -27,9 +27,7 @@ export default function Home() {
         <p className={style.p}>
           My name is Steven and I&apos;m a{' '}
           <Link href="/blog/software-shepherd">
-            <a>
-              Software <s>Engineer</s> Shepherd
-            </a>
+            Software<s>Engineer</s>Shepherd
           </Link>{' '}
           with a passion for building open source tools. I currently work for{' '}
           <a href="https://vercel.com">Vercel</a> building the best cloud deployment experience in
