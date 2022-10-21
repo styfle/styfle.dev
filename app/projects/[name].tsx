@@ -1,3 +1,4 @@
+import { experimental_use as use } from 'react';
 import Link from 'next/link';
 import Layout from 'components/Layout';
 import { getProjects, GitHubProject, getRawFile } from 'utils/github';
@@ -8,18 +9,13 @@ interface Props {
   readme: string;
 }
 
-export const getStaticPaths = async () => ({
-  paths: (await getProjects()).map(p => `/projects/${p.name}`),
-  fallback: false,
-});
+interface Params {
+  name: string;
+}
 
-export async function getStaticProps({
-  params,
-}: {
-  params: { name: string };
-}): Promise<{ props: Props }> {
-  const { name } = params;
+export const generateStaticParams = async () => (await getProjects()).map(p => p.name);
 
+async function getProps({ name }: Params): Promise<Props> {
   const project = (await getProjects()).find(p => p.name === name);
   if (!project) {
     throw new Error(`Expected name ${name}`);
@@ -33,12 +29,11 @@ export async function getStaticProps({
       (match: string) => `https://raw.githubusercontent.com/styfle/geoslack/main/docs/${match}`,
     );
   }
-  return {
-    props: { project, readme },
-  };
+  return { project, readme };
 }
 
-export default function Project({ project, readme }: Props) {
+export default function Project({ params }: { params: Params }) {
+  const { project, readme } = use(getProps(params));
   const { name, html_url } = project;
   const baseUrl = `${html_url}/blob/main/`;
   const html = markdownToHtml(readme, baseUrl);

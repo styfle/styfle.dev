@@ -1,3 +1,4 @@
+import { experimental_use as use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from 'components/Layout';
@@ -6,14 +7,12 @@ import { marked } from 'marked';
 import { formatDate } from 'utils/date';
 import Simpsons from 'public/images/blog/simpsons-any-key.jpg';
 
-export async function getStaticProps() {
-  const posts = await getPosts('trim');
-  const sortedPosts = posts.sort((a, b) => b.date.localeCompare(a.date));
-
-  return { props: { posts: sortedPosts } };
+async function getProps(): Promise<BlogPost[]> {
+  return (await getPosts('trim')).sort((a, b) => b.date.localeCompare(a.date));
 }
 
-export default function Blog({ posts }: { posts: BlogPost[] }) {
+export default function Blog() {
+  const posts = use(getProps());
   return (
     <Layout title="Blog">
       <h1>Blog</h1>

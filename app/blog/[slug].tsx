@@ -1,3 +1,4 @@
+import { experimental_use as use } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,16 +15,13 @@ interface PostProps {
   ogImage?: { src: string; width: number; height: number } | null;
 }
 
-export const getStaticPaths = async () => ({
-  paths: (await getPosts('trim')).map(p => `/blog/${p.slug}`),
-  fallback: false,
-});
+interface Params {
+  slug: string;
+}
 
-export async function getStaticProps({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<{ props: PostProps }> {
+export const generateStaticParams = async () => (await getPosts('trim')).map(p => p.slug);
+
+async function getProps(params: Params): Promise<PostProps> {
   const { slug } = params;
 
   const post = (await getPosts('full')).find(p => p.slug === slug);
@@ -32,13 +30,11 @@ export async function getStaticProps({
   }
   const { title, date, ogImage, content } = post;
   const html = markdownToHtml(content);
-  return {
-    props: { slug, title, date, ogImage, html },
-  };
+  return { slug, title, date, ogImage, html };
 }
 
-export default function Post(props: PostProps) {
-  const { slug, title, date, ogImage, html } = props;
+export default function Post({ params }: { params: Params }) {
+  const { slug, title, date, ogImage, html } = use(getProps(params));
   return (
     <Layout title={title} ogImage={ogImage}>
       <article>

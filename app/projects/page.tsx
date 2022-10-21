@@ -1,15 +1,17 @@
+import { experimental_use as use } from 'react';
 import Image from 'next/image';
 import Layout from 'components/Layout';
 import { getProjects, GitHubProject } from 'utils/github';
 import { formatDate } from 'utils/date';
 import style from 'styles/projects.module.css';
 
-export async function getStaticProps() {
+async function getProps(): Promise<GitHubProject[]> {
   const projects = await getProjects();
-  return { props: { projects } };
+  return projects;
 }
 
-export default function Projects({ projects }: { projects: GitHubProject[] }) {
+export default function Projects() {
+  const projects = use(getProps());
   return (
     <Layout title="Projects">
       <h1>Projects</h1>
