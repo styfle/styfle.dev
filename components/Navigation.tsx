@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import style from 'styles/navigation.module.css';
 
 interface NavLink {
@@ -17,8 +18,7 @@ const links: NavLink[] = [
 ];
 
 export default function Navigation() {
-  // TODO: how to get current path?
-  let pathname = '';
+  const pathname = usePathname();
   return (
     <nav>
       <ul className={`container ${style.ul}`}>
