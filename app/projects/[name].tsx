@@ -1,4 +1,4 @@
-import { experimental_use as use } from 'react';
+import { use } from 'react';
 import Link from 'next/link';
 import Layout from 'components/Layout';
 import { getProjects, GitHubProject, getRawFile } from 'utils/github';

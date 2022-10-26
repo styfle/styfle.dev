@@ -1,4 +1,4 @@
-import { experimental_use as use } from 'react';
+import { use } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
