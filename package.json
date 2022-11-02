@@ -19,9 +19,9 @@
     "gray-matter": "4.0.3",
     "highlight.js": "11.6.0",
     "marked": "4.1.1",
-    "next": "13.0.0",
-    "react": "0.0.0-experimental-fecc288b7-20221025",
-    "react-dom": "0.0.0-experimental-fecc288b7-20221025"
+    "next": "13.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@octokit/types": "8.0.0",
