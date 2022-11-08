@@ -2,6 +2,9 @@
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
