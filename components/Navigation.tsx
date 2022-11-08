@@ -20,7 +20,7 @@ const links: NavLink[] = [
 export default function Navigation() {
   const pathname = usePathname();
   return (
-    <nav>
+    <nav className={style.nav}>
       <ul className={`container ${style.ul}`}>
         {links.map(({ href, label }) => (
           <li key={href} className={pathname === href ? `${style.li} ${style.active}` : style.li}>

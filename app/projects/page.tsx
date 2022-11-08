@@ -1,19 +1,12 @@
-import { use } from 'react';
 import Image from 'next/image';
-import Layout from 'components/Layout';
-import { getProjects, GitHubProject } from 'utils/github';
+import { getProjects } from 'utils/github';
 import { formatDate } from 'utils/date';
-import style from 'styles/projects.module.css';
+import style from './projects.module.css';
 
-async function getProps(): Promise<GitHubProject[]> {
+export default async function Projects() {
   const projects = await getProjects();
-  return projects;
-}
-
-export default function Projects() {
-  const projects = use(getProps());
   return (
-    <Layout title="Projects">
+    <>
       <h1>Projects</h1>
       <div className={style.grid}>
         {projects.map(({ name, description, homepage, created_at, og_image_url }) => (
@@ -29,6 +22,6 @@ export default function Projects() {
           </section>
         ))}
       </div>
-    </Layout>
+    </>
   );
 }

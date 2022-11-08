@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout from 'components/Layout';
 import Avatar from 'public/images/blog/ceriously-flat-glow.jpg';
 import style from 'styles/index.module.css';
 import { useState } from 'react';
@@ -10,7 +9,7 @@ export default function Home() {
   const [pulse, setPulse] = useState(false);
 
   return (
-    <Layout title="Home">
+    <>
       <div className="main-content">
         <div className={`${style.avatar} ${pulse ? style.pulse : ''}`}>
           <Image
@@ -39,6 +38,6 @@ export default function Home() {
           hear about it!
         </p>
       </div>
-    </Layout>
+    </>
   );
 }
