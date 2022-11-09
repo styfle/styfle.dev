@@ -2,7 +2,6 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  swcMinify: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [{
@@ -11,8 +10,7 @@ const nextConfig = {
     }],
   },
   experimental: {
-    browsersListForSwc: true,
-    legacyBrowsers: false,
+    appDir: true,
   }
 }
 

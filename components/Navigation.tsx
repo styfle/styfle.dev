@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
+import style from 'styles/navigation.module.css';
 
 interface NavLink {
   href: string;
@@ -16,41 +18,18 @@ const links: NavLink[] = [
 ];
 
 export default function Navigation() {
-  const { pathname } = useRouter();
+  const pathname = usePathname();
   return (
-    <nav>
-      <ul className="container">
+    <nav className={style.nav}>
+      <ul className={`container ${style.ul}`}>
         {links.map(({ href, label }) => (
-          <li key={href} className={pathname === href ? 'active' : undefined}>
-            <Link href={href}>
-              <a>{label}</a>
+          <li key={href} className={pathname === href ? `${style.li} ${style.active}` : style.li}>
+            <Link href={href} className={style.a}>
+              {label}
             </Link>
           </li>
         ))}
       </ul>
-
-      <style jsx>{`
-        ul {
-          display: flex;
-          justify-content: space-between;
-        }
-        nav > ul {
-          padding: 0px;
-        }
-        li {
-          display: flex;
-          padding: 10px 10px;
-        }
-        li.active {
-          border-bottom: 3px ridge currentColor;
-        }
-        a {
-          color: white;
-          font-size: 20px;
-          font-weight: bold;
-          text-decoration: none;
-        }
-      `}</style>
     </nav>
   );
 }

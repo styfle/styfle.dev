@@ -1,40 +1,18 @@
+import style from 'styles/footer.module.css';
+
 const Footer = () => (
   <footer>
-    <style jsx>{`
-      .flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 10em;
-      }
-
-      .social-svg {
-        fill: white;
-        width: 32px;
-        height: 32px;
-      }
-
-      a {
-        margin: 0 0.5vw;
-        text-decoration: none;
-        color: inherit;
-      }
-
-      a:hover {
-        border-bottom: none;
-        color: var(--green);
-      }
-
-      svg:hover {
-        transition: border-radius 300ms;
-        border-radius: 5px;
-      }
-    `}</style>
     <div className="container">
-      <div className="flex">
+      <div className={style.flex}>
         <div>
-          <a target="_blank" rel="noreferrer" href="https://github.com/styfle" title="GitHub">
-            <svg className="social-svg" viewBox="0 0 64 64">
+          <a
+            className={style.a}
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/styfle"
+            title="GitHub"
+          >
+            <svg className={style.social} viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
               </g>
@@ -46,8 +24,14 @@ const Footer = () => (
               </g>
             </svg>
           </a>
-          <a target="_blank" rel="noreferrer" href="https://www.npmjs.com/~styfle" title="NPM">
-            <svg className="social-svg" viewBox="0 0 64 64">
+          <a
+            className={style.a}
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.npmjs.com/~styfle"
+            title="NPM"
+          >
+            <svg className={style.social} viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
               </g>
@@ -60,13 +44,14 @@ const Footer = () => (
             </svg>
           </a>
           <a
+            className={style.a}
             target="_blank"
             rel="noreferrer"
             href="https://stackoverflow.com/users/266535/styfle"
             title="StackOverflow"
           >
             <svg
-              className="social-svg"
+              className={style.social}
               style={{ backgroundColor: '#de862b' }}
               viewBox="-13 -13 50 50"
             >
@@ -74,12 +59,13 @@ const Footer = () => (
             </svg>
           </a>
           <a
+            className={style.a}
             target="_blank"
             rel="noreferrer"
             href="https://medium.com/@styfle"
             title="Medium"
           >
-            <svg className="social-svg" viewBox="0 0 64 64">
+            <svg className={style.social} viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
               </g>
@@ -91,8 +77,14 @@ const Footer = () => (
               </g>
             </svg>
           </a>
-          <a target="_blank" rel="noreferrer" href="https://twitter.com/styfle" title="Twitter">
-            <svg className="social-svg" viewBox="0 0 64 64">
+          <a
+            className={style.a}
+            target="_blank"
+            rel="noreferrer"
+            href="https://twitter.com/styfle"
+            title="Twitter"
+          >
+            <svg className={style.social} viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
               </g>
@@ -104,9 +96,15 @@ const Footer = () => (
               </g>
             </svg>
           </a>
-          <a target="_blank" rel="noreferrer" href="https://keybase.io/styfle" title="Keybase">
+          <a
+            className={style.a}
+            target="_blank"
+            rel="noreferrer"
+            href="https://keybase.io/styfle"
+            title="Keybase"
+          >
             <svg
-              className="social-svg"
+              className={style.social}
               viewBox="-10 -10 45 45"
               style={{ backgroundColor: '#33a0ff' }}
             >
@@ -116,12 +114,13 @@ const Footer = () => (
             </svg>
           </a>
           <a
+            className={style.a}
             target="_blank"
             rel="noreferrer"
             href="https://www.facebook.com/ceriously.com/"
             title="Facebook"
           >
-            <svg className="social-svg" viewBox="0 0 64 64">
+            <svg className={style.social} viewBox="0 0 64 64">
               <g className="social-svg-background">
                 <circle cx="32" cy="32" r="31"></circle>
               </g>
@@ -135,8 +134,10 @@ const Footer = () => (
           </a>
         </div>
         <div>
-          <a href="https://github.com/styfle/styfle.dev">styfle.dev</a>&copy;{' '}
-          {new Date().getFullYear()}
+          <a className={style.a} href="https://github.com/styfle/styfle.dev">
+            styfle.dev
+          </a>
+          &copy; {new Date().getFullYear()}
         </div>
       </div>
     </div>

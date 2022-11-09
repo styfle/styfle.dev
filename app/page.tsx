@@ -1,6 +1,6 @@
-import Image from 'next/future/image';
+'use client';
+import Image from 'next/image';
 import Link from 'next/link';
-import Layout from 'components/Layout';
 import Avatar from 'public/images/blog/ceriously-flat-glow.jpg';
 import style from 'styles/index.module.css';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ export default function Home() {
   const [pulse, setPulse] = useState(false);
 
   return (
-    <Layout title="Home">
+    <>
       <div className="main-content">
         <div className={`${style.avatar} ${pulse ? style.pulse : ''}`}>
           <Image
@@ -26,9 +26,7 @@ export default function Home() {
         <p className={style.p}>
           My name is Steven and I&apos;m a{' '}
           <Link href="/blog/software-shepherd">
-            <a>
-              Software <s>Engineer</s> Shepherd
-            </a>
+            Software <s>Engineer</s> Shepherd
           </Link>{' '}
           with a passion for building open source tools. I currently work for{' '}
           <a href="https://vercel.com">Vercel</a> building the best cloud deployment experience in
@@ -40,6 +38,6 @@ export default function Home() {
           hear about it!
         </p>
       </div>
-    </Layout>
+    </>
   );
 }

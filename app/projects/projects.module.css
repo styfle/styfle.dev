@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.section {
+  border-color: rgba(185, 190, 180, 0.2);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition-duration: 100ms;
+  transition-property: border-color, background;
+}
+
+.section:hover {
+  cursor: pointer;
+  background: rgba(185, 190, 180, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .section {
+    border-color: rgba(45, 47, 45, 1);
+  }
+  .section:hover {
+    background: rgba(125, 135, 125, 0.1);
+  }
+}
+
+.section h2 {
+  margin: 0;
+}
+
+.section time {
+  font-size: 12px;
+}
+
+.section > a {
+  color: unset;
+  text-decoration: unset;
+}
+
+.section > a:hover {
+  color: unset;
+}

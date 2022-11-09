@@ -2,6 +2,9 @@
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -19,7 +22,7 @@
     "gray-matter": "4.0.3",
     "highlight.js": "11.6.0",
     "marked": "4.1.1",
-    "next": "12.3.2-canary.28",
+    "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -29,8 +32,8 @@
     "@types/marked": "4.0.7",
     "@types/node": "16",
     "@types/react": "18.0.21",
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.2-canary.28",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.2",
     "prettier": "2.7.1",
     "typescript": "4.8.4"
   }

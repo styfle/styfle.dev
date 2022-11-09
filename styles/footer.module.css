@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10em;
+}
+
+.social {
+  fill: white;
+  width: 32px;
+  height: 32px;
+}
+
+.social:hover {
+  transition: border-radius 300ms;
+  border-radius: 5px;
+}
+
+.a {
+  margin: 0 0.5vw;
+  text-decoration: none;
+  color: inherit;
+}
+
+.a:hover {
+  border-bottom: none;
+  color: var(--green);
+}
