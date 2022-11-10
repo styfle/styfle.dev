@@ -116,7 +116,7 @@ const Footer = () => (
           <a
             className={style.a}
             target="_blank"
-            rel="noreferrer"
+            rel="me noreferrer"
             href="https://mstdn.io/@styfle"
             title="Mastodon"
           >
