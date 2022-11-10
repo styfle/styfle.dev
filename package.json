@@ -13,15 +13,11 @@
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
     "git-pre-commit": "yarn prettier && git add -A"
   },
-  "browserslist": [
-    "supports es6-module-dynamic-import",
-    "not dead"
-  ],
   "dependencies": {
     "@octokit/rest": "19.0.5",
     "gray-matter": "4.0.3",
     "highlight.js": "11.6.0",
-    "marked": "4.1.1",
+    "marked": "4.2.2",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -30,9 +26,9 @@
     "@octokit/types": "8.0.0",
     "@types/gtag.js": "0.0.12",
     "@types/marked": "4.0.7",
-    "@types/node": "16",
-    "@types/react": "18.0.21",
-    "eslint": "8.26.0",
+    "@types/node": "16.18.3",
+    "@types/react": "18.0.25",
+    "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "prettier": "2.7.1",
     "typescript": "4.8.4"
