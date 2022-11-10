@@ -183,6 +183,10 @@ img[align='right'] {
   display: none;
 }
 
+time {
+  font-size: 0.8em;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;

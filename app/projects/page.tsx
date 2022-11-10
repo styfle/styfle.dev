@@ -13,8 +13,8 @@ export default async function Projects() {
           <section key={name} className={style.section}>
             <a href={homepage || ''}>
               <Image alt={name} src={og_image_url || ''} width={640} height={320} />
-              <h2 className="green-link">{name}</h2>
-              <time dateTime={created_at || ''} itemProp="created_at">
+              <h2>{name}</h2>
+              <time dateTime={created_at || ''} itemProp="dateCreated">
                 {formatDate(created_at || '')}
               </time>
               <div itemProp="description">{description}</div>
