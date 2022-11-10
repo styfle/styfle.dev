@@ -11,7 +11,7 @@ export default async function Blog() {
   return (
     <>
       <h1>Blog</h1>
-      <Image src={Simpsons} placeholder="blur" width="720" height="420" alt="Simpsons Any Key" />
+      <Image src={Simpsons} placeholder="blur" width="710" height="360" alt="Simpsons Any Key" />
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2>
