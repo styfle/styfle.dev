@@ -17,7 +17,7 @@ export default async function Post({ params }: { params: Params }) {
     <article>
       <header>
         <h1 itemProp="name headline">{title}</h1>
-        <p style={{ textAlign: 'center', fontSize: '0.8em', lineHeight: '1' }}>
+        <p style={{ textAlign: 'center', lineHeight: '1' }}>
           <time dateTime={date} itemProp="datePublished">
             {formatDate(date)}
           </time>

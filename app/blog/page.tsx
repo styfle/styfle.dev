@@ -14,21 +14,15 @@ export default async function Blog() {
       <Image src={Simpsons} placeholder="blur" width="710" height="360" alt="Simpsons Any Key" />
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
-          <h2>
+          <h2 style={{ margin: 0 }}>
             <Link href="/blog/[slug]" as={`/blog/${slug}`} className="green-link">
               {title}
             </Link>
           </h2>
-          <p className="post-meta">
-            <time className="dt-published" dateTime={date} itemProp="datePublished">
-              {formatDate(date)}
-            </time>
-          </p>
-          <div
-            className="post-content e-content"
-            itemProp="articleBody"
-            dangerouslySetInnerHTML={{ __html: marked(content) }}
-          ></div>
+          <time dateTime={date} itemProp="datePublished">
+            {formatDate(date)}
+          </time>
+          <div itemProp="articleBody" dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
           <Link href="/blog/[slug]" as={`/blog/${slug}`} className="green-link">
             Read more...
           </Link>

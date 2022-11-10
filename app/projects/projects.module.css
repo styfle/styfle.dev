@@ -32,10 +32,6 @@
   margin: 0;
 }
 
-.section time {
-  font-size: 12px;
-}
-
 .section > a {
   color: unset;
   text-decoration: unset;
