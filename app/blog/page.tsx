@@ -15,7 +15,7 @@ export default async function Blog() {
       {posts.map(({ slug, title, date, content }) => (
         <article key={slug}>
           <h2 style={{ margin: 0 }}>
-            <Link href="/blog/[slug]" as={`/blog/${slug}`} className="green-link">
+            <Link href={`/blog/${slug}`} className="green-link">
               {title}
             </Link>
           </h2>
@@ -23,7 +23,7 @@ export default async function Blog() {
             {formatDate(date)}
           </time>
           <div itemProp="articleBody" dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-          <Link href="/blog/[slug]" as={`/blog/${slug}`} className="green-link">
+          <Link href={`/blog/${slug}`} className="green-link">
             Read more...
           </Link>
           <hr />
