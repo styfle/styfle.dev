@@ -14,7 +14,7 @@ export default async function Head() {
         rel="stylesheet"
         media="(prefers-color-scheme: dark)"
         //@ts-ignore
-        precedence="default"
+        precedence="high"
       ></link>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link
@@ -22,7 +22,7 @@ export default async function Head() {
         rel="stylesheet"
         media="(prefers-color-scheme: light)"
         //@ts-ignore
-        precedence="default"
+        precedence="high"
       ></link>
     </>
   );

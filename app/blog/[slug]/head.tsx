@@ -9,6 +9,22 @@ export default async function Head({ params }: { params: Params }) {
       <meta property="og:title" content={title} />
       <meta property="og:image" content={og} />
       <title>{title}</title>
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link
+        href="/themes/nord.css"
+        rel="stylesheet"
+        media="(prefers-color-scheme: dark)"
+        //@ts-ignore
+        precedence="high"
+      ></link>
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link
+        href="/themes/github.css"
+        rel="stylesheet"
+        media="(prefers-color-scheme: light)"
+        //@ts-ignore
+        precedence="high"
+      ></link>
     </>
   );
 }
