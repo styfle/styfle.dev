@@ -1,27 +1,14 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import Avatar from 'public/images/blog/ceriously-flat-glow.jpg';
 import style from 'styles/index.module.css';
-import { useState } from 'react';
 
 export default function Home() {
-  const [pulse, setPulse] = useState(false);
-
   return (
     <>
       <div className="main-content">
-        <div className={`${style.avatar} ${pulse ? style.pulse : ''}`}>
-          <Image
-            src={Avatar}
-            className={style.round}
-            onLoadingComplete={() => setPulse(true)}
-            placeholder="blur"
-            width="200"
-            height="200"
-            alt="styfle"
-            priority
-          />
+        <div className={style.avatar}>
+          <Image src={Avatar} placeholder="blur" width="200" height="200" alt="styfle" priority />
         </div>
         <p className={style.p}>
           My name is Steven and I&apos;m a{' '}
