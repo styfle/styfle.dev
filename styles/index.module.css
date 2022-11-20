@@ -2,24 +2,22 @@
   font-size: 20px;
 }
 
-/**
-  * Avatar animation adapted from
-  * https://codepen.io/blixt/pen/ZGwwKW
-  */
 .avatar {
-  position: relative;
-  height: 200px;
-  width: 200px;
+  text-align: center;
   margin: 60px auto;
+}
+
+.avatar > img {
   border: var(--green) solid 8px;
   border-radius: 50%;
 }
 
-.avatar:hover {
-  animation: pulse 1s ease-in-out infinite;
+.avatar > img:hover {
+  animation: coinflip 1s ease-in-out;
+  animation-delay: 2s;
 }
 
-@keyframes pulse {
+@keyframes coinflip {
   0% {
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     opacity: 1;
@@ -104,8 +102,4 @@
     transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     opacity: 1;
   }
-}
-
-.round {
-  border-radius: 50%;
 }

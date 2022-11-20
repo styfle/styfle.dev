@@ -7,16 +7,8 @@ export default function Home() {
   return (
     <>
       <div className="main-content">
-        <div className={`${style.avatar} ${style.pulse}`}>
-          <Image
-            src={Avatar}
-            className={style.round}
-            placeholder="blur"
-            width="200"
-            height="200"
-            alt="styfle"
-            priority
-          />
+        <div className={style.avatar}>
+          <Image src={Avatar} placeholder="blur" width="200" height="200" alt="styfle" priority />
         </div>
         <p className={style.p}>
           My name is Steven and I&apos;m a{' '}
