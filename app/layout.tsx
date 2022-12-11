@@ -2,6 +2,7 @@ import 'styles/global.css';
 
 import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
+import { AnalyticsWrapper } from 'components/Analytics';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <main className="container">{children}</main>
         <Footer />
+        <AnalyticsWrapper />
       </body>
     </html>
   );

@@ -2,9 +2,6 @@
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -15,6 +12,7 @@
   },
   "dependencies": {
     "@octokit/rest": "19.0.5",
+    "@vercel/analytics": "0.1.6",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.4",
