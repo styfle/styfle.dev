@@ -1,0 +1,25 @@
+{
+    "subject":"acct:styfle@mstdn.io",
+    "aliases":
+    [
+        "https://mstdn.io/@styfle",
+        "https://mstdn.io/users/styfle"
+    ],
+    "links":
+    [
+        {
+            "rel":"http://webfinger.net/rel/profile-page",
+            "type":"text/html",
+            "href":"https://mstdn.io/@styfle"
+        },
+        {
+            "rel":"self",
+            "type":"application/activity+json",
+            "href":"https://mstdn.io/users/styfle"
+        },
+        {
+            "rel":"http://ostatus.org/schema/1.0/subscribe",
+            "template":"https://hachyderm.io/authorize_interaction?uri={uri}"
+        }
+    ]
+}
