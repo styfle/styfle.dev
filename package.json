@@ -11,7 +11,7 @@
     "git-pre-commit": "yarn prettier && git add -A"
   },
   "dependencies": {
-    "@octokit/rest": "19.0.5",
+    "@octokit/rest": "19.0.7",
     "@vercel/analytics": "0.1.8",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
