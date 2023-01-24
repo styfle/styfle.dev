@@ -1,4 +1,5 @@
 {
+	"private": true,
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
