@@ -2,13 +2,14 @@
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
+  "packageManager": "pnpm@7.26.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "lint": "next lint",
     "start": "next start",
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
-    "git-pre-commit": "yarn prettier && git add -A"
+    "git-pre-commit": "pnpm prettier && git add -A"
   },
   "dependencies": {
     "@octokit/rest": "19.0.7",
