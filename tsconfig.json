@@ -16,7 +16,6 @@
     "moduleResolution": "nodenext",
     "isolatedModules": true,
     "jsx": "preserve",
-    "allowJs": true,
     "resolveJsonModule": true,
     "incremental": true,
     "plugins": [
