@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
     "baseUrl": ".",
     "lib": [
       "dom",
@@ -13,8 +12,8 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "isolatedModules": true,
     "jsx": "preserve",
     "allowJs": true,
