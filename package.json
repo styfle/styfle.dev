@@ -29,7 +29,7 @@
     "@types/node": "16.18.11",
     "@types/react": "18.0.27",
     "eslint": "8.32.0",
-    "eslint-config-next": "13.1.7-canary.2",
+    "eslint-config-next": "13.1.7-canary.4",
     "prettier": "2.8.3",
     "typescript": "5.0.0-beta"
   }
