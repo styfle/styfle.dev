@@ -1,5 +1,33 @@
 import Image from 'next/image';
 import Kirk from 'public/images/blog/star-trek-kirk.jpg';
+import { getOgImage } from 'utils/og-image';
+
+export async function generateMetadata() {
+  const title = 'Contact';
+  const description = 'Are you trying to contact styfle? You found the right place!';
+  const ogImage = getOgImage('/images/blog/star-trek-kirk.jpg');
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: `https://styfle.dev/contact`,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      title,
+      description,
+      images: ogImage,
+    },
+  };
+}
 
 export default function Contact() {
   return (

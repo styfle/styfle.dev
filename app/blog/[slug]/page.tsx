@@ -4,11 +4,45 @@ import { getPosts } from 'utils/posts';
 import { formatDate } from 'utils/date';
 import { markdownToHtml } from 'utils/markdown';
 import { getProps, Params } from './utils';
+import { getOgImage } from 'utils/og-image';
 
 export const generateStaticParams = async () => {
   const posts = await getPosts('trim');
   return posts;
 };
+
+export async function generateMetadata({ params }: { params: Params }) {
+  const posts = await getPosts('trim');
+  const post = posts.find(p => p.slug === params.slug);
+  if (!post) {
+    throw new Error(`Expected slug ${params.slug}`);
+  }
+  const ogImage = getOgImage(post.ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg');
+
+  const { title, slug, date: publishedTime, content: description } = post;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      publishedTime,
+      url: `https://styfle.dev/blog/${slug}`,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      title,
+      description,
+      images: ogImage,
+    },
+  };
+}
 
 export default async function Post({ params }: { params: Params }) {
   const { slug, title, date, ogImage, content } = await getProps(params);

@@ -2,6 +2,34 @@ import Image from 'next/image';
 import { getProjects } from 'utils/github';
 import { formatDate } from 'utils/date';
 import style from './projects.module.css';
+import { getOgImage } from 'utils/og-image';
+
+export async function generateMetadata() {
+  const title = 'Projects';
+  const description = 'A porfolio of projects built by styfle over the years.';
+  const ogImage = getOgImage('/images/blog/ceriously-flat-glow.jpg');
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: `https://styfle.dev/projects`,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      title,
+      description,
+      images: ogImage,
+    },
+  };
+}
 
 export default async function Projects() {
   const projects = await getProjects();

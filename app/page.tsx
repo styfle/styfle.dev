@@ -2,6 +2,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Avatar from 'public/images/blog/ceriously-flat-glow.jpg';
 import style from 'styles/index.module.css';
+import { getOgImage } from 'utils/og-image';
+
+export async function generateMetadata() {
+  const title = 'Home';
+  const description =
+    "My name is Steven and I'm a Software Shepherd with a passion for building open source tools.";
+  const ogImage = getOgImage('/images/blog/ceriously-flat-glow.jpg');
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: `https://styfle.dev`,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      title,
+      description,
+      images: ogImage,
+    },
+  };
+}
 
 export default function Home() {
   return (
