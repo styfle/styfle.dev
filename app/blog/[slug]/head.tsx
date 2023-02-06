@@ -1,16 +1,10 @@
-import { getOgImage } from 'utils/og-image';
-import { getProps, Params } from './utils';
-
-export default async function Head({ params }: { params: Params }) {
-  const { title, ogImage } = await getProps(params);
-  const og = getOgImage(ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg');
+export default async function Head() {
   return (
     <>
-      <meta property="og:title" content={title} />
-      <meta property="og:image" content={og} />
-      <title>{title}</title>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link
+        key="theme-dark"
+        id="theme-dark"
         href="/themes/nord.css"
         rel="stylesheet"
         media="(prefers-color-scheme: dark)"
@@ -19,6 +13,8 @@ export default async function Head({ params }: { params: Params }) {
       ></link>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link
+        key="theme-light"
+        id="theme-light"
         href="/themes/github.css"
         rel="stylesheet"
         media="(prefers-color-scheme: light)"

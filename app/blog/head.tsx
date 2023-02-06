@@ -1,15 +1,10 @@
-import { getOgImage } from 'utils/og-image';
-
 export default async function Head() {
-  const title = 'Blog';
-  const ogImage = getOgImage('/images/blog/simpsons-any-key.jpg');
   return (
     <>
-      <meta property="og:title" content={title} />
-      <meta property="og:image" content={ogImage} />
-      <title>{title}</title>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link
+        key="theme-dark"
+        id="theme-dark"
         href="/themes/nord.css"
         rel="stylesheet"
         media="(prefers-color-scheme: dark)"
@@ -18,6 +13,8 @@ export default async function Head() {
       ></link>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link
+        key="theme-light"
+        id="theme-light"
         href="/themes/github.css"
         rel="stylesheet"
         media="(prefers-color-scheme: light)"

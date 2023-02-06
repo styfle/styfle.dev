@@ -4,6 +4,34 @@ import { getPosts } from 'utils/posts';
 import { marked } from 'marked';
 import { formatDate } from 'utils/date';
 import Simpsons from 'public/images/blog/simpsons-any-key.jpg';
+import { getOgImage } from 'utils/og-image';
+
+export async function generateMetadata() {
+  const title = 'Blog';
+  const description = 'Occasional articles about software, the web, and more.';
+  const ogImage = getOgImage('/images/blog/simpsons-any-key.jpg');
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: `https://styfle.dev/blog`,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      title,
+      description,
+      images: ogImage,
+    },
+  };
+}
 
 export default async function Blog() {
   const allPosts = await getPosts('trim');
