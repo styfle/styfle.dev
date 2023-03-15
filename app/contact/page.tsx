@@ -39,6 +39,7 @@ export default function Contact() {
         width="720"
         height="360"
         alt="Star Trek Kirk"
+        priority
         //@ts-ignore
         fetchPriority="high"
       />

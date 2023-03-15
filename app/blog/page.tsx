@@ -45,6 +45,7 @@ export default async function Blog() {
         width="710"
         height="360"
         alt="Simpsons Any Key"
+        priority
         //@ts-ignore
         fetchPriority="high"
       />

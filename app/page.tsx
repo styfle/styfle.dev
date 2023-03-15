@@ -43,6 +43,7 @@ export default function Home() {
             width="200"
             height="200"
             alt="styfle"
+            priority
             //@ts-ignore
             fetchPriority="high"
           />

@@ -64,6 +64,7 @@ export default async function Post({ params }: { params: Params }) {
           width={ogImage.width}
           height={ogImage.height}
           alt={title}
+          priority
           //@ts-ignore
           fetchPriority="high"
         />
