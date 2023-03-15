@@ -1,4 +1,4 @@
-export default async function Head() {
+export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
@@ -21,6 +21,7 @@ export default async function Head() {
         //@ts-ignore
         precedence="high"
       ></link>
+      {children}
     </>
   );
 }
