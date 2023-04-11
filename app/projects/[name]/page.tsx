@@ -4,6 +4,8 @@ import { markdownToHtml } from 'utils/markdown';
 import { getOgImage } from 'utils/og-image';
 import { getProps, Params } from './utils';
 
+export const dynamicParams = false;
+
 export const generateStaticParams = async () => {
   const projects = await getProjects();
   return projects;
