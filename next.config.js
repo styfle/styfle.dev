@@ -9,9 +9,6 @@ const nextConfig = {
       hostname: 'via.placeholder.com',
     }],
   },
-  experimental: {
-    appDir: true,
-  }
 }
 
 module.exports = nextConfig
