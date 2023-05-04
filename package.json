@@ -3,7 +3,7 @@
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
-  "packageManager": "pnpm@8.0.0",
+  "packageManager": "pnpm@8.4.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -18,18 +18,18 @@
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "13.2.5-canary.33",
+    "next": "13.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@octokit/types": "9.0.0",
+    "@octokit/types": "9.2.0",
     "@types/gtag.js": "0.0.12",
     "@types/marked": "4.0.8",
     "@types/node": "16.18.11",
     "@types/react": "18.0.27",
     "eslint": "8.32.0",
-    "eslint-config-next": "13.2.5-canary.33",
+    "eslint-config-next": "13.4.0",
     "prettier": "2.8.3",
     "typescript": "5.0.2"
   }
