@@ -25,6 +25,9 @@ export async function generateMetadata() {
       ],
     },
     twitter: {
+      creator: '@styfle',
+      site: '@styfle',
+      card: 'summary_large_image',
       title,
       description,
       images: ogImage,
