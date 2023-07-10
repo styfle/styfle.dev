@@ -4,6 +4,9 @@
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
   "packageManager": "pnpm@8.4.0",
+	"engines": {
+		"node": "16.x"
+	},
   "scripts": {
     "dev": "next",
     "build": "next build",
