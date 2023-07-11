@@ -13,7 +13,7 @@
     "git-pre-commit": "pnpm prettier && git add -A"
   },
   "dependencies": {
-    "@octokit/rest": "19.0.7",
+    "@octokit/rest": "20.0.1",
     "@vercel/analytics": "0.1.8",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
@@ -23,10 +23,10 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@octokit/types": "9.2.0",
+    "@octokit/types": "11.1.0",
     "@types/gtag.js": "0.0.12",
     "@types/marked": "4.0.8",
-    "@types/node": "16.18.11",
+    "@types/node": "18.16.19",
     "@types/react": "18.0.27",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
