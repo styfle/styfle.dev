@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "styfle.dev",
+	"foo": "testing small change to see build cache in action",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
   "scripts": {
