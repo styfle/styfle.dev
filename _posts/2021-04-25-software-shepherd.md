@@ -22,7 +22,7 @@ There are many different titles for very similar jobs and everyone has different
 
 And those are just the nouns...slap a few adjectives in front and you get _Senior Software Engineer_, _Full-Stack Developer_, and even _Principal Technologist_.
 
-Do these have titles have different meanings? Sometimes. But often they're the same position. Do people people treat these titles differently? I think so. They probably even come with different salaries. But more than the money, some of these titles are better known outside of the industry.
+Do these titles have different meanings? Sometimes. But often they're the same position. Do people people treat these titles differently? I think so. They probably even come with different salaries. But more than the money, some of these titles are better known outside of the industry.
 
 Take for instance, meeting someone new. When you meet someone new, they typically ask two questions, "What's your name?" followed by "What do you do?" which really means "What's your job title so I can evaluate if you are interesting or wealthy enough to be worth talking to?"
 
