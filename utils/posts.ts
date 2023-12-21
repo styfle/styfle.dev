@@ -12,7 +12,7 @@ export interface BlogPost {
 }
 
 export async function getPosts(type: 'full' | 'trim'): Promise<BlogPost[]> {
-  const postsDirectory = resolve(process.cwd(), '_posts');
+  const postsDirectory = resolve(process.cwd(), 'posts');
   const postFiles = await readdir(postsDirectory);
 
   const posts = await Promise.all(
