@@ -4,6 +4,11 @@ import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 import { AnalyticsWrapper } from 'components/Analytics';
 
+// Prevent usage of dynamic functions such
+// as `cookies()`,  and changes `dynamicParams` to false.
+// This is equivalent to getStaticProps() in Pages Router.
+export const dynamic = 'force-static';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
