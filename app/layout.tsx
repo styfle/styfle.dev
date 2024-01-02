@@ -7,6 +7,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const gaId = process?.env?.GA_ID;
+  console.log({ gaId });
   return (
     <html lang="en">
       <head>
