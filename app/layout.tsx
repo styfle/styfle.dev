@@ -2,9 +2,11 @@ import 'styles/global.css';
 
 import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
-import { AnalyticsWrapper } from 'components/Analytics';
+// @ts-expect-error - no types yet
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const gaId = process?.env?.GA_ID;
   return (
     <html lang="en">
       <head>
@@ -20,8 +22,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <main className="container">{children}</main>
         <Footer />
-        <AnalyticsWrapper />
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }
