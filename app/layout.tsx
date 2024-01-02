@@ -2,7 +2,6 @@ import 'styles/global.css';
 
 import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
-// @ts-expect-error - no types yet
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
