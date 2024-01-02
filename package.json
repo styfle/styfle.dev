@@ -12,6 +12,7 @@
     "git-pre-commit": "pnpm prettier && git add -A"
   },
   "dependencies": {
+    "@next/third-parties": "14.0.4",
     "@octokit/rest": "20.0.1",
     "@vercel/analytics": "0.1.8",
     "gray-matter": "4.0.3",
