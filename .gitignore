@@ -4,4 +4,5 @@ repos.json
 .now
 .vercel
 .env*
+.env*.local
 .vscode
