@@ -4,7 +4,7 @@
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev --turbo",
     "build": "next build",
     "lint": "next lint",
     "start": "next start",
