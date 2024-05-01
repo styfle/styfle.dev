@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev --turbo",
-		  "build": "echo \"VERCEL_BRANCH_URL is $VERCEL_BRANCH_URL\" && next build",
+		"build": "next build",
     "lint": "next lint",
     "start": "next start",
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
