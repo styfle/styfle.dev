@@ -15,12 +15,13 @@
     "@next/third-parties": "14.2.0",
     "@octokit/rest": "20.0.1",
     "@vercel/analytics": "0.1.8",
+    "babel-plugin-react-compiler": "0.0.0-experimental-c23de8d-20240515",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "14.2.3",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "next": "14.3.0-canary.67",
+    "react": "19.0.0-beta-26f2496093-20240514",
+    "react-dom": "19.0.0-beta-26f2496093-20240514"
   },
   "devDependencies": {
     "@octokit/types": "11.1.0",
@@ -29,7 +30,7 @@
     "@types/node": "18.16.19",
     "@types/react": "18.0.27",
     "eslint": "8.44.0",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "14.3.0-canary.67",
     "prettier": "2.8.3",
     "typescript": "5.0.2"
   },
