@@ -62,7 +62,7 @@ export default async function Post({ params }: { params: Params }) {
       </header>
 
       {ogImage ? (
-        <Image src={ogImage.src} width={ogImage.width} height={ogImage.height} alt={title} />
+        <Image src={ogImage.src} width={ogImage.width} height={ogImage.height} alt={title} quality={80} />
       ) : null}
       <div
         className="main-content"

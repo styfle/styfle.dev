@@ -34,7 +34,7 @@ export default function Contact() {
   return (
     <>
       <h1>First Contact 🖖</h1>
-      <Image src={Kirk} placeholder="blur" width="720" height="360" alt="Star Trek Kirk" />
+      <Image src={Kirk} placeholder="blur" width="720" height="360" alt="Star Trek Kirk" quality={80} />
       <p>Hey thanks for reaching out! You can contact me in the following ways:</p>
       <ul>
         <li>

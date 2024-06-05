@@ -40,7 +40,7 @@ export default function Home() {
     <>
       <div className="main-content">
         <div className={style.avatar}>
-          <Image src={Avatar} placeholder="blur" width="200" height="200" alt="styfle" priority />
+          <Image src={Avatar} placeholder="blur" width="200" height="200" alt="styfle" priority quality={80} />
         </div>
         <p className={style.p}>
           My name is Steven and I&apos;m a{' '}
