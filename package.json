@@ -14,7 +14,7 @@
   "dependencies": {
     "@next/third-parties": "14.2.0",
     "@octokit/rest": "20.0.1",
-    "@vercel/analytics": "0.1.8",
+    "@vercel/speed-insights": "1.0.12",
     "babel-plugin-react-compiler": "0.0.0-experimental-c23de8d-20240515",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
