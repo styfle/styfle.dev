@@ -11,9 +11,9 @@ dependencies:
   '@octokit/rest':
     specifier: 20.0.1
     version: 20.0.1
-  '@vercel/analytics':
-    specifier: 0.1.8
-    version: 0.1.8(react@19.0.0-beta-26f2496093-20240514)
+  '@vercel/speed-insights':
+    specifier: 1.0.12
+    version: 1.0.12(next@14.3.0-canary.67)(react@19.0.0-beta-26f2496093-20240514)
   babel-plugin-react-compiler:
     specifier: 0.0.0-experimental-c23de8d-20240515
     version: 0.0.0-experimental-c23de8d-20240515
@@ -756,11 +756,31 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@vercel/analytics@0.1.8(react@19.0.0-beta-26f2496093-20240514):
-    resolution: {integrity: sha512-PQrOI8BJ9qUiVJuQfnKiJd15eDjDJH9TBKsNeMrtelT4NAk7d9mBVz1CoZkvoFnHQ0OW7Xnqmr1F2nScfAnznQ==}
+  /@vercel/speed-insights@1.0.12(next@14.3.0-canary.67)(react@19.0.0-beta-26f2496093-20240514):
+    resolution: {integrity: sha512-ZGQ+a7bcfWJD2VYEp2R1LHvRAMyyaFBYytZXsfnbOMkeOvzGNVxUL7aVUvisIrTZjXTSsxG45DKX7yiw6nq2Jw==}
+    requiresBuild: true
     peerDependencies:
-      react: ^16.8||^17||^18
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19
+      svelte: ^4
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
     dependencies:
+      next: 14.3.0-canary.67(babel-plugin-react-compiler@0.0.0-experimental-c23de8d-20240515)(react-dom@19.0.0-beta-26f2496093-20240514)(react@19.0.0-beta-26f2496093-20240514)
       react: 19.0.0-beta-26f2496093-20240514
     dev: false
 
