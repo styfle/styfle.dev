@@ -3,6 +3,7 @@ import 'styles/global.css';
 import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const gaId = process?.env?.GA_ID;
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <main className="container">{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
       {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
