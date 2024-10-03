@@ -2,6 +2,7 @@ import { getProjects, GitHubProject, getRawFile } from 'utils/github';
 
 export interface Params {
   name: string;
+  [key: string]: string;
 }
 
 interface Props {

@@ -2,6 +2,7 @@ import { getPosts } from 'utils/posts';
 
 export interface Params {
   slug: string;
+  [key: string]: string;
 }
 
 interface Props {

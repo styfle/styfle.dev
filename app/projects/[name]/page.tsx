@@ -11,9 +11,9 @@ export const generateStaticParams = async () => {
   return projects;
 };
 
-export async function generateMetadata({ params }: { params: Params }) {
-  const { project } = await getProps(params);
-  if (!project) return null;
+export async function generateMetadata({ params }: { params: Promise<Params> }) {
+  const { project } = await getProps(await params);
+  if (!project) return {};
 
   const { name: title, created_at: publishedTime, description, og_image_url } = project;
 
@@ -43,8 +43,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 }
 
-export default async function Project({ params }: { params: Params }) {
-  const { project, readme } = await getProps(params);
+export default async function Project({ params }: { params: Promise<Params> }) {
+  const { project, readme } = await getProps(await params);
   const { name, html_url } = project;
   const baseUrl = `${html_url}/blob/main/`;
   const __html = markdownToHtml(readme, baseUrl);

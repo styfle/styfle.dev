@@ -13,11 +13,12 @@ export const generateStaticParams = async () => {
   return posts;
 };
 
-export async function generateMetadata({ params }: { params: Params }) {
+export async function generateMetadata({ params }: { params: Promise<Params> }) {
   const posts = await getPosts('trim');
-  const post = posts.find(p => p.slug === params.slug);
+  const { slug: s } = await params;
+  const post = posts.find(p => p.slug === s);
   if (!post) {
-    throw new Error(`Expected slug ${params.slug}`);
+    throw new Error(`Expected slug ${s}`);
   }
   const ogImage = getOgImage(post.ogImage?.src ?? '/images/blog/ceriously-flat-glow.jpg');
 
@@ -47,8 +48,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 }
 
-export default async function Post({ params }: { params: Params }) {
-  const { slug, title, date, ogImage, content } = await getProps(params);
+export default async function Post({ params }: { params: Promise<Params> }) {
+  const { slug, title, date, ogImage, content } = await getProps(await params);
   const html = markdownToHtml(content);
   return (
     <article>
