@@ -19,7 +19,7 @@
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "14.3.0-canary.67",
+    "next": "15.0.0-canary.177",
     "react": "19.0.0-beta-26f2496093-20240514",
     "react-dom": "19.0.0-beta-26f2496093-20240514"
   },
