@@ -1,11 +1,10 @@
 import { getProjects, GitHubProject, getRawFile } from 'utils/github';
 
-export interface Params {
+export type Params = {
   name: string;
-  [key: string]: string;
 }
 
-interface Props {
+type Props = {
   project: GitHubProject;
   readme: string;
 }

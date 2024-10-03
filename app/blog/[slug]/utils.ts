@@ -1,11 +1,10 @@
 import { getPosts } from 'utils/posts';
 
-export interface Params {
+export type Params = {
   slug: string;
-  [key: string]: string;
 }
 
-interface Props {
+type Props = {
   slug: string;
   title: string;
   date: string;
