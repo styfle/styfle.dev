@@ -29,9 +29,9 @@
     "@types/marked": "4.0.8",
     "@types/node": "20.16.13",
     "@types/react": "npm:types-react@19.0.0-rc.1",
-    "eslint": "8.44.0",
+    "eslint": "9.13.0",
     "eslint-config-next": "15.0.0",
-    "prettier": "2.8.3",
+    "prettier": "3.3.3",
     "typescript": "5.6.3"
   },
   "pnpm": {

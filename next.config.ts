@@ -4,11 +4,13 @@ const nextConfig: import('next').NextConfig = {
   },
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [{
-      protocol: 'https',
-      hostname: 'via.placeholder.com',
-    }],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      },
+    ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
