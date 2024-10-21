@@ -1,7 +1,4 @@
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
+const nextConfig: import('next').NextConfig = {
   experimental: {
     reactCompiler: true,
   },
@@ -14,4 +11,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig
