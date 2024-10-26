@@ -81,7 +81,7 @@ const Footer = () => (
             className={style.a}
             target="_blank"
             rel="noreferrer"
-            href="https://twitter.com/styfle"
+            href="https://x.com/styfle"
             title="Twitter"
           >
             <svg className={style.social} viewBox="0 0 64 64">

@@ -77,6 +77,6 @@ If you would like to see a demo, visit [CodeSandbox][CodeSandbox] to see the cod
 [Getter]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
 [WikiL10n]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [Medium]: https://medium.com/@styfle/es6-proxy-and-localization-c1269bbc0a26
-[Twitter]: https://twitter.com/styfle/status/947932282777735169
+[Twitter]: https://x.com/styfle/status/947932282777735169
 [Facebook]: https://www.facebook.com/ceriouslycom/posts/1780110312010794
 [HackerNews]: https://news.ycombinator.com/item?id=16047941

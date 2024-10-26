@@ -45,7 +45,7 @@ The beauty here is that this media query respects the user's system preference s
 
 In order to implement Markdown blog post authoring, I reached for [Marked](https://github.com/markedjs/marked), a project I help maintain that parses markdown and converts it to HTML. And, as you may have guessed, I used Next.js [dynamic route segments](https://nextjs.org/docs/routing/introduction#dynamic-route-segments) to dynamically generate a page for each blog post. Is there anything Next.js can't do?
 
-The domain was easy. I actually purchased [styfle.dev](https://twitter.com/styfle/status/1101238620982308864) a year ago because `.dev` is the new hotness. [Vercel](https://vercel.com/domains) makes it really easy to purchase a domain and assign it to a project in seconds.
+The domain was easy. I actually purchased [styfle.dev](https://x.com/styfle/status/1101238620982308864) a year ago because `.dev` is the new hotness. [Vercel](https://vercel.com/domains) makes it really easy to purchase a domain and assign it to a project in seconds.
 
 Which brings me to my last step, deployment. I set up [Vercel GitHub Integration](https://vercel.com/github) with a few clicks so that each time I `git push` to my [repository](https://github.com/styfle/styfle.dev), a new deployment is created. The best part here is that Vercel will deploy Pull Requests to a Preview URL and even take screenshots of the modified pages using the [Deploy Summary Integration](https://vercel.com/integrations/deploy-summary). For example, see [PR 13](https://github.com/styfle/styfle.dev/pull/13).
 

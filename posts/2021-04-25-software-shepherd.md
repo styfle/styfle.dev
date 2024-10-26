@@ -8,7 +8,7 @@ ogImage:
   height: 500
 ---
 
-A few years ago, I changed my Twitter bio from Software Engineer to [Software Shepherd](https://twitter.com/styfle/status/1083763630108217344) for a number of reasons. I couldn't fit these reasons into a tweet so I wrote an entire blog post.
+A few years ago, I changed my Twitter bio from Software Engineer to [Software Shepherd](https://x.com/styfle/status/1083763630108217344) for a number of reasons. I couldn't fit these reasons into a tweet so I wrote an entire blog post.
 
 ## Title
 
