@@ -39,7 +39,7 @@ export default function Contact() {
       <ul>
         <li>
           Public Message -{' '}
-          <a className="green-link" href="https://twitter.com/styfle">
+          <a className="green-link" href="https://x.com/styfle">
             Tweet
           </a>{' '}
           or{' '}
@@ -50,7 +50,7 @@ export default function Contact() {
         </li>
         <li>
           Private Message - Direct Message on{' '}
-          <a className="green-link" href="https://twitter.com/styfle">
+          <a className="green-link" href="https://x.com/styfle">
             Twitter
           </a>{' '}
           or{' '}

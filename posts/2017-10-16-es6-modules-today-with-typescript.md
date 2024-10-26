@@ -157,7 +157,7 @@ Also, please checkout the [GitHub][GitHub] repo for more details and of course, 
 See something you like? Or see something wrong? Then add a comment below:
 
 - [Medium Comments](https://medium.com/@styfle/22969cd360f0/)
-- [Twitter Comments](https://twitter.com/styfle/status/919926605614583809)
+- [Twitter Comments](https://x.com/styfle/status/919926605614583809)
 - [Facebook Comments](https://www.facebook.com/ceriouslycom/posts/1702044993150660)
 
 [NPM]: https://www.npmjs.com/package/copee
