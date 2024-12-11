@@ -54,8 +54,8 @@ export default function Contact() {
             Twitter
           </a>{' '}
           or{' '}
-          <a className="green-link" href="https://keybase.io/styfle">
-            Keybase
+          <a className="green-link" href="https://bsky.app/profile/styfle.dev">
+            Bluesky
           </a>
           .
         </li>
