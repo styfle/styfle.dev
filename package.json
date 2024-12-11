@@ -29,10 +29,10 @@
     "@types/marked": "4.0.8",
     "@types/node": "20.16.13",
     "@types/react": "19.0.1",
-    "eslint": "9.13.0",
+    "eslint": "9.16.0",
     "eslint-config-next": "15.1.0",
-    "prettier": "3.3.3",
-    "typescript": "5.6.3"
+    "prettier": "3.4.2",
+    "typescript": "5.7.2"
   },
   "pnpm": {
     "overrides": {
