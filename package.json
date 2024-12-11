@@ -4,7 +4,7 @@
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "lint": "next lint",
     "start": "next start",
@@ -12,31 +12,31 @@
     "git-pre-commit": "pnpm prettier && git add -A"
   },
   "dependencies": {
-    "@next/third-parties": "15.0.0",
+    "@next/third-parties": "15.1.0",
     "@octokit/rest": "20.0.1",
     "@vercel/speed-insights": "1.0.12",
-    "babel-plugin-react-compiler": "19.0.0-beta-8a03594-20241020",
+    "babel-plugin-react-compiler": "19.0.0-beta-37ed2a7-20241206",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "15.0.0",
-    "react": "19.0.0-rc-65a56d0e-20241020",
-    "react-dom": "19.0.0-rc-65a56d0e-20241020"
+    "next": "15.1.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@octokit/types": "11.1.0",
     "@types/gtag.js": "0.0.12",
     "@types/marked": "4.0.8",
     "@types/node": "20.16.13",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react": "19.0.1",
     "eslint": "9.13.0",
-    "eslint-config-next": "15.0.0",
+    "eslint-config-next": "15.1.0",
     "prettier": "3.3.3",
     "typescript": "5.6.3"
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "npm:types-react@19.0.0-rc.1"
+      "@types/react": "19.0.1"
     }
   },
   "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f"
