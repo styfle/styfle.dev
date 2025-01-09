@@ -12,14 +12,14 @@
     "git-pre-commit": "pnpm prettier && git add -A"
   },
   "dependencies": {
-    "@next/third-parties": "15.1.0",
+    "@next/third-parties": "15.1.4",
     "@octokit/rest": "20.0.1",
     "@vercel/speed-insights": "1.0.12",
     "babel-plugin-react-compiler": "19.0.0-beta-37ed2a7-20241206",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "15.1.2",
+    "next": "15.1.4",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
@@ -30,7 +30,7 @@
     "@types/node": "20.16.13",
     "@types/react": "19.0.1",
     "eslint": "9.16.0",
-    "eslint-config-next": "15.1.0",
+    "eslint-config-next": "15.1.4",
     "prettier": "3.4.2",
     "typescript": "5.7.2"
   },
