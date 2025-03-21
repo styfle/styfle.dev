@@ -19,7 +19,7 @@
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "15.1.4",
+    "next": "15.2.3",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
