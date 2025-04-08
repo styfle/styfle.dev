@@ -1,7 +1,7 @@
 ---
 slug: 'git-branch-symlink'
 title: 'Git Branch Symlink'
-date: '2022-08-07T23:51:00.000Z'
+date: '2022-02-14T09:30:00.000Z'
 ogImage:
   src: '/images/blog/simpsons-any-key.jpg'
   width: 710
