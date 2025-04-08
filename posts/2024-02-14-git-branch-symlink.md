@@ -8,8 +8,7 @@ ogImage:
   height: 360
 ---
 
-Most git repos I work with use `main` as the default branch name. So I get in the habbit of running `git checkout main`. However, there are a few I regularly work with that don't use `main`, which is fine. But old habbits die hard. This leads to a confusing error message:
-
+Most git repos I work with use `main` as the default branch name. So I get in the habit of running `git checkout main`. However, there are a few I regularly work with that don't use `main`, which is fine. But old habits die hard. This leads to a confusing error message:
 ```sh
 $ git checkout main
 error: pathspec 'main' did not match any file(s) known to git
