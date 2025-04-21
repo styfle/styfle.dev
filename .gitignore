@@ -6,3 +6,4 @@ repos.json
 .env*
 .env*.local
 .vscode
+.v0
