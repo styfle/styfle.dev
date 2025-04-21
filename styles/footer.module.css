@@ -5,6 +5,13 @@
   height: 10em;
 }
 
+@media (max-width: 800px) {
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .social {
   fill: white;
   width: 32px;
