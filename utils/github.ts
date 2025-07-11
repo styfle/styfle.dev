@@ -1,11 +1,14 @@
 import type { GetResponseDataTypeFromEndpointMethod } from '@octokit/types';
 import { Octokit } from '@octokit/rest';
 import { existsSync, promises } from 'fs';
+import { join } from 'path';
 const { readFile, writeFile } = promises;
 if (!process.env.GH_TOKEN) {
   throw new Error('Expected environment variable GH_TOKEN');
 }
 const octokit = new Octokit({ auth: process.env.GH_TOKEN });
+
+const reposFilePath = join(process.cwd(), 'repos.json');
 
 export type Repo = GetResponseDataTypeFromEndpointMethod<
   typeof octokit.repos.listForAuthenticatedUser
@@ -43,9 +46,9 @@ export type GitHubProject = Pick<
 
 async function getAllRepos(): Promise<Repo[]> {
   let repos: Repo[];
-  if (existsSync('./repos.json')) {
-    console.log('Found cached repos.json...');
-    const json = await readFile('./repos.json', 'utf8');
+  if (existsSync(reposFilePath)) {
+    console.log('Found cached ', reposFilePath);
+    const json = await readFile(reposFilePath, 'utf8');
     repos = JSON.parse(json);
   } else {
     console.log('Fetching all repos so this might take a second...');
@@ -55,7 +58,7 @@ async function getAllRepos(): Promise<Repo[]> {
       sort: 'created',
       per_page: 100,
     });
-    await writeFile('./repos.json', JSON.stringify(repos), 'utf8');
+    await writeFile(reposFilePath, JSON.stringify(repos), 'utf8');
   }
   return repos;
 }
