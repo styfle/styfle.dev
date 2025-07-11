@@ -1,3 +1,4 @@
+// FOO
 const nextConfig: import('next').NextConfig = {
   experimental: {
     reactCompiler: true,
