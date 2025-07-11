@@ -1,14 +1,12 @@
 import type { GetResponseDataTypeFromEndpointMethod } from '@octokit/types';
 import { Octokit } from '@octokit/rest';
 import { existsSync, promises } from 'fs';
-import { join } from 'path';
 const { readFile, writeFile } = promises;
 if (!process.env.GH_TOKEN) {
   throw new Error('Expected environment variable GH_TOKEN');
 }
 const octokit = new Octokit({ auth: process.env.GH_TOKEN });
-
-const reposFilePath = join(process.cwd(), 'repos.json');
+const reposFilePath = '/tmp/styfle-dev-repos.json';
 
 export type Repo = GetResponseDataTypeFromEndpointMethod<
   typeof octokit.repos.listForAuthenticatedUser
