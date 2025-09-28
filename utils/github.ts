@@ -50,12 +50,24 @@ async function getAllRepos(): Promise<Repo[]> {
     repos = JSON.parse(json);
   } else {
     console.log('Fetching all repos so this might take a second...');
-    repos = await octokit.paginate(octokit.repos.listForAuthenticatedUser, {
-      visibility: 'all',
-      affiliation: 'owner',
-      sort: 'created',
-      per_page: 100,
-    });
+    const [repoList, tc39] = await Promise.all([
+      octokit.paginate(octokit.repos.listForAuthenticatedUser, {
+        visibility: 'all',
+        affiliation: 'owner',
+        sort: 'created',
+        per_page: 100,
+      }),
+      octokit.repos.get({
+        owner: 'tc39',
+        repo: 'proposal-import-bytes',
+      }),
+    ]);
+    repos = repoList;
+    if (tc39.status === 200) {
+      // @ts-expect-error The type doesn't match perfectly but it's close enough
+      repos.push(tc39.data);
+    }
+    repos.sort((a, b) => new Date(b.created_at!).getTime() - new Date(a.created_at!).getTime());
     await writeFile(reposFilePath, JSON.stringify(repos), 'utf8');
   }
   return repos;
