@@ -1,7 +1,5 @@
 const nextConfig: import('next').NextConfig = {
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     qualities: [50, 75],
