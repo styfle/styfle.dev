@@ -2,7 +2,6 @@ const nextConfig: import('next').NextConfig = {
   reactCompiler: true,
   experimental: {
     turbopackFileSystemCacheForDev: true,
-    turbopackFileSystemCacheForBuild: true, // canary only for now
   },
   images: {
     formats: ['image/avif', 'image/webp'],
