@@ -63,6 +63,19 @@ async function getAllRepos(): Promise<Repo[]> {
       }),
     ]);
     repos = repoList;
+    // @ts-expect-error The type doesn't match perfectly but it's close enough
+    repos.push({
+      name: 'ypha',
+      full_name: 'styfle/ypha',
+      html_url: 'https://github.com/styfle/ypha', // repo is currently private so we manually push here
+      description: '👩🏽‍⚕️ Your Patient Has Arrived - replace the legacy Call Button in a waiting room',
+      created_at: '2019-01-16T02:46:01Z',
+      updated_at: '2025-03-10T01:48:36Z',
+      pushed_at: '2025-03-10T01:48:33Z',
+      homepage: 'https://ypha.app',
+      stargazers_count: 0,
+      watchers_count: 0,
+    });
     if (tc39.status === 200) {
       // @ts-expect-error The type doesn't match perfectly but it's close enough
       repos.push(tc39.data);
