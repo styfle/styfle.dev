@@ -13,6 +13,22 @@ const nextConfig: import('next').NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/blog/post.php',
+        has: [
+          {
+            type: 'query',
+            key: 'id',
+            value: '\\d{4}-\\d{2}-\\d{2}\\.(?<slug>[^\\.]+)\\.md',
+          },
+        ],
+        destination: '/blog/:slug?id=legacy',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
