@@ -8,19 +8,20 @@
     "build": "next build --turbopack",
     "lint": "eslint .",
     "start": "next start",
+		"analyze": "next experimental-analyze",
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
     "git-pre-commit": "pnpm prettier && git add -A"
   },
   "dependencies": {
-    "@next/third-parties": "16.0.7",
+    "@next/third-parties": "16.1.1",
     "@octokit/rest": "20.0.1",
     "@vercel/speed-insights": "1.0.12",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "16.0.10",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -29,9 +30,9 @@
     "@types/marked": "4.0.8",
     "@types/node": "20.16.13",
     "@types/react": "19.2.7",
-    "babel-plugin-react-compiler": "19.1.0-rc.3",
+    "babel-plugin-react-compiler": "1.0.0",
     "eslint": "9.16.0",
-    "eslint-config-next": "16.0.7",
+    "eslint-config-next": "16.1.1",
     "prettier": "3.4.2",
     "typescript": "5.7.2"
   },
