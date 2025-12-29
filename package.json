@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "start": "next start",
 		"analyze": "next experimental-analyze",
+		"upgrade": "next upgrade",
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
     "git-pre-commit": "pnpm prettier && git add -A"
   },
