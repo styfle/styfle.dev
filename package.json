@@ -8,6 +8,7 @@
     "build": "next build --turbopack",
     "lint": "eslint .",
     "start": "next start",
+		"analyze": "next experimental-analyze",
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
     "git-pre-commit": "pnpm prettier && git add -A"
   },
