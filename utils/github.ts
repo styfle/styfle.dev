@@ -108,7 +108,7 @@ export async function getProjects(): Promise<GitHubProject[]> {
       allowList.has(r.name) ||
       (!r.fork && !r.private && !r.disabled && !r.archived && !blockList.has(r.name)),
   );
-  projects.forEach(async r => {
+  projects.forEach(r => {
     if (!r.og_image_url) {
       if (existsSync(`${process.cwd()}/public/images/projects/${r.name}.png`)) {
         r.og_image_url = `/images/projects/${r.name}.png`;
