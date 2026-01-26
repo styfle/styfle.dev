@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import matter from 'gray-matter';
 import { resolve, join } from 'path';
 import fs from 'fs';
@@ -11,7 +12,7 @@ export interface BlogPost {
   content: string;
 }
 
-export async function getPosts(type: 'full' | 'trim'): Promise<BlogPost[]> {
+export const getPostsFullContent = cache(async (): Promise<BlogPost[]> => {
   const postsDirectory = resolve(process.cwd(), 'posts');
   const postFiles = await readdir(postsDirectory);
 
@@ -21,7 +22,7 @@ export async function getPosts(type: 'full' | 'trim'): Promise<BlogPost[]> {
       const markdown = await readFile(fullPath, 'utf8');
       const {
         data: { slug, title, date, ogImage = null },
-        content: fullContent,
+        content,
       } = matter(markdown);
 
       if (typeof slug !== 'string') {
@@ -43,11 +44,17 @@ export async function getPosts(type: 'full' | 'trim'): Promise<BlogPost[]> {
         throw new Error(`Expected ogImage to be object but found: ${typeof ogImage}`);
       }
 
-      const content = type === 'trim' ? fullContent.split('\n')[1] || '' : fullContent;
-
       return { slug, title, date, ogImage, content };
     }),
   );
 
-  return posts;
+  return posts.sort((a, b) => b.date.localeCompare(a.date));
+});
+
+export async function getPostsTruncated(): Promise<BlogPost[]> {
+  const posts = await getPostsFullContent();
+  return posts.map(post => ({
+    ...post,
+    content: post.content.split('\n')[1] || '',
+  }));
 }

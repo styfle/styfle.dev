@@ -1,4 +1,4 @@
-import { getPosts } from 'utils/posts';
+import { getPostsFullContent } from 'utils/posts';
 
 export interface Params {
   slug: string;
@@ -14,7 +14,7 @@ interface Props {
 
 export async function getProps(params: Params): Promise<Props> {
   const { slug } = params;
-  const posts = await getPosts('full');
+  const posts = await getPostsFullContent();
   const post = posts.find(p => p.slug === slug);
   if (!post) {
     throw new Error(`Expected slug ${slug}`);

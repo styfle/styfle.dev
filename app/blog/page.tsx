@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getPosts } from 'utils/posts';
+import { getPostsTruncated } from 'utils/posts';
 import { marked } from 'marked';
 import { formatDate } from 'utils/date';
 import Simpsons from 'public/images/blog/simpsons-any-key.jpg';
@@ -35,8 +35,7 @@ export async function generateMetadata() {
 }
 
 export default async function Blog() {
-  const allPosts = await getPosts('trim');
-  const posts = allPosts.sort((a, b) => b.date.localeCompare(a.date));
+  const posts = await getPostsTruncated();
   return (
     <>
       <h1>Blog</h1>

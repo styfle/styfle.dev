@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getPosts } from 'utils/posts';
+import { getPostsTruncated } from 'utils/posts';
 import { formatDate } from 'utils/date';
 import { markdownToHtml } from 'utils/markdown';
 import { getProps, Params } from './utils';
@@ -9,13 +9,13 @@ import { getOgImage } from 'utils/og-image';
 export const dynamicParams = false;
 
 export const generateStaticParams = async () => {
-  const posts = await getPosts('trim');
+  const posts = await getPostsTruncated();
   return posts;
 };
 
 export async function generateMetadata(props: { params: Promise<Params> }) {
   const params = await props.params;
-  const posts = await getPosts('trim');
+  const posts = await getPostsTruncated();
   const post = posts.find(p => p.slug === params.slug);
   if (!post) {
     throw new Error(`Expected slug ${params.slug}`);
