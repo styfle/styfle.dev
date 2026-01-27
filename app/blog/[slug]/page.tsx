@@ -6,8 +6,6 @@ import { markdownToHtml } from 'utils/markdown';
 import { getProps, Params } from './utils';
 import { getOgImage } from 'utils/og-image';
 
-export const dynamicParams = false;
-
 export const generateStaticParams = async () => {
   const posts = await getPostsTruncated();
   return posts;
