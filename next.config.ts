@@ -1,3 +1,4 @@
+// this comment is a noop
 const nextConfig: import('next').NextConfig = {
   reactCompiler: true,
   images: {
