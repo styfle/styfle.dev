@@ -8,21 +8,21 @@
     "build": "next build --turbopack",
     "lint": "eslint .",
     "start": "next start",
-		"analyze": "next experimental-analyze",
-		"upgrade": "next upgrade",
+    "analyze": "next experimental-analyze",
+    "upgrade": "next upgrade",
     "prettier": "prettier \"./**/*.ts\" \"./**/*.tsx\" \"./styles/*.css\" --write",
     "git-pre-commit": "pnpm prettier && git add -A"
   },
   "dependencies": {
-    "@next/third-parties": "16.1.1",
+    "@next/third-parties": "16.2.0",
     "@octokit/rest": "20.0.1",
     "@vercel/speed-insights": "1.0.12",
     "gray-matter": "4.0.3",
     "highlight.js": "11.7.0",
     "marked": "4.2.12",
-    "next": "16.1.7",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "next": "16.2.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -30,16 +30,16 @@
     "@types/gtag.js": "0.0.12",
     "@types/marked": "4.0.8",
     "@types/node": "20.16.13",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.14",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "9.16.0",
-    "eslint-config-next": "16.1.1",
+    "eslint-config-next": "16.2.0",
     "prettier": "3.4.2",
     "typescript": "5.7.2"
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "19.2.7"
+      "@types/react": "19.2.14"
     }
   },
   "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f"
