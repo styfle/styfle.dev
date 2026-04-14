@@ -35,7 +35,7 @@
     "eslint": "9.16.0",
     "eslint-config-next": "16.2.3",
     "prettier": "3.4.2",
-    "typescript": "5.7.2"
+    "typescript": "6.0.2"
   },
   "pnpm": {
     "overrides": {
