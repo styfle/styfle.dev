@@ -4,8 +4,6 @@ import { markdownToHtml } from 'utils/markdown';
 import { getOgImage } from 'utils/og-image';
 import { getProps, Params } from './utils';
 
-export const dynamicParams = false;
-
 export const generateStaticParams = async () => {
   const projects = await getProjects();
   return projects;
@@ -14,7 +12,9 @@ export const generateStaticParams = async () => {
 export async function generateMetadata(props: { params: Promise<Params> }) {
   const params = await props.params;
   const { project } = await getProps(params);
-  if (!project) return null;
+  if (!project) {
+    throw new Error(`Expected project with name ${params.name}`);
+  }
 
   const { name: title, created_at: publishedTime, description, og_image_url } = project;
 
