@@ -3,7 +3,7 @@
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
-	"packageManager": "pnpm@11.8.0",
+  "packageManager": "pnpm@11.8.0",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
@@ -14,13 +14,13 @@
     "git-pre-commit": "node --run prettier && git add -A"
   },
   "dependencies": {
-    "@next/third-parties": "16.2.9",
+    "@next/third-parties": "16.2.10",
     "@octokit/rest": "20.0.1",
     "@vercel/speed-insights": "2.0.0",
     "gray-matter": "4.0.3",
     "highlight.js": "11.11.1",
     "marked": "4.2.12",
-    "next": "16.2.9",
+    "next": "16.2.10",
     "react": "19.2.7",
     "react-dom": "19.2.7"
   },
