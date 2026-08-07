@@ -1,3 +1,2 @@
 allowBuilds:
-  '@vercel/speed-insights': set this to true or false
-  sharp: false
+  '@vercel/speed-insights': false
