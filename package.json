@@ -3,7 +3,10 @@
   "name": "styfle.dev",
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "bun@1.4.0",
+  "engines": {
+    "bun": "1.4.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
