@@ -4,6 +4,9 @@
   "repository": "https://github.com/styfle/styfle.dev",
   "license": "MIT",
   "packageManager": "bun@1.4.0",
+  "engines": {
+    "bun": "1.4.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
