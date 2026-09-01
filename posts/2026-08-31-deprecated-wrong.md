@@ -2,13 +2,17 @@
 slug: 'deprecated-wrong'
 title: 'You might be using "deprecated" wrong'
 date: '2026-08-31T09:30:00.000Z'
+ogImage:
+  src: '/images/blog/drake-old-legacy-new-hotness.jpg'
+  width: 1408
+  height: 768
 ---
 
-When you say "we will deprecate this %3Cfeature%3E on %3Cdate%3E" you are likely wrong.
+When you say "we will deprecate _feature_ on _date_" you are likely wrong.
 
-What you probably mean is "we will **remove** %3Cfeature%3E on %3Cdate%3E".
+What you probably mean is "we will **REMOVE** _feature_ on _date_".
 
-[Deprecation](https://en.wikipedia.org/wiki/Deprecation) is the discouragement of use.
+[Deprecation](https://en.wikipedia.org/wiki/Deprecation) is the discouragement of use. I often see deprecation confused with removal. That's wrong. Software or APIs can remain deprecated for a long time, even forever. The important thing is the deprecation should also come with a recommended alternative.
 
 ## Deprecation is not a countdown
 
@@ -16,14 +20,14 @@ To deprecate something is to formally tell the world: "this still works, but we 
 
 ## So what about the date?
 
-The date in the announcement is the **discontinue date**, sometimes called a **sunset date** or **end of life** or simply a removal date. This is the day the API stops working, gets removed, or starts returning errors.
+The date in the announcement is the **discontinue date**, sometimes called a **sunset date** or **end of life** or simply a **removal date**. This is the day the API stops working, gets removed, or starts returning errors.
 
 If your API lives in a library published to a registry like npm, this would be the date you publish the [semver major](https://semver.org) release.
 
 These are two distinct events on a timeline:
 
-1. **Deprecation** — the announcement that the API is on its way out. It still works. No behavior changes yet.
-2. **Discontinue** — the date the API is removed or stops functioning.
+1. **Deprecation** — announcement discouragement. It still works but maybe prints a warning.
+2. **Discontinue** — the date the API is removed or stops working.
 
 Collapsing them into one "deprecation date" hides the most important information: how long do I have? The gap between those two dates is the migration window, and that's exactly what consumers need to plan around.
 
