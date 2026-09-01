@@ -49,7 +49,6 @@ Good:
 
 > The `getProfile()` method is **deprecated**. It will be **removed on 2027-03-01**. Use `getProfileAsync()` instead, which returns the same data with Promise support.
 
-
 ## Say what you mean
 
 Words shape how humans (and increasingly, agents) respond to your announcements. Use "deprecated" for the moment you publicly announce the decision. Call the future date what it is: a discontinue or sunset date or removal date. And this announcement MUST point to its successor.
