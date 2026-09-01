@@ -14,13 +14,13 @@
     "git-pre-commit": "node --run prettier && git add -A"
   },
   "dependencies": {
-    "@next/third-parties": "16.3.0",
+    "@next/third-parties": "16.3.3",
     "@octokit/rest": "20.0.1",
     "@vercel/speed-insights": "2.0.0",
     "gray-matter": "4.0.3",
     "highlight.js": "11.11.1",
     "marked": "4.2.12",
-    "next": "16.3.0",
+    "next": "16.3.3",
     "react": "19.2.7",
     "react-dom": "19.2.7"
   },
