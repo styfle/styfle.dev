@@ -18,7 +18,9 @@ Software or APIs can remain deprecated for a long time, even forever. The import
 
 ## Contradiction
 
-Deprecation is formally tell the world: "this still works for now, but we recommend you stop building new things with it." That state begins the instant you publish the announcement. So "going to be deprecated" is a contradiction — it either is deprecated or it isn't. There is no in-between limbo where an API is "going to be deprecated."
+Deprecation is formally telling the world: "this still works for now, but we recommend you stop building new things with it." That state begins the instant you publish the announcement.
+
+So "going to be deprecated" is a contradiction — it either is deprecated or it isn't. There is no in-between state where an API is "going to be deprecated."
 
 ## Dates
 
