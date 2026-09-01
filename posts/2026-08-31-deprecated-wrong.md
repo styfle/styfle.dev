@@ -43,7 +43,7 @@ If you deprecate an API, your job is only half done unless you also tell consume
 
 The recommended alternative matters more than ever now that agents and automated tooling read your docs and changelogs. An agent that encounters a deprecated function needs an unambiguous replacement.
 
-The removal date actually isn't as important as you might think. If you have a new API that is designed to replace a legacy API, today is probably the day to deprecate, even if you don't have a removal date. Let consumers know early so they have time to migrate. 
+The removal date actually isn't as important as you might think. If you have a new API that is designed to replace a legacy API, today is probably the day to deprecate, even if you don't have a removal date. Let consumers know early so they have time to migrate.
 
 No one will be upset if you deprecate early and wait a long time until removal. However, you'll surely get upset users if the time between deprecation and removal is too quick.
 
