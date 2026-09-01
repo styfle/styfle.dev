@@ -1,6 +1,6 @@
 ---
 slug: 'deprecated-wrong'
-title: 'You're probably using "deprecated" wrong'
+title: 'You''re probably using "deprecated" wrong'
 date: '2026-08-31T09:30:00.000Z'
 ogImage:
   src: '/images/blog/drake-old-legacy-new-hotness.jpg'
@@ -8,11 +8,13 @@ ogImage:
   height: 768
 ---
 
-If you've ever said "we will deprecate _feature_ on _date_" you are likely wrong.
+If you've ever said "we will deprecate feature _X_ on date _Y_" you are likely wrong.
 
-What you probably mean is "we will **REMOVE** _feature_ on _date_".
+What you probably mean is "we will **REMOVE** feature _X_ on date _Y_".
 
-[Deprecation](https://en.wikipedia.org/wiki/Deprecation) is discouragement of new or continued usage. That's it. I often see deprecation confused with removal. That's wrong. Software or APIs can remain deprecated for a long time, even forever. The important thing is the deprecation should also come with a recommended alternative.
+[Deprecation](https://en.wikipedia.org/wiki/Deprecation) is discouragement of new or continued usage. That's it. I often see deprecation confused with removal. That's wrong.
+
+Software or APIs can remain deprecated for a long time, even forever. The important thing is the deprecation should also come with a recommended alternative.
 
 ## Contradiction
 
@@ -20,13 +22,13 @@ Deprecation is formally tell the world: "this still works for now, but we recomm
 
 ## Dates
 
-The date in the announcement is likely the **discontinue date**, sometimes called a **sunset date** or **end of life** or simply a **removal date**. This is the day the API stops working, gets removed, or starts returning errors.
+The date in the announcement is likely the **discontinue date**, sometimes called a [sunset](https://en.wikipedia.org/wiki/Sunset_(computing)) or [end-of-life](https://en.wikipedia.org/wiki/Software_release_life_cycle#End-of-life) or simply **removal**. This is the day the API stops working, gets removed, or starts returning errors.
 
-If your API lives in a library published to a registry like npm, this would be the date you publish the [semver major](https://semver.org) release (API removal is a breaking change).
+If your API lives in a library published to a registry like npm, this would be the date you publish the [semver major](https://semver.org) release (since public API removal is a breaking change).
 
 These are two distinct events on a timeline:
 
-1. **Deprecation** — announcement discouragement. It still works but maybe prints a warning.
+1. **Deprecation** — the announcement discouraging use. It still works but prints a warning.
 2. **Discontinue** — the date the API is removed or stops working.
 
 Collapsing them into one "deprecation date" hides the most important information: how long do I have? The gap between those two dates is the migration window, and that's exactly what consumers need to plan around.
@@ -37,9 +39,11 @@ If you deprecate an API, your job is only half done unless you also tell consume
 2. **When** will it be discontinued?
 3. **What should I use instead?**
 
-Number 3 matters more than ever now that agents and automated tooling read your docs and changelogs. An AI coding assistant that encounters a deprecated function needs an unambiguous replacement.
+The recommended alternative matters more than ever now that agents and automated tooling read your docs and changelogs. An agent that encounters a deprecated function needs an unambiguous replacement.
 
-Number 2 actually isn't as important as you might think. If you have a new API already, today is probably the day to deprecate, even if you don't have a removal date. Let consumers know early. No one will be upset if you deprecate early and wait a long time until removal. However, you'll surely get upset users if the time between deprecation and removal is too quick.
+The removal date actually isn't as important as you might think. If you have a new API that is designed to replace a legacy API, today is probably the day to deprecate, even if you don't have a removal date. Let consumers know early so they have time to migrate. 
+
+No one will be upset if you deprecate early and wait a long time until removal. However, you'll surely get upset users if the time between deprecation and removal is too quick.
 
 Today is the day to deprecate, what are you waiting for?
 
