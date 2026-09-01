@@ -10,11 +10,13 @@ I've seen this in changelogs, READMEs, and announcements (and I've personally wr
 
 ## Deprecation is not a countdown
 
-To deprecate something is to formally tell the world: "this still works, but we recommend you building new things with it." That state begins the instant you publish the announcement. So "going to be deprecated" is a contradiction — it either is deprecated or it isn't. There is no in-between limbo where an API is "going to be deprecated."
+To deprecate something is to formally tell the world: "this still works, but we recommend you stop building new things with it." That state begins the instant you publish the announcement. So "going to be deprecated" is a contradiction — it either is deprecated or it isn't. There is no in-between limbo where an API is "going to be deprecated."
 
 ## So what about the date?
 
-The date in the announcement is the **discontinue date**, sometimes call a **sunset date** or **end of life**. This is the day the API stops working, gets removed, or starts returning errors.
+The date in the announcement is the **discontinue date**, sometimes called a **sunset date** or **end of life** or simply, **removal date**. This is the day the API stops working, gets removed, or starts returning errors.
+
+If your API lives in a library published to a registry like npm, this would be the date you publish the [semver major](https://semver.org) release.
 
 These are two distinct events on a timeline:
 
@@ -23,15 +25,13 @@ These are two distinct events on a timeline:
 
 Collapsing them into one "deprecation date" hides the most important information: how long do I have? The gap between those two dates is the migration window, and that's exactly what consumers need to plan around.
 
-## A deprecation without a recommendation is incomplete
-
-If you deprecate an API, your job is only half done unless you also tell people what to use instead. A good deprecation announcement answers three questions:
+If you deprecate an API, your job is only half done unless you also tell consumers what to use instead. A good deprecation announcement answers three questions:
 
 - **What** is deprecated?
 - **When** will it be discontinued?
 - **What should I use instead?**
 
-The last one matters more than ever now that agents and automated tooling read your docs and changelogs. An AI coding assistant that encounters a deprecated function needs an unambiguous replacement to suggest. A human reading a changelog needs a path forward, not just a warning sign. "This is deprecated" without a recommendation just spreads uncertainty — it tells everyone there's a problem but gives no solution.
+The last one matters more than ever now that agents and automated tooling read your docs and changelogs. An AI coding assistant that encounters a deprecated function needs an unambiguous replacement.
 
 ## What good looks like
 
@@ -46,4 +46,4 @@ Good:
 
 ## Say what you mean
 
-Words shape how people — and increasingly, agents — respond to your announcements. Reserve "deprecated" for the moment you actually pull the trigger. Call the future date what it is: a discontinue or sunset date. And never deprecate something without pointing to its successor. Clear language makes migration plans obvious and keeps your ecosystem moving forward instead of stuck in limbo.
+Words shape how humans (and increasingly, agents) respond to your announcements. Use "deprecated" for the moment you publicaly announce the decision. Call the future date what it is: a discontinue or sunset date or removal date. And this announcement MUST pointing to its successor.
