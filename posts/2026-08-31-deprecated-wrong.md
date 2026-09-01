@@ -1,6 +1,6 @@
 ---
 slug: 'deprecated-wrong'
-title: 'You might be using "deprecated" wrong'
+title: 'You're probably using "deprecated" wrong'
 date: '2026-08-31T09:30:00.000Z'
 ogImage:
   src: '/images/blog/drake-old-legacy-new-hotness.jpg'
@@ -8,21 +8,21 @@ ogImage:
   height: 768
 ---
 
-When you say "we will deprecate _feature_ on _date_" you are likely wrong.
+If you've ever said "we will deprecate _feature_ on _date_" you are likely wrong.
 
 What you probably mean is "we will **REMOVE** _feature_ on _date_".
 
-[Deprecation](https://en.wikipedia.org/wiki/Deprecation) is the discouragement of use. I often see deprecation confused with removal. That's wrong. Software or APIs can remain deprecated for a long time, even forever. The important thing is the deprecation should also come with a recommended alternative.
+[Deprecation](https://en.wikipedia.org/wiki/Deprecation) is discouragement of new or continued usage. That's it. I often see deprecation confused with removal. That's wrong. Software or APIs can remain deprecated for a long time, even forever. The important thing is the deprecation should also come with a recommended alternative.
 
-## Deprecation is not a countdown
+## Contradiction
 
-To deprecate something is to formally tell the world: "this still works, but we recommend you stop building new things with it." That state begins the instant you publish the announcement. So "going to be deprecated" is a contradiction — it either is deprecated or it isn't. There is no in-between limbo where an API is "going to be deprecated."
+Deprecation is formally tell the world: "this still works for now, but we recommend you stop building new things with it." That state begins the instant you publish the announcement. So "going to be deprecated" is a contradiction — it either is deprecated or it isn't. There is no in-between limbo where an API is "going to be deprecated."
 
-## So what about the date?
+## Dates
 
-The date in the announcement is the **discontinue date**, sometimes called a **sunset date** or **end of life** or simply a **removal date**. This is the day the API stops working, gets removed, or starts returning errors.
+The date in the announcement is likely the **discontinue date**, sometimes called a **sunset date** or **end of life** or simply a **removal date**. This is the day the API stops working, gets removed, or starts returning errors.
 
-If your API lives in a library published to a registry like npm, this would be the date you publish the [semver major](https://semver.org) release.
+If your API lives in a library published to a registry like npm, this would be the date you publish the [semver major](https://semver.org) release (API removal is a breaking change).
 
 These are two distinct events on a timeline:
 
@@ -33,22 +33,37 @@ Collapsing them into one "deprecation date" hides the most important information
 
 If you deprecate an API, your job is only half done unless you also tell consumers what to use instead. A good deprecation announcement answers three questions:
 
-- **What** is deprecated?
-- **When** will it be discontinued?
-- **What should I use instead?**
+1. **What** is deprecated?
+2. **When** will it be discontinued?
+3. **What should I use instead?**
 
-The last one matters more than ever now that agents and automated tooling read your docs and changelogs. An AI coding assistant that encounters a deprecated function needs an unambiguous replacement.
+Number 3 matters more than ever now that agents and automated tooling read your docs and changelogs. An AI coding assistant that encounters a deprecated function needs an unambiguous replacement.
 
-## What good looks like
+Number 2 actually isn't as important as you might think. If you have a new API already, today is probably the day to deprecate, even if you don't have a removal date. Let consumers know early. No one will be upset if you deprecate early and wait a long time until removal. However, you'll surely get upset users if the time between deprecation and removal is too quick.
+
+Today is the day to deprecate, what are you waiting for?
+
+## Example
 
 Bad:
 
-> The `getProfile()` method is going to be deprecated on 2027-03-01.
+```js
+/**
+ * Going to be deprecated on 2027-03-01.
+ */
+function getProfile() {}
+```
 
 Good:
 
-> The `getProfile()` method is **deprecated**. It will be **removed on 2027-03-01**. Use `getProfileAsync()` instead, which returns the same data with Promise support.
+```js
+/**
+ * @deprecated Use `getProfileAsync()` instead, which returns the same data with Promise support.
+ * The `getProfile()` method will be removed on 2027-03-01 starting in version 7.0.0.
+ */
+function getProfile() {}
+```
 
-## Say what you mean
+## Conclusion
 
 Words shape how humans (and increasingly, agents) respond to your announcements. Use "deprecated" for the moment you publicly announce the decision. Call the future date what it is: a discontinue or sunset date or removal date. And this announcement MUST point to its successor.
