@@ -64,12 +64,13 @@ Good:
 
 ```js
 /**
- * @deprecated Use `getProfileAsync()` instead, which returns the same data with Promise support.
- * The `getProfile()` method will be removed on 2027-03-01 starting in version 7.0.0.
+ * @deprecated Use `getAccount()` instead, which returns
+ * the same data with Promise support. The `getProfile()`
+ * method will be removed in v7.0.0 on 2027-03-01.
  */
 function getProfile() {}
 ```
 
 ## Conclusion
 
-Words shape how humans (and increasingly, agents) respond to your announcements. Use "deprecated" for the moment you publicly announce the decision. Call the future date what it is: a discontinue or sunset date or removal date. And this announcement MUST point to its successor.
+Words shape how humans (and increasingly, agents) respond to your announcements. Use "deprecated" for the moment you publicly announce the decision. Call the future date what it is: a discontinue or sunset date or removal date. And this announcement MUST point to its successor. Link to this blog post if you need to convince your coworkers.
